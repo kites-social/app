@@ -1,0 +1,764 @@
+<div id="kites-wallet-onboarding" class="kwo-preview" aria-label="Kites wallet onboarding flow preview">
+  <style>
+    #kites-wallet-onboarding {
+      color-scheme: light dark;
+      --kwo-background: light-dark(#ffffff, #000000);
+      --kwo-surface: light-dark(#ffffff, #1c1c1e);
+      --kwo-secondary: light-dark(#f2f2f7, #2c2c2e);
+      --kwo-ink: light-dark(#111111, #f5f5f7);
+      --kwo-muted: light-dark(#6d6d72, #a1a1a6);
+      --kwo-border: light-dark(#d2d2d7, #3a3a3c);
+      --kwo-primary: light-dark(#007aff, #0a84ff);
+      --kwo-success: light-dark(#248a3d, #30d158);
+      width: min(100%, 430px);
+      margin: 0 auto;
+      color: var(--kwo-ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    }
+
+    #kites-wallet-onboarding * { box-sizing: border-box; }
+
+    #kites-wallet-onboarding .kwo-controls {
+      display: grid;
+      gap: 12px;
+      margin: 0 0 14px;
+    }
+
+    #kites-wallet-onboarding .kwo-control-group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    #kites-wallet-onboarding .kwo-control-label {
+      flex: none;
+      color: var(--kwo-muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    #kites-wallet-onboarding .kwo-segmented {
+      display: inline-flex;
+      max-width: 270px;
+      padding: 3px;
+      border: 1px solid var(--kwo-border);
+      border-radius: 12px;
+      background: var(--kwo-secondary);
+    }
+
+    #kites-wallet-onboarding .kwo-choice {
+      min-height: 32px;
+      padding: 0 10px;
+      border: 0;
+      border-radius: 9px;
+      background: transparent;
+      color: var(--kwo-muted);
+      font: inherit;
+      font-size: 11px;
+      font-weight: 550;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    #kites-wallet-onboarding .kwo-choice[aria-pressed="true"] {
+      background: var(--kwo-surface);
+      color: var(--kwo-ink);
+      box-shadow: 0 1px 3px light-dark(rgb(0 0 0 / 12%), rgb(0 0 0 / 30%));
+    }
+
+    #kites-wallet-onboarding .kwo-device {
+      position: relative;
+      display: flex;
+      min-height: 790px;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid var(--kwo-border);
+      border-radius: 28px;
+      background: var(--kwo-background);
+      box-shadow: 0 14px 42px light-dark(rgb(0 0 0 / 12%), rgb(0 0 0 / 45%));
+    }
+
+    #kites-wallet-onboarding .kwo-status {
+      display: flex;
+      min-height: 34px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 7px 22px 1px;
+      font-size: 11px;
+      font-weight: 650;
+      letter-spacing: 0.015em;
+    }
+
+    #kites-wallet-onboarding .kwo-status-icons {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--kwo-muted);
+      font-size: 10px;
+    }
+
+    #kites-wallet-onboarding .kwo-header {
+      display: flex;
+      min-height: 58px;
+      align-items: center;
+      gap: 10px;
+      padding: 5px 19px 11px;
+    }
+
+    #kites-wallet-onboarding .kwo-header-title {
+      margin: 0;
+      font-size: 21px;
+      font-weight: 650;
+      letter-spacing: -0.035em;
+    }
+
+    #kites-wallet-onboarding .kwo-header-back {
+      display: none;
+      width: 30px;
+      height: 34px;
+      align-items: center;
+      justify-content: flex-start;
+      border: 0;
+      background: transparent;
+      color: var(--kwo-primary);
+      cursor: pointer;
+    }
+
+    #kites-wallet-onboarding .kwo-screen {
+      position: relative;
+      flex: 1;
+      min-height: 620px;
+      padding: 0 16px 24px;
+    }
+
+    #kites-wallet-onboarding .kwo-screen-tabs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 0 0 18px;
+      border-bottom: 1px solid var(--kwo-border);
+    }
+
+    #kites-wallet-onboarding .kwo-screen-tab {
+      min-height: 43px;
+      border: 0;
+      border-bottom: 2px solid transparent;
+      background: transparent;
+      color: var(--kwo-muted);
+      font: inherit;
+      font-size: 13px;
+    }
+
+    #kites-wallet-onboarding .kwo-screen-tab[aria-current="page"] {
+      border-bottom-color: var(--kwo-primary);
+      color: var(--kwo-ink);
+      font-weight: 650;
+    }
+
+    #kites-wallet-onboarding .kwo-empty-screen {
+      display: flex;
+      min-height: 520px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px;
+      text-align: center;
+    }
+
+    #kites-wallet-onboarding .kwo-empty-icon {
+      display: grid;
+      width: 46px;
+      height: 46px;
+      margin-bottom: 15px;
+      place-items: center;
+      color: var(--kwo-muted);
+    }
+
+    #kites-wallet-onboarding .kwo-heading {
+      max-width: 300px;
+      margin: 0;
+      font-size: 17px;
+      font-weight: 620;
+      letter-spacing: -0.015em;
+      line-height: 1.3;
+    }
+
+    #kites-wallet-onboarding .kwo-description {
+      max-width: 315px;
+      margin: 9px 0 19px;
+      color: var(--kwo-muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    #kites-wallet-onboarding .kwo-primary {
+      display: inline-flex;
+      min-height: 43px;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 18px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--kwo-primary);
+      color: #ffffff;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 650;
+      cursor: pointer;
+    }
+
+    #kites-wallet-onboarding .kwo-secondary-action {
+      display: inline-flex;
+      min-height: 40px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 15px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--kwo-secondary);
+      color: var(--kwo-ink);
+      font: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    #kites-wallet-onboarding .kwo-market {
+      padding-top: 4px;
+    }
+
+    #kites-wallet-onboarding .kwo-market-kicker {
+      margin: 0 0 10px;
+      color: var(--kwo-muted);
+      font-size: 11px;
+      font-weight: 650;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    #kites-wallet-onboarding .kwo-market-question {
+      max-width: 330px;
+      margin: 0 0 10px;
+      font-size: 22px;
+      font-weight: 650;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+    }
+
+    #kites-wallet-onboarding .kwo-market-meta {
+      margin: 0 0 20px;
+      color: var(--kwo-muted);
+      font-size: 13px;
+    }
+
+    #kites-wallet-onboarding .kwo-market-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    #kites-wallet-onboarding .kwo-outcome {
+      min-height: 50px;
+      border: 1px solid var(--kwo-border);
+      border-radius: 14px;
+      background: var(--kwo-surface);
+      color: var(--kwo-ink);
+      font: inherit;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    #kites-wallet-onboarding .kwo-market-note {
+      max-width: 330px;
+      margin: 0;
+      color: var(--kwo-muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    #kites-wallet-onboarding .kwo-balance-placeholder {
+      display: grid;
+      min-height: 520px;
+      place-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    #kites-wallet-onboarding .kwo-balance-placeholder p {
+      max-width: 290px;
+      margin: 8px 0 17px;
+      color: var(--kwo-muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    #kites-wallet-onboarding .kwo-compose {
+      position: absolute;
+      right: 18px;
+      bottom: 83px;
+      z-index: 1;
+      display: grid;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      border: 0;
+      border-radius: 17px;
+      background: var(--kwo-primary);
+      color: #ffffff;
+      box-shadow: 0 4px 12px light-dark(rgb(0 0 0 / 18%), rgb(0 0 0 / 50%));
+    }
+
+    #kites-wallet-onboarding .kwo-bottom-nav {
+      position: relative;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      min-height: 72px;
+      align-items: center;
+      padding: 6px 5px 9px;
+      border-top: 1px solid var(--kwo-border);
+      background: var(--kwo-surface);
+    }
+
+    #kites-wallet-onboarding .kwo-nav-item {
+      display: flex;
+      min-width: 0;
+      min-height: 48px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      border: 0;
+      background: transparent;
+      color: var(--kwo-muted);
+      font: inherit;
+      font-size: 9px;
+    }
+
+    #kites-wallet-onboarding .kwo-nav-item[aria-current="page"] {
+      color: var(--kwo-primary);
+      font-weight: 650;
+    }
+
+    #kites-wallet-onboarding .kwo-scrim {
+      position: absolute;
+      z-index: 4;
+      inset: 34px 0 72px;
+      background: light-dark(rgb(0 0 0 / 34%), rgb(0 0 0 / 53%));
+    }
+
+    #kites-wallet-onboarding .kwo-sheet {
+      position: absolute;
+      z-index: 5;
+      right: 0;
+      bottom: 72px;
+      left: 0;
+      max-height: calc(100% - 115px);
+      overflow-y: auto;
+      padding: 9px 22px 25px;
+      border: 1px solid var(--kwo-border);
+      border-bottom: 0;
+      border-radius: 23px 23px 0 0;
+      background: var(--kwo-surface);
+      box-shadow: 0 -8px 28px light-dark(rgb(0 0 0 / 9%), rgb(0 0 0 / 35%));
+    }
+
+    #kites-wallet-onboarding .kwo-sheet-handle {
+      width: 38px;
+      height: 4px;
+      margin: 0 auto 20px;
+      border-radius: 999px;
+      background: var(--kwo-border);
+    }
+
+    #kites-wallet-onboarding .kwo-eyebrow {
+      margin: 0 0 7px;
+      color: var(--kwo-muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    #kites-wallet-onboarding .kwo-sheet-title {
+      margin: 0;
+      font-size: 21px;
+      font-weight: 660;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+    }
+
+    #kites-wallet-onboarding .kwo-sheet-copy {
+      margin: 10px 0 17px;
+      color: var(--kwo-muted);
+      font-size: 13px;
+      line-height: 1.48;
+    }
+
+    #kites-wallet-onboarding .kwo-privacy-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 0 0 17px;
+      padding: 12px;
+      border-radius: 14px;
+      background: var(--kwo-secondary);
+      color: var(--kwo-ink);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    #kites-wallet-onboarding .kwo-privacy-note i {
+      flex: none;
+      margin-top: 1px;
+      color: var(--kwo-muted);
+    }
+
+    #kites-wallet-onboarding .kwo-sheet-actions {
+      display: grid;
+      gap: 9px;
+      margin-top: 15px;
+    }
+
+    #kites-wallet-onboarding .kwo-sheet-actions .kwo-primary,
+    #kites-wallet-onboarding .kwo-sheet-actions .kwo-secondary-action {
+      width: 100%;
+    }
+
+    #kites-wallet-onboarding .kwo-passkey-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 15px 0;
+      padding: 14px;
+      border: 1px solid var(--kwo-border);
+      border-radius: 16px;
+      background: var(--kwo-background);
+    }
+
+    #kites-wallet-onboarding .kwo-passkey-icon {
+      display: grid;
+      width: 40px;
+      height: 40px;
+      flex: none;
+      place-items: center;
+      border-radius: 13px;
+      background: var(--kwo-secondary);
+      color: var(--kwo-ink);
+    }
+
+    #kites-wallet-onboarding .kwo-passkey-card p { margin: 0; }
+
+    #kites-wallet-onboarding .kwo-passkey-title {
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    #kites-wallet-onboarding .kwo-passkey-subtitle {
+      margin-top: 3px !important;
+      color: var(--kwo-muted);
+      font-size: 11px;
+    }
+
+    #kites-wallet-onboarding .kwo-address-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 14px 0;
+      padding: 13px 14px;
+      border: 1px solid var(--kwo-border);
+      border-radius: 14px;
+      background: var(--kwo-background);
+    }
+
+    #kites-wallet-onboarding .kwo-address-label {
+      margin: 0 0 4px;
+      color: var(--kwo-muted);
+      font-size: 10px;
+      font-weight: 650;
+      text-transform: uppercase;
+    }
+
+    #kites-wallet-onboarding .kwo-address {
+      margin: 0;
+      font-size: 13px;
+      font-weight: 650;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.01em;
+    }
+
+    #kites-wallet-onboarding .kwo-status-list {
+      display: grid;
+      gap: 12px;
+      margin: 16px 0 19px;
+      padding: 0;
+      list-style: none;
+    }
+
+    #kites-wallet-onboarding .kwo-status-row {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--kwo-ink);
+      font-size: 13px;
+    }
+
+    #kites-wallet-onboarding .kwo-status-row i { color: var(--kwo-success); }
+
+    #kites-wallet-onboarding .kwo-ready-mark {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      margin: 0 0 13px;
+      place-items: center;
+      border-radius: 50%;
+      background: light-dark(#e6f5e9, #17351f);
+      color: var(--kwo-success);
+    }
+
+    @media (max-width: 370px) {
+      #kites-wallet-onboarding .kwo-control-group { align-items: flex-start; flex-direction: column; gap: 5px; }
+      #kites-wallet-onboarding .kwo-segmented { max-width: 100%; }
+      #kites-wallet-onboarding .kwo-choice { padding: 0 8px; font-size: 10px; }
+      #kites-wallet-onboarding .kwo-sheet { padding-right: 17px; padding-left: 17px; }
+      #kites-wallet-onboarding .kwo-device { min-height: 770px; }
+    }
+  </style>
+
+  <div class="kwo-controls" aria-label="Choose a flow to preview">
+    <div class="kwo-control-group">
+      <span class="kwo-control-label">Starting point</span>
+      <div class="kwo-segmented" role="group" aria-label="Starting point">
+        <button class="kwo-choice" type="button" data-origin="trade" aria-pressed="true">Trade widget</button>
+        <button class="kwo-choice" type="button" data-origin="wallet" aria-pressed="false">Wallet tab</button>
+      </div>
+    </div>
+    <div class="kwo-control-group">
+      <span class="kwo-control-label">Account state</span>
+      <div class="kwo-segmented" role="group" aria-label="Account state">
+        <button class="kwo-choice" type="button" data-mode="new" aria-pressed="true">First setup</button>
+        <button class="kwo-choice" type="button" data-mode="returning" aria-pressed="false">Wallet exists</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="kwo-device">
+    <div class="kwo-status" aria-hidden="true"><span>9:41</span><span class="kwo-status-icons"><span>●●●</span><span>Wi-Fi</span><span>▰</span></span></div>
+    <header class="kwo-header">
+      <button class="kwo-header-back" type="button" data-action="back" aria-label="Back"><i data-lucide="chevron-left" aria-hidden="true"></i></button>
+      <h1 class="kwo-header-title" id="kwo-header-title">Market</h1>
+    </header>
+    <main class="kwo-screen" id="kwo-screen"></main>
+    <button class="kwo-compose" type="button" aria-label="Create a post"><i data-lucide="square-pen" aria-hidden="true"></i></button>
+    <nav class="kwo-bottom-nav" aria-label="Main navigation">
+      <button class="kwo-nav-item" type="button" data-nav="feed" aria-label="Feeds"><i data-lucide="cloud" aria-hidden="true"></i><span>Feeds</span></button>
+      <button class="kwo-nav-item" type="button" aria-label="Search"><i data-lucide="search" aria-hidden="true"></i><span>Search</span></button>
+      <button class="kwo-nav-item" type="button" data-nav="wallet" aria-label="Wallet"><i data-lucide="wallet" aria-hidden="true"></i><span>Wallet</span></button>
+      <button class="kwo-nav-item" type="button" aria-label="Notifications"><i data-lucide="bell" aria-hidden="true"></i><span>Notifications</span></button>
+      <button class="kwo-nav-item" type="button" aria-label="Profile"><i data-lucide="user-round" aria-hidden="true"></i><span>Profile</span></button>
+    </nav>
+    <div id="kwo-overlay"></div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js"></script>
+  <script>
+    const kwoRoot = document.getElementById("kites-wallet-onboarding");
+    const kwoScreen = kwoRoot.querySelector("#kwo-screen");
+    const kwoOverlay = kwoRoot.querySelector("#kwo-overlay");
+    const kwoHeaderTitle = kwoRoot.querySelector("#kwo-header-title");
+    const kwoState = { origin: "trade", mode: "new", step: "entry" };
+
+    function kwoEntryScreen() {
+      kwoHeaderTitle.textContent = kwoState.origin === "trade" ? "Market" : "Wallet";
+      if (kwoState.origin === "wallet") {
+        if (kwoState.step === "done") {
+          return `
+            <div class="kwo-screen-tabs" role="tablist" aria-label="Wallet sections">
+              <button class="kwo-screen-tab" type="button" role="tab" aria-current="page">Balances</button>
+              <button class="kwo-screen-tab" type="button" role="tab">Positions</button>
+            </div>
+            <section class="kwo-balance-placeholder">
+              <div>
+                <div class="kwo-ready-mark"><i data-lucide="check" aria-hidden="true"></i></div>
+                <h2 class="kwo-heading">Wallet ready</h2>
+                <p>Your wallet is linked to your Bluesky account. Balances will appear here, grouped by network.</p>
+                <div class="kwo-address-card"><div><p class="kwo-address-label">Linked wallet</p><p class="kwo-address">0x71c4…9F24</p></div><i data-lucide="copy" aria-hidden="true"></i></div>
+                <button class="kwo-primary" type="button">Deposit funds</button>
+              </div>
+            </section>`;
+        }
+        const action = kwoState.mode === "new" ? "Set up wallet" : "Unlock wallet";
+        const description = kwoState.mode === "new"
+          ? "Set up a passkey wallet to deposit, send funds, and trade. You can keep browsing without one."
+          : "Your wallet is linked. Unlock it with your passkey the first time you use it this session.";
+        return `
+          <div class="kwo-screen-tabs" role="tablist" aria-label="Wallet sections">
+            <button class="kwo-screen-tab" type="button" role="tab" aria-current="page">Balances</button>
+            <button class="kwo-screen-tab" type="button" role="tab">Positions</button>
+          </div>
+          <section class="kwo-empty-screen">
+            <div class="kwo-empty-icon"><i data-lucide="wallet" aria-hidden="true"></i></div>
+            <h2 class="kwo-heading">${kwoState.mode === "new" ? "No wallet is linked to this account yet." : "Your wallet is ready to unlock."}</h2>
+            <p class="kwo-description">${description}</p>
+            <button class="kwo-primary" type="button" data-action="start">${action}</button>
+          </section>`;
+      }
+
+      const note = kwoState.step === "done"
+        ? "Your wallet is ready. Continue with the trade you started."
+        : "Choose an outcome to continue to the trade form.";
+      return `
+        <section class="kwo-market">
+          <p class="kwo-market-kicker">Prediction market</p>
+          <h2 class="kwo-market-question">Will ETH close above $4,000 this week?</h2>
+          <p class="kwo-market-meta">Ends Friday · 2.4k traders</p>
+          <div class="kwo-market-options"><button class="kwo-outcome" type="button">Yes&nbsp;&nbsp; 43¢</button><button class="kwo-outcome" type="button">No&nbsp;&nbsp; 58¢</button></div>
+          <p class="kwo-market-note">${note}</p>
+        </section>`;
+    }
+
+    function kwoSheet() {
+      const cancelButton = `<button class="kwo-secondary-action" type="button" data-action="cancel">Not now</button>`;
+      let body = "";
+
+      if (kwoState.step === "entry") {
+        const title = kwoState.mode === "new" ? "A wallet is needed to trade" : "Unlock your wallet to trade";
+        const copy = kwoState.mode === "new"
+          ? "Create your Kites wallet once, then use it with the supported trading venues in the app."
+          : "Use your passkey to unlock your linked wallet. It will stay ready in memory for this session.";
+        const button = kwoState.mode === "new" ? "Set up wallet" : "Unlock with passkey";
+        body = `<p class="kwo-eyebrow">${kwoState.mode === "new" ? "Wallet needed" : "Wallet locked"}</p><h2 class="kwo-sheet-title">${title}</h2><p class="kwo-sheet-copy">${copy}</p><div class="kwo-sheet-actions"><button class="kwo-primary" type="button" data-action="start">${button}</button>${cancelButton}</div>`;
+      } else if (kwoState.step === "explain") {
+        body = `
+          <p class="kwo-eyebrow">One-time setup</p>
+          <h2 class="kwo-sheet-title">Create your Kites wallet</h2>
+          <p class="kwo-sheet-copy">Use a passkey to create and unlock your wallet. Your private key stays on your device, and the same wallet works across supported venues.</p>
+          <div class="kwo-privacy-note"><i data-lucide="globe-2" aria-hidden="true"></i><span>Your wallet address will be publicly linked to your Bluesky account so people can find it to send you funds.</span></div>
+          <div class="kwo-sheet-actions"><button class="kwo-primary" type="button" data-action="passkey">Continue with passkey</button>${cancelButton}</div>`;
+      } else if (kwoState.step === "passkey") {
+        body = `
+          <p class="kwo-eyebrow">Passkey</p>
+          <h2 class="kwo-sheet-title">Create a passkey</h2>
+          <p class="kwo-sheet-copy">Use Face ID, Touch ID, or your device screen lock. Your passkey helps unlock your wallet when you need it.</p>
+          <div class="kwo-passkey-card"><div class="kwo-passkey-icon"><i data-lucide="fingerprint" aria-hidden="true"></i></div><div><p class="kwo-passkey-title">Kites wallet</p><p class="kwo-passkey-subtitle">Passkey protected</p></div></div>
+          <div class="kwo-sheet-actions"><button class="kwo-primary" type="button" data-action="create-passkey">Create passkey</button><button class="kwo-secondary-action" type="button" data-action="back">Back</button></div>`;
+      } else if (kwoState.step === "unlock") {
+        body = `
+          <p class="kwo-eyebrow">Returning wallet</p>
+          <h2 class="kwo-sheet-title">Unlock your wallet</h2>
+          <p class="kwo-sheet-copy">Use your passkey to unlock your linked wallet. It stays ready in memory for this session, so you won't need to unlock it for every action.</p>
+          <div class="kwo-passkey-card"><div class="kwo-passkey-icon"><i data-lucide="fingerprint" aria-hidden="true"></i></div><div><p class="kwo-passkey-title">Kites wallet</p><p class="kwo-passkey-subtitle">Linked to your Bluesky account</p></div></div>
+          <div class="kwo-sheet-actions"><button class="kwo-primary" type="button" data-action="unlock-wallet">Unlock with passkey</button>${cancelButton}</div>`;
+      } else if (kwoState.step === "link") {
+        body = `
+          <p class="kwo-eyebrow">Prove ownership</p>
+          <h2 class="kwo-sheet-title">Link wallet to Bluesky</h2>
+          <div class="kwo-address-card"><div><p class="kwo-address-label">Your new wallet</p><p class="kwo-address">0x71c4…9F24</p></div><i data-lucide="copy" aria-hidden="true"></i></div>
+          <p class="kwo-sheet-copy">Sign a one-time proof and publish the link to your Bluesky account. Anyone can see this association and use it to find your wallet address. This does not move funds or pay a network fee.</p>
+          <div class="kwo-sheet-actions"><button class="kwo-primary" type="button" data-action="sign-link">Sign and link wallet</button><button class="kwo-secondary-action" type="button" data-action="back">Back</button></div>`;
+      } else if (kwoState.step === "ready") {
+        body = `
+          <div class="kwo-ready-mark"><i data-lucide="check" aria-hidden="true"></i></div>
+          <p class="kwo-eyebrow">Wallet ready</p>
+          <h2 class="kwo-sheet-title">Your wallet is linked</h2>
+          <div class="kwo-address-card"><div><p class="kwo-address-label">Linked wallet</p><p class="kwo-address">0x71c4…9F24</p></div><i data-lucide="copy" aria-hidden="true"></i></div>
+          <p class="kwo-sheet-copy">Your wallet is ready. Add funds now, or come back to this later.</p>
+          <div class="kwo-sheet-actions"><button class="kwo-primary" type="button" data-action="deposit">Deposit funds</button><button class="kwo-secondary-action" type="button" data-action="finish">Open wallet</button></div>`;
+      } else if (kwoState.step === "venue") {
+        const venueRows = kwoState.mode === "new"
+          ? `<li class="kwo-status-row"><i data-lucide="check-circle-2" aria-hidden="true"></i><span>Passkey wallet created</span></li><li class="kwo-status-row"><i data-lucide="check-circle-2" aria-hidden="true"></i><span>Wallet linked to Bluesky</span></li><li class="kwo-status-row"><i data-lucide="check-circle-2" aria-hidden="true"></i><span>Venue account ready</span></li>`
+          : `<li class="kwo-status-row"><i data-lucide="check-circle-2" aria-hidden="true"></i><span>Wallet unlocked for this session</span></li><li class="kwo-status-row"><i data-lucide="check-circle-2" aria-hidden="true"></i><span>Venue account ready</span></li>`;
+        body = `
+          <div class="kwo-ready-mark"><i data-lucide="check" aria-hidden="true"></i></div>
+          <p class="kwo-eyebrow">Ready to trade</p>
+          <h2 class="kwo-sheet-title">Your trade is ready</h2>
+          <p class="kwo-sheet-copy">Kites prepared this venue in the background. You stay in Kites and use the same wallet; there is no separate venue signup.</p>
+          <ul class="kwo-status-list">${venueRows}</ul>
+          <div class="kwo-sheet-actions"><button class="kwo-primary" type="button" data-action="finish">Return to trade</button></div>`;
+      } else if (kwoState.step === "unlocked") {
+        body = `
+          <div class="kwo-ready-mark"><i data-lucide="check" aria-hidden="true"></i></div>
+          <p class="kwo-eyebrow">Wallet unlocked</p>
+          <h2 class="kwo-sheet-title">You're ready to continue</h2>
+          <p class="kwo-sheet-copy">Your wallet stays available in memory for this session, so you won't be asked to unlock it for every action.</p>
+          <div class="kwo-sheet-actions"><button class="kwo-primary" type="button" data-action="unlocked-continue">${kwoState.origin === "trade" ? "Continue to trade" : "Open wallet"}</button></div>`;
+      }
+
+      return `<div class="kwo-scrim"></div><section class="kwo-sheet" role="dialog" aria-modal="true"><div class="kwo-sheet-handle"></div>${body}</section>`;
+    }
+
+    function kwoRender() {
+      for (const button of kwoRoot.querySelectorAll("[data-origin]")) {
+        button.setAttribute("aria-pressed", String(button.dataset.origin === kwoState.origin));
+      }
+      for (const button of kwoRoot.querySelectorAll("[data-mode]")) {
+        button.setAttribute("aria-pressed", String(button.dataset.mode === kwoState.mode));
+      }
+      for (const button of kwoRoot.querySelectorAll("[data-nav]")) {
+        if (button.dataset.nav === (kwoState.origin === "trade" ? "feed" : "wallet")) {
+          button.setAttribute("aria-current", "page");
+        } else {
+          button.removeAttribute("aria-current");
+        }
+      }
+
+      if (kwoState.step === "entry" || kwoState.step === "done" || kwoState.step === "dismissed") {
+        kwoScreen.innerHTML = kwoEntryScreen();
+        kwoOverlay.innerHTML = kwoState.step === "entry" && kwoState.origin === "trade" ? kwoSheet() : "";
+      } else if (kwoState.step === "venue" || kwoState.step === "unlocked") {
+        kwoScreen.innerHTML = kwoEntryScreen();
+        kwoOverlay.innerHTML = kwoSheet();
+      } else {
+        kwoScreen.innerHTML = kwoEntryScreen();
+        kwoOverlay.innerHTML = kwoSheet();
+      }
+
+      const hasBackStep = ["explain", "passkey", "link", "unlock"].includes(kwoState.step);
+      kwoRoot.querySelector(".kwo-header-back").style.display = hasBackStep ? "inline-flex" : "none";
+      if (globalThis.lucide) globalThis.lucide.createIcons({ attrs: { width: 18, height: 18 } });
+    }
+
+    kwoRoot.addEventListener("click", (event) => {
+      const button = event.target.closest("button");
+      if (!button) return;
+
+      if (button.dataset.origin) {
+        kwoState.origin = button.dataset.origin;
+        kwoState.step = "entry";
+      } else if (button.dataset.mode) {
+        kwoState.mode = button.dataset.mode;
+        kwoState.step = "entry";
+      } else if (button.dataset.action === "start") {
+        kwoState.step = kwoState.mode === "new" ? "explain" : "unlock";
+      } else if (button.dataset.action === "passkey") {
+        kwoState.step = "passkey";
+      } else if (button.dataset.action === "create-passkey") {
+        kwoState.step = "link";
+      } else if (button.dataset.action === "sign-link") {
+        kwoState.step = kwoState.origin === "trade" ? "venue" : "ready";
+      } else if (button.dataset.action === "unlock-wallet") {
+        kwoState.step = kwoState.origin === "trade" ? "venue" : "unlocked";
+      } else if (button.dataset.action === "unlocked-continue") {
+        kwoState.step = kwoState.origin === "trade" ? "venue" : "done";
+      } else if (button.dataset.action === "deposit") {
+        kwoState.step = "done";
+      } else if (button.dataset.action === "finish") {
+        kwoState.step = "done";
+      } else if (button.dataset.action === "cancel") {
+        kwoState.step = "dismissed";
+      } else if (button.dataset.action === "back") {
+        const backSteps = { explain: "entry", passkey: "explain", link: "passkey" };
+        kwoState.step = backSteps[kwoState.step] ?? "entry";
+      } else if (button.classList.contains("kwo-outcome")) {
+        if (kwoState.mode === "new") kwoState.step = "explain";
+        else kwoState.step = "unlock";
+      }
+      kwoRender();
+    });
+
+    kwoRender();
+  </script>
+</div>

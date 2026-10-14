@@ -1,0 +1,195 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider     = "sqlite"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model TranslatablePost {
+  id       String @id @default(cuid())
+  uri      String @unique
+  language String
+
+  translation PostTranslation[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([uri])
+}
+
+model PostTranslation {
+  id       String @id @default(cuid())
+  language String
+  text     String
+
+  service String @default("GOOGLE")
+
+  postUri String
+  post    TranslatablePost @relation(fields: [postUri], references: [uri], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([postUri])
+  @@index([postUri, language, service], name: "unique_translation")
+}
+
+model Poll {
+  id      String @id // provided by client, since it needs to be made after posting
+  postUri String
+
+  question String
+  q1       String
+  q2       String
+  q3       String
+  q4       String
+
+  votes PollVote[]
+
+  user    User   @relation(fields: [userDid], references: [did])
+  userDid String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([postUri])
+  @@index([userDid])
+}
+
+model PollVote {
+  id String @id @default(cuid())
+
+  pollId  String
+  poll    Poll   @relation(fields: [pollId], references: [id], onDelete: Cascade)
+  choice  Int
+  userIp  String
+  userKey String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([pollId, userIp])
+  @@index([pollId])
+}
+
+model PushToken {
+  id String @id @default(cuid())
+
+  did  String
+  user User   @relation(fields: [did], references: [did], onDelete: Cascade)
+
+  platform String
+  token    String
+
+  disabled Boolean @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([did, platform])
+  @@index([did, platform])
+}
+
+model User {
+  did String @id
+
+  tokens    PushToken[]
+  mutes     Mute[]
+  muteLists MuteList[]
+
+  polls       Poll[]
+  evmWallet   EvmWallet?
+  marketPosts MarketPost[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model EvmWallet {
+  id      String  @id @default(cuid())
+  // Historical rows can be detached; the ATProto record selects the active
+  // wallet.
+  userDid String? @unique
+  user    User?   @relation(fields: [userDid], references: [did], onDelete: Cascade)
+
+  address String @unique
+
+  polymarketDepositWalletAddress         String?   @unique
+  polymarketDepositWalletTransactionId   String?
+  polymarketDepositWalletDeployStartedAt DateTime?
+
+  // Legacy server-custodied key material. Client-custodied wallets leave these
+  // null: the private key is derived from a passkey on the device and never
+  // reaches the server.
+  encryptedPrivateKey String?
+  privateKeyNonce     String?
+  encryptedDek        String?
+  dekNonce            String?
+  encryptionVersion   Int?
+
+  // Existing wallets are already provisioned; new wallets explicitly set this false.
+  initialFundingComplete   Boolean   @default(true)
+  initialFundingLockAt     DateTime?
+  initialMonFundingTxHash  String?
+  initialUsdcFundingTxHash String?
+
+  polymarketInitialFundingComplete   Boolean   @default(false)
+  polymarketInitialFundingLockAt     DateTime?
+  polymarketInitialPolFundingTxHash  String?
+  polymarketInitialPusdFundingTxHash String?
+  polymarketInitialDepositComplete   Boolean   @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Serializes admin-wallet transaction submission across API instances.
+model EvmFundingNonceLock {
+  id       String    @id
+  lockedAt DateTime?
+}
+
+model MarketPost {
+  postUri       String  @id
+  postCid       String?
+  marketAddress String
+  chainId       Int
+  marketTxHash  String
+  ownerDid      String
+  owner         User    @relation(fields: [ownerDid], references: [did], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([chainId, marketAddress])
+  @@index([ownerDid])
+}
+
+model Mute {
+  did String @id
+
+  user    User   @relation(fields: [userDid], references: [did])
+  userDid String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userDid])
+}
+
+model MuteList {
+  uri String @id
+
+  user    User   @relation(fields: [userDid], references: [did])
+  userDid String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userDid])
+}

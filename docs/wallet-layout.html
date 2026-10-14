@@ -1,0 +1,411 @@
+<div id="kites-wallet-preview" class="kw-preview" aria-label="Kites Wallet screen preview">
+  <style>
+    #kites-wallet-preview {
+      color-scheme: light dark;
+      --kw-background: light-dark(#ffffff, #000000);
+      --kw-surface: light-dark(#ffffff, #1c1c1e);
+      --kw-secondary-surface: light-dark(#f2f2f7, #2c2c2e);
+      --kw-foreground: light-dark(#111111, #f5f5f7);
+      --kw-muted: light-dark(#6d6d72, #a1a1a6);
+      --kw-border: light-dark(#d2d2d7, #3a3a3c);
+      --kw-primary: light-dark(#007aff, #0a84ff);
+      width: min(100%, 396px);
+      margin: 0 auto;
+      color: var(--kw-foreground);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    }
+
+    #kites-wallet-preview * { box-sizing: border-box; }
+
+    #kites-wallet-preview .kw-device {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--kw-border);
+      border-radius: 28px;
+      background: var(--kw-background);
+      box-shadow: 0 14px 42px light-dark(rgb(0 0 0 / 12%), rgb(0 0 0 / 45%));
+    }
+
+    #kites-wallet-preview .kw-status {
+      display: flex;
+      min-height: 34px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 7px 22px 1px;
+      color: var(--kw-foreground);
+      font-size: 11px;
+      font-weight: 650;
+      letter-spacing: 0.015em;
+    }
+
+    #kites-wallet-preview .kw-status-icons {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--kw-muted);
+      font-size: 10px;
+    }
+
+    #kites-wallet-preview .kw-header {
+      display: flex;
+      min-height: 58px;
+      align-items: center;
+      padding: 4px 20px 10px;
+    }
+
+    #kites-wallet-preview .kw-title {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 650;
+      letter-spacing: -0.035em;
+    }
+
+    #kites-wallet-preview .kw-tabs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 0 16px;
+      border-bottom: 1px solid var(--kw-border);
+    }
+
+    #kites-wallet-preview .kw-tab {
+      position: relative;
+      min-height: 46px;
+      border: 0;
+      background: transparent;
+      color: var(--kw-muted);
+      font: inherit;
+      font-size: 14px;
+      font-weight: 550;
+      cursor: pointer;
+    }
+
+    #kites-wallet-preview .kw-tab[aria-selected="true"] {
+      color: var(--kw-foreground);
+      font-weight: 650;
+    }
+
+    #kites-wallet-preview .kw-tab[aria-selected="true"]::after {
+      position: absolute;
+      right: 18px;
+      bottom: -1px;
+      left: 18px;
+      height: 2px;
+      border-radius: 2px 2px 0 0;
+      background: var(--kw-primary);
+      content: "";
+    }
+
+    #kites-wallet-preview .kw-content {
+      min-height: 520px;
+      padding: 18px 16px 24px;
+    }
+
+    #kites-wallet-preview .kw-empty {
+      display: flex;
+      min-height: 462px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 16px;
+      text-align: center;
+    }
+
+    #kites-wallet-preview .kw-empty-icon {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 17px;
+      place-items: center;
+      color: var(--kw-muted);
+    }
+
+    #kites-wallet-preview .kw-heading {
+      max-width: 300px;
+      margin: 0;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      line-height: 1.3;
+    }
+
+    #kites-wallet-preview .kw-description {
+      max-width: 300px;
+      margin: 9px 0 19px;
+      color: var(--kw-muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    #kites-wallet-preview .kw-primary {
+      display: inline-flex;
+      min-height: 42px;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 18px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--kw-primary);
+      color: #ffffff;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 650;
+      cursor: pointer;
+    }
+
+    #kites-wallet-preview .kw-balance-view { display: grid; gap: 16px; }
+
+    #kites-wallet-preview .kw-intro {
+      margin: 1px 2px 0;
+      color: var(--kw-muted);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    #kites-wallet-preview .kw-deposit {
+      width: 100%;
+      min-height: 43px;
+    }
+
+    #kites-wallet-preview .kw-chain { margin: 1px 0 0; }
+
+    #kites-wallet-preview .kw-chain-title {
+      margin: 0 2px 8px;
+      color: var(--kw-muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    #kites-wallet-preview .kw-token-list {
+      overflow: hidden;
+      border: 1px solid var(--kw-border);
+      border-radius: 17px;
+      background: var(--kw-surface);
+    }
+
+    #kites-wallet-preview .kw-token-row {
+      position: relative;
+      display: flex;
+      min-height: 64px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 9px 12px 9px 15px;
+    }
+
+    #kites-wallet-preview .kw-token-row + .kw-token-row::before {
+      position: absolute;
+      top: 0;
+      right: 15px;
+      left: 15px;
+      height: 1px;
+      background: var(--kw-border);
+      content: "";
+    }
+
+    #kites-wallet-preview .kw-token-info { min-width: 0; }
+
+    #kites-wallet-preview .kw-token-symbol {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 650;
+    }
+
+    #kites-wallet-preview .kw-token-description {
+      margin: 2px 0 0;
+      color: var(--kw-muted);
+      font-size: 11px;
+      line-height: 1.25;
+    }
+
+    #kites-wallet-preview .kw-token-actions {
+      display: flex;
+      flex: none;
+      align-items: center;
+      gap: 9px;
+    }
+
+    #kites-wallet-preview .kw-amount {
+      min-width: 35px;
+      font-size: 14px;
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+    }
+
+    #kites-wallet-preview .kw-send {
+      min-height: 33px;
+      padding: 0 12px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--kw-secondary-surface);
+      color: var(--kw-foreground);
+      font: inherit;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    #kites-wallet-preview .kw-compose {
+      position: absolute;
+      right: 18px;
+      bottom: 82px;
+      z-index: 2;
+      display: grid;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      border: 0;
+      border-radius: 17px;
+      background: var(--kw-primary);
+      color: #ffffff;
+      box-shadow: 0 4px 12px light-dark(rgb(0 0 0 / 18%), rgb(0 0 0 / 50%));
+      cursor: pointer;
+    }
+
+    #kites-wallet-preview .kw-bottom-nav {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      min-height: 72px;
+      align-items: center;
+      padding: 6px 5px 9px;
+      border-top: 1px solid var(--kw-border);
+      background: var(--kw-surface);
+    }
+
+    #kites-wallet-preview .kw-nav-item {
+      display: flex;
+      min-width: 0;
+      min-height: 48px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      border: 0;
+      background: transparent;
+      color: var(--kw-muted);
+      font: inherit;
+      font-size: 9px;
+      cursor: pointer;
+    }
+
+    #kites-wallet-preview .kw-nav-item[aria-current="page"] {
+      color: var(--kw-primary);
+      font-weight: 650;
+    }
+
+    @media (max-width: 360px) {
+      #kites-wallet-preview .kw-content { padding-right: 12px; padding-left: 12px; }
+      #kites-wallet-preview .kw-nav-item { font-size: 8px; }
+      #kites-wallet-preview .kw-token-actions { gap: 6px; }
+    }
+  </style>
+
+  <div class="kw-device">
+    <div class="kw-status" aria-hidden="true">
+      <span>9:41</span>
+      <span class="kw-status-icons"><span>●●●</span><span>Wi-Fi</span><span>▰</span></span>
+    </div>
+
+    <header class="kw-header"><h1 class="kw-title">Wallet</h1></header>
+
+    <div class="kw-tabs" role="tablist" aria-label="Wallet sections">
+      <button class="kw-tab" id="kw-balances-tab" type="button" role="tab" aria-controls="kw-panel" aria-selected="true">Balances</button>
+      <button class="kw-tab" id="kw-positions-tab" type="button" role="tab" aria-controls="kw-panel" aria-selected="false">Positions</button>
+    </div>
+
+    <main id="kw-panel" class="kw-content" role="tabpanel" aria-labelledby="kw-balances-tab" aria-live="polite"></main>
+
+    <button class="kw-compose" type="button" aria-label="Create a post">
+      <i data-lucide="square-pen" aria-hidden="true"></i>
+    </button>
+
+    <nav class="kw-bottom-nav" aria-label="Main navigation">
+      <button class="kw-nav-item" type="button" aria-label="Feeds"><i data-lucide="cloud" aria-hidden="true"></i><span>Feeds</span></button>
+      <button class="kw-nav-item" type="button" aria-label="Search"><i data-lucide="search" aria-hidden="true"></i><span>Search</span></button>
+      <button class="kw-nav-item" type="button" aria-label="Wallet" aria-current="page"><i data-lucide="wallet" aria-hidden="true"></i><span>Wallet</span></button>
+      <button class="kw-nav-item" type="button" aria-label="Notifications"><i data-lucide="bell" aria-hidden="true"></i><span>Notifications</span></button>
+      <button class="kw-nav-item" type="button" aria-label="Profile"><i data-lucide="user-round" aria-hidden="true"></i><span>Profile</span></button>
+    </nav>
+  </div>
+
+  <script src="https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js"></script>
+  <script>
+    const kwRoot = document.getElementById("kites-wallet-preview");
+    const kwState = { walletState: "not-created", activeTab: "balances" };
+    const kwPanel = kwRoot.querySelector("#kw-panel");
+    const kwBalancesTab = kwRoot.querySelector("#kw-balances-tab");
+    const kwPositionsTab = kwRoot.querySelector("#kw-positions-tab");
+
+    function kwRender() {
+      const onBalances = kwState.activeTab === "balances";
+      kwBalancesTab.setAttribute("aria-selected", String(onBalances));
+      kwPositionsTab.setAttribute("aria-selected", String(!onBalances));
+      kwPanel.setAttribute("aria-labelledby", onBalances ? "kw-balances-tab" : "kw-positions-tab");
+
+      if (kwState.walletState === "not-created" && onBalances) {
+        kwPanel.innerHTML = `
+          <section class="kw-empty">
+            <div class="kw-empty-icon"><i data-lucide="wallet" aria-hidden="true"></i></div>
+            <h2 class="kw-heading">No wallet is linked to this account yet.</h2>
+            <p class="kw-description">Set up a passkey wallet to deposit, send funds, and trade. You can keep browsing without one.</p>
+            <button class="kw-primary" type="button" data-action="setup">Set up wallet</button>
+          </section>`;
+      } else if (!onBalances) {
+        kwPanel.innerHTML = `
+          <section class="kw-empty">
+            <div class="kw-empty-icon"><i data-lucide="chart-no-axes-column-increasing" aria-hidden="true"></i></div>
+            <h2 class="kw-heading">No open positions yet.</h2>
+            <p class="kw-description">Your active positions across supported markets will appear here.</p>
+            <button class="kw-primary" type="button">Explore markets</button>
+          </section>`;
+      } else {
+        kwPanel.innerHTML = `
+          <section class="kw-balance-view">
+            <p class="kw-intro">Balances are shown separately for each network.</p>
+            <button class="kw-primary kw-deposit" type="button">Deposit</button>
+            <section class="kw-chain" aria-label="Monad Testnet balances">
+              <h2 class="kw-chain-title">Monad Testnet</h2>
+              <div class="kw-token-list">
+                <div class="kw-token-row"><div class="kw-token-info"><h3 class="kw-token-symbol">MON</h3><p class="kw-token-description">Native network token</p></div><div class="kw-token-actions"><span class="kw-amount">0</span><button class="kw-send" type="button">Send</button></div></div>
+                <div class="kw-token-row"><div class="kw-token-info"><h3 class="kw-token-symbol">USDC</h3><p class="kw-token-description">Protocol collateral</p></div><div class="kw-token-actions"><span class="kw-amount">0</span><button class="kw-send" type="button">Send</button></div></div>
+                <div class="kw-token-row"><div class="kw-token-info"><h3 class="kw-token-symbol">AUSD</h3><p class="kw-token-description">Agora USD</p></div><div class="kw-token-actions"><span class="kw-amount">0</span><button class="kw-send" type="button">Send</button></div></div>
+              </div>
+            </section>
+            <section class="kw-chain" aria-label="Polygon balances">
+              <h2 class="kw-chain-title">Polygon</h2>
+              <div class="kw-token-list">
+                <div class="kw-token-row"><div class="kw-token-info"><h3 class="kw-token-symbol">POL</h3><p class="kw-token-description">Native network token</p></div><div class="kw-token-actions"><span class="kw-amount">0</span><button class="kw-send" type="button">Send</button></div></div>
+                <div class="kw-token-row"><div class="kw-token-info"><h3 class="kw-token-symbol">pUSD</h3><p class="kw-token-description">Polymarket USD</p></div><div class="kw-token-actions"><span class="kw-amount">0</span><button class="kw-send" type="button">Send</button></div></div>
+                <div class="kw-token-row"><div class="kw-token-info"><h3 class="kw-token-symbol">USDC</h3><p class="kw-token-description">USD Coin</p></div><div class="kw-token-actions"><span class="kw-amount">0</span><button class="kw-send" type="button">Send</button></div></div>
+                <div class="kw-token-row"><div class="kw-token-info"><h3 class="kw-token-symbol">USDC.e</h3><p class="kw-token-description">Bridged USD Coin</p></div><div class="kw-token-actions"><span class="kw-amount">0</span><button class="kw-send" type="button">Send</button></div></div>
+              </div>
+            </section>
+          </section>`;
+      }
+
+      if (globalThis.lucide) globalThis.lucide.createIcons({ attrs: { width: 18, height: 18 } });
+    }
+
+    kwBalancesTab.addEventListener("click", () => { kwState.activeTab = "balances"; kwRender(); });
+    kwPositionsTab.addEventListener("click", () => { kwState.activeTab = "positions"; kwRender(); });
+    kwPanel.addEventListener("click", (event) => {
+      if (event.target.closest('[data-action="setup"]')) {
+        kwState.walletState = "wallet-ready";
+        kwState.activeTab = "balances";
+        kwRender();
+      }
+    });
+
+    kwRender();
+
+    if (globalThis.Tweak) {
+      const kwTweak = new Tweak({ container: kwRoot, onChange: kwRender });
+      kwTweak.addSelect(kwState, "walletState", {
+        label: "Wallet state",
+        options: [
+          { label: "First visit", value: "not-created" },
+          { label: "Wallet ready, no funds", value: "wallet-ready" }
+        ]
+      });
+    }
+  </script>
+</div>

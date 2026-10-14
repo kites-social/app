@@ -1,0 +1,5865 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2024-02-15 13:07+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: hr\n"
+"Project-Id-Version: Kites\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2025-09-21 14:10\n"
+"Last-Translator: \n"
+"Language-Team: Croatian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: src/components/wallet-activity-preview.tsx:110
+msgid "{0}"
+msgstr ""
+
+#: src/components/notification/index.tsx:175
+msgid "{0} @{1}"
+msgstr "{0} @{1}"
+
+#: src/app/pro.tsx:217
+msgid "{0} / month"
+msgstr "{0} / mjesečno"
+
+#: src/app/pro.tsx:250
+msgid "{0} / year"
+msgstr "{0} / godina"
+
+#: src/components/notification/index.tsx:219
+msgid "{0} and {1}"
+msgstr ""
+
+#: src/app/polymarket-event.tsx:148
+msgid "{0} markets"
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/index.tsx:292
+#~ msgid "{0} posts"
+#~ msgstr ""
+
+#: src/components/notification/index.tsx:224
+msgid "{2} and {3} others"
+msgstr ""
+
+#: src/lib/utils/time.ts:43
+msgid "{days} days ago"
+msgstr "prije {days} dana"
+
+#: src/lib/utils/time.ts:40
+msgid "{days}d"
+msgstr "{days}d"
+
+#: src/lib/utils/time.ts:54
+msgid "{hours} hours ago"
+msgstr "prije {hours} sati"
+
+#: src/lib/utils/time.ts:51
+msgid "{hours}h"
+msgstr "{hours}h"
+
+#: src/lib/composer/market-proposal-panel.tsx:278
+msgid "{MARKET_FUNDING_WINDOW_DAYS} days"
+msgstr ""
+
+#: src/lib/utils/time.ts:65
+msgid "{minutes} minutes ago"
+msgstr "prije {minutes} minuta"
+
+#: src/lib/utils/time.ts:62
+msgid "{minutes}m"
+msgstr "{minutes}m"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/tag/[tag].tsx:195
+msgid "{modeName} feed for #{decodedTag} is empty"
+msgstr "{modeName} feed za #{decodedTag} je prazan"
+
+#: src/lib/utils/time.ts:32
+msgid "{months} months ago"
+msgstr "prije {months} mjeseca"
+
+#: src/lib/utils/time.ts:29
+msgid "{months}M"
+msgstr "{months}mj"
+
+#: src/components/feed-row.tsx:103
+#: src/components/feed-row.tsx:109
+msgid "{name} feed"
+msgstr "{name} feed"
+
+#: src/components/feed-row.tsx:106
+msgid "{name} feed by @{0}, {1} likes"
+msgstr "{name} feed od @{0}, {1} lajk"
+
+#: src/components/feed-row.tsx:108
+msgid "{name} list by @{0}"
+msgstr "{name} lista od @{0}"
+
+#: src/lib/utils/time.ts:74
+msgid "{secondsAgo} seconds ago"
+msgstr "{secondsAgo} sekundi"
+
+#: src/lib/utils/time.ts:71
+msgid "{secondsAgo}s"
+msgstr "{secondsAgo}s"
+
+#: src/lib/web3/custody/context.tsx:176
+msgid "{venueName} setup complete"
+msgstr ""
+
+#: src/lib/web3/custody/context.tsx:174
+msgid "{venueName} setup is waiting"
+msgstr ""
+
+#: src/lib/web3/custody/context.tsx:177
+msgid "{venueName} setup needs attention"
+msgstr ""
+
+#: src/lib/utils/time.ts:21
+msgid "{years} years ago"
+msgstr "{years} godina"
+
+#: src/lib/utils/time.ts:18
+msgid "{years}y"
+msgstr "{years}g"
+
+#: src/lib/account-actions.ts:97
+msgid "@{handle} has been blocked"
+msgstr "@{handle} vas je blokirao"
+
+#: src/lib/account-actions.ts:143
+msgid "@{handle} has been unblocked"
+msgstr "@{handle} vas je odblokirao"
+
+#: src/lib/account-actions.ts:54
+msgid "@{handle} is no longer muted"
+msgstr "@{handle} više nije utišan"
+
+#. This is the text from the notification tab. examples: 'Paul liked your post', 'Alice and Bob reposted your post', 'Eric and 4 others followed you'
+#: src/components/notification/index.tsx:223
+#~ msgid "<0>{0, plural, =1 {{1}} =2 {{2} and {3}} other {{4} and {5} others}}</0><1>{6}</1>"
+#~ msgstr ""
+
+#: src/components/drawer/actor-details.tsx:49
+#: src/components/screens/profile/profile-info.tsx:556
+msgid "<0>{0}</0> Followers"
+msgstr "<0>{0}</0> Pratitelja"
+
+#: src/components/drawer/actor-details.tsx:56
+#: src/components/screens/profile/profile-info.tsx:567
+msgid "<0>{0}</0> Following"
+msgstr "<0>{0}</0> Pratite"
+
+#: src/components/screens/profile/profile-info.tsx:575
+msgid "<0>{0}</0> Posts"
+msgstr "<0>{0}</0> Objavi"
+
+#. This is the text from the notification tab. examples: 'Paul liked your post', 'Alice and Bob reposted your post', 'Eric and 4 others followed you'
+#: src/components/notification/index.tsx:204
+msgid "<0>{4}</0><1>{5}</1>"
+msgstr ""
+
+#. be very careful not to leave spaces between the elements
+#: src/app/capture/[author]/[post].tsx:117
+#~ msgid "<0>a bluesky post, via</0><1/><2>kites.social</2>"
+#~ msgstr "<0>bluesky objava, putem</0><1/><2>kites.social</2>"
+
+#. be very careful not to leave spaces between the elements
+#: src/app/capture/[author]/[post].tsx:117
+msgid "<0>a Kites post, via</0><1/><2>kites.social</2>"
+msgstr ""
+
+#: src/lib/utils/time.ts:42
+msgid "1 day ago"
+msgstr "prije 1 dan"
+
+#: src/lib/utils/time.ts:53
+msgid "1 hour ago"
+msgstr "prije 1 sat"
+
+#: src/lib/utils/time.ts:64
+msgid "1 minute ago"
+msgstr "prije 1 minutu"
+
+#: src/lib/utils/time.ts:31
+msgid "1 month ago"
+msgstr "prije mjesec dana"
+
+#: src/app/(auth)/sign-up.tsx:160
+#~ msgid "1 of 3"
+#~ msgstr ""
+
+#: src/lib/utils/time.ts:73
+msgid "1 second ago"
+msgstr "prije 1 sekunde"
+
+#: src/lib/utils/time.ts:20
+msgid "1 year ago"
+msgstr "prije 1 godine"
+
+#: src/app/wallet-link.tsx:295
+msgid "1. Read this record from the PDS for the DID in its AT URI."
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:276
+msgid "2 minutes (development)"
+msgstr ""
+
+#: src/app/(auth)/sign-up.tsx:273
+#~ msgid "2 of 3"
+#~ msgstr ""
+
+#: src/app/wallet-link.tsx:300
+msgid "2. Confirm proof.did matches that DID, and proof.address matches the record's address."
+msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:388
+msgid "24 hours ago"
+msgstr ""
+
+#: src/app/(auth)/sign-up.tsx:376
+#~ msgid "3 of 3"
+#~ msgstr ""
+
+#: src/app/wallet-link.tsx:306
+msgid "3. Recover the signer using the domain and WalletLink typed message shown above. It must equal the recorded address."
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:186
+#~ msgid "5 days"
+#~ msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:268
+msgid "A {0} transfer is awaiting confirmation."
+msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:175
+#~ msgid "A {bondText} USDC resolver bond is required. The app may first approve the resolution hub to transfer it; the contract determines whether the bond is returned or slashed."
+#~ msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:173
+#~ msgid "A {bondText} USDC resolver bond is required. The contract determines whether it is returned or slashed."
+#~ msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:180
+msgid "A {bondText} USDC resolver bond is required. The contract determines whether the bond is returned or slashed."
+msgstr ""
+
+#: src/app/(auth)/sign-up.tsx:341
+#~ msgid "A code has been sent to {phone}. <0>Change phone number.</0>"
+#~ msgstr ""
+
+#: src/app/market-rules.tsx:21
+msgid "A final review may be requested"
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:168
+msgid "A market is created on Monad Testnet by your linked wallet."
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:113
+#~ msgid "A market is created on Monad Testnet by your linked wallet. MON is needed for gas."
+#~ msgstr ""
+
+#: src/app/composer/index.tsx:298
+msgid "A market transaction has already been submitted. Discarding this post will leave that market unattached."
+msgstr ""
+
+#: src/app/composer/propose-market.tsx:93
+msgid "A market transaction has already been submitted. Leaving now will leave that market unattached to this post."
+msgstr ""
+
+#: src/app/market-rules.tsx:9
+msgid "A result is proposed"
+msgstr ""
+
+#: src/app/settings/_layout.tsx:130
+#: src/lib/quick-actions.ts:65
+msgid "About"
+msgstr "Više o"
+
+#: src/app/settings/index.tsx:87
+msgid "About Kites"
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:154
+#~ msgid "About this setup"
+#~ msgstr ""
+
+#: src/app/settings/pro.tsx:53
+msgid "Accent colour"
+msgstr "Boja detalja"
+
+#: src/app/settings/app.tsx:107
+msgid "Accessibility"
+msgstr "Pristupačnost"
+
+#: src/app/settings/index.tsx:38
+msgid "Account"
+msgstr "Račun"
+
+#: src/components/widgets/markets/perpetual/market.tsx:829
+#~ msgid "Account {0}"
+#~ msgstr ""
+
+#: src/app/settings/account/delete-account.tsx:226
+msgid "Account deleted. Goodbye!"
+msgstr "Račun izbrisan. Doviđenja!"
+
+#: src/components/widgets/markets/perpetual/market.tsx:288
+#~ msgid "Account details"
+#~ msgstr ""
+
+#: src/app/settings/account/index.tsx:28
+msgid "Account Details"
+msgstr "Detalji računa"
+
+#: src/components/widgets/markets/perpetual/market.tsx:849
+#~ msgid "Account frozen"
+#~ msgstr ""
+
+#: src/app/settings/_layout.tsx:76
+msgid "Account Settings"
+msgstr "Postavke računa"
+
+#: src/app/wallet-activity.tsx:43
+msgid "Activity"
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:113
+#~ msgid "Add"
+#~ msgstr ""
+
+#: src/app/add-to-list/[handle].tsx:124
+msgid "Add {0} to List"
+msgstr "Dodaj {0} na listu"
+
+#: src/app/composer/index.tsx:1072
+msgid "Add a content warning"
+msgstr "Dodajte upozorenje o sadržaju"
+
+#: src/lib/composer/alt-text-editor.tsx:154
+msgid "Add a description to the image. Good alt text is concise yet detailed. Make sure to write out any text in the image itself."
+msgstr "Dodajte opis slike. Dobar alternativni tekst je sažet i detaljan. Obavezno ga napišite na samoj slici."
+
+#: src/components/switch-accounts.tsx:167
+msgid "Add another account"
+msgstr "Dodajte drugi račun"
+
+#: src/components/wallet-venue-balances.tsx:182
+#~ msgid "Add collateral"
+#~ msgstr ""
+
+#: src/app/composer/index.tsx:882
+msgid "Add embed for <0>{potential}</0>"
+msgstr "Dodaj post na web <0>{potential}</0>"
+
+#: src/lib/composer/keyboard-accessory.tsx:97
+msgid "Add image"
+msgstr "Dodaj sliku"
+
+#: src/app/composer/index.tsx:857
+msgid "Add market widget for <0>${ticker}</0>"
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:297
+msgid "Add to favourites"
+msgstr "Dodaj u favorite"
+
+#: src/components/screens/profile/profile-info.tsx:820
+msgid "Add to list"
+msgstr "Dodaj na listu"
+
+#: src/app/_layout.tsx:536
+msgid "Add to List"
+msgstr "Dodaj na popis"
+
+#: src/app/add-to-list/[handle].tsx:155
+msgid "Add to moderation list"
+msgstr "Dodaj na moderiranu listu"
+
+#: src/app/add-to-list/[handle].tsx:146
+msgid "Add to user list"
+msgstr "Dodaj na korisnikovu listu"
+
+#: src/app/composer/index.tsx:315
+#~ msgid "Adding a description to your image makes Bluesky more accessible to people with disabilities, and helps give context to everyone. We strongly recommend adding alt text to all images."
+#~ msgstr "Dodavanje opisa vašoj slici čini Bluesky pristupačniji osobama s invaliditetom i pomaže dati kontekst svima. Toplo preporučujemo dodavanje alternativnog teksta svim slikama."
+
+#: src/app/composer/index.tsx:343
+msgid "Adding a description to your image makes Kites more accessible to people with disabilities, and helps give context to everyone. We strongly recommend adding alt text to all images."
+msgstr ""
+
+#: src/components/deposit-modal.tsx:50
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:501
+msgid "Address copied"
+msgstr ""
+
+#: src/app/composer/content-warning.tsx:47
+msgid "Adult content"
+msgstr "Sadržaj za odrasle"
+
+#: src/app/settings/account/index.tsx:52
+msgid "Advanced Settings"
+msgstr "Napredne postavke"
+
+#: src/app/market-rules.tsx:10
+msgid "After trading ends, anyone can propose YES, NO, or Cancelled based on the market's published rules."
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/feeds/index.tsx:193
+#: src/components/feeds-button.tsx:217
+msgid "All feeds"
+msgstr "Svi feedovi"
+
+#: src/app/composer/language.tsx:98
+msgid "All languages"
+msgstr "Svi jezici"
+
+#: src/lib/composer/market-proposal-panel.tsx:535
+msgid "Allocation details could not be loaded. Open the market and refresh its data."
+msgstr ""
+
+#: src/app/settings/app.tsx:47
+msgid "Allows you to manually sort non-favourite feeds in the feeds tab"
+msgstr "Omogućuje vam ručno sortiranje neomiljenih feedova na feed tabu"
+
+#: src/app/composer/index.tsx:717
+msgid "Alt"
+msgstr "Alt"
+
+#: src/components/image-viewer.tsx:160
+msgid "ALT"
+msgstr "ALT"
+
+#: src/components/embed/image.tsx:219
+msgid "ALT text"
+msgstr "ALT tekst"
+
+#: src/components/image-viewer.tsx:191
+msgid "ALT Text"
+msgstr "ALT Tekst"
+
+#: src/app/market-trade.tsx:1197
+#: src/components/perpl-collateral-modal.tsx:359
+#: src/components/polymarket-withdraw-modal.tsx:450
+#: src/components/venue-funding-modal.tsx:457
+#: src/components/venue-funding-modal.tsx:526
+msgid "Amount"
+msgstr ""
+
+#: src/components/send-token-modal.tsx:593
+msgid "Amount ({0})"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:417
+msgid "Amount exceeds the remaining funding goal."
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:425
+msgid "Amount exceeds your available USDC balance."
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:400
+#~ msgid "Amount in pUSD"
+#~ msgstr ""
+
+#: src/components/send-token-modal.tsx:596
+msgid "Amount to send"
+msgstr ""
+
+#: src/components/error-boundary.tsx:22
+#: src/components/query-without-data.tsx:22
+#: src/components/screens/change-password-flow.tsx:78
+#: src/components/translation.tsx:165
+msgid "An error occurred"
+msgstr "Došlo je do greške"
+
+#: src/components/image-with-context-menu.tsx:142
+msgid "An error occurred while trying to copy the image"
+msgstr "Pojavila se greška prilikom pokušaja kopiranja slike"
+
+#: src/components/image-with-context-menu.tsx:174
+msgid "An error occurred while trying to save the image"
+msgstr "Pojavila se greška prilikom pokušaja spremanja slike"
+
+#: src/components/image-with-context-menu.tsx:198
+msgid "An error occurred while trying to share the image"
+msgstr "Pojavila se greška prilikom pokušaja djeljenja slike"
+
+#: src/app/wallet-link.tsx:199
+msgid "An ISO timestamp derived from the signed issuedAt value. It is not a separate signed field."
+msgstr ""
+
+#: src/app/composer/index.tsx:549
+#: src/app/composer/propose-market.tsx:299
+msgid "An unknown error occurred"
+msgstr "Došlo je do nepoznate greške"
+
+#: src/app/settings/account/change-handle.tsx:58
+msgid "An unknown error occurred."
+msgstr "Došlo je do nepoznate greške."
+
+#: src/app/pro.tsx:232
+msgid "Annual Plan"
+msgstr "Godišnji plan"
+
+#: src/components/post-context-menu.tsx:137
+msgid "Anti-Social Behavior"
+msgstr "Antisocijalno ponašanje"
+
+#: src/app/settings/about.tsx:180
+msgid "App info"
+msgstr "Informacije o aplikaciji"
+
+#: src/app/settings/language/index.tsx:47
+#: src/app/settings/language/index.tsx:50
+msgid "App language"
+msgstr "Jezik aplikacije"
+
+#: src/app/(auth)/sign-in.tsx:139
+msgid "App Password"
+msgstr "Lozinka aplikacije"
+
+#: src/app/(auth)/sign-in.tsx:177
+msgid "App Passwords"
+msgstr "Lozinka aplikacije"
+
+#: src/app/settings/index.tsx:58
+msgid "App settings"
+msgstr "Postavke aplikacije"
+
+#: src/app/settings/_layout.tsx:118
+msgid "App Settings"
+msgstr "Postavke aplikacije"
+
+#: src/app/market-trade.tsx:1468
+msgid "Apply"
+msgstr ""
+
+#: src/app/market-trade.tsx:1348
+msgid "Approx. at displayed price"
+msgstr ""
+
+#: src/lib/account-actions.ts:71
+msgid "Are you sure you want to block @{handle}?"
+msgstr "Sigurno želite blokirati @{handle}?"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:330
+msgid "Are you sure you want to delete this list?"
+msgstr "Jeste li sigurni da želite izbrisati ovaj popis?"
+
+#: src/components/post-context-menu.tsx:88
+msgid "Are you sure you want to delete this post?"
+msgstr "Jeste li sigurni da želite izbrisati ovu objavu?"
+
+#: src/lib/account-actions.ts:117
+msgid "Are you sure you want to unblock @{handle}?"
+msgstr "Sigurno želite odblokirati @{handle}?"
+
+#: src/components/order-book-panel.tsx:243
+msgid "Ask"
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:355
+#~ msgid "Asset"
+#~ msgstr ""
+
+#: src/app/market-trade.tsx:1484
+msgid "At 100%, minimum-output protection is disabled."
+msgstr ""
+
+#: src/app/market-trade.tsx:1480
+msgid "At 100%, the most permissive price limit is used."
+msgstr ""
+
+#: src/app/composer/propose-market.tsx:197
+msgid "Attach market"
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:520
+msgid "Attester vote"
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:241
+msgid "AUSD request confirmed"
+msgstr ""
+
+#: src/components/handle-availability.tsx:61
+#: src/components/prediction-market-funding.tsx:406
+msgid "Available"
+msgstr "Dostupno"
+
+#: src/components/perpl-collateral-modal.tsx:334
+#: src/components/venue-funding-modal.tsx:412
+msgid "Available to deposit"
+msgstr ""
+
+#: src/components/perpl-collateral-modal.tsx:336
+#: src/components/polymarket-withdraw-modal.tsx:442
+msgid "Available to withdraw"
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:136
+msgid "Awaiting a resolution proposal"
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:102
+#~ msgid "Awaiting an on-chain resolution update"
+#~ msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:126
+msgid "Awaiting resolution status"
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:122
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:427
+#: src/app/settings/account/delete-account.tsx:203
+#: src/components/screens/change-password-flow.tsx:201
+#: src/components/screens/profile/profile-info.tsx:365
+msgid "Back"
+msgstr "Natrag"
+
+#: src/components/widgets/markets/perpetual/market.tsx:833
+#~ msgid "Balance"
+#~ msgstr ""
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:471
+msgid "Balance unavailable"
+msgstr ""
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:473
+msgid "Balance: {balance}"
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:236
+msgid "Balances"
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:97
+#~ msgid "Balances are shown separately for each network."
+#~ msgstr ""
+
+#: src/app/market-rules.tsx:14
+msgid "Before the deadline, someone else can challenge by proposing a different result. If nobody challenges, the proposal becomes final. If challenged, a group called the Oracle Council votes."
+msgstr ""
+
+#: src/app/market-rules.tsx:14
+#~ msgid "Before the deadline, someone else can challenge by proposing a different result. If nobody challenges, the proposal becomes final. If challenged, the Oracle Council votes."
+#~ msgstr ""
+
+#: src/app/market-rules.tsx:22
+msgid "Before the final deadline, an eligible SPM holder can ask a designated review panel to vote. If no review is requested, the result at this stage becomes final."
+msgstr ""
+
+#: src/app/market-rules.tsx:22
+#~ msgid "Before the final deadline, an eligible SPM holder can ask a panel of attesters to vote. If no review is requested, the result at this stage becomes final."
+#~ msgstr ""
+
+#: src/app/market-rules.tsx:22
+#~ msgid "Before the final deadline, an eligible SPM holder can ask a panel of attesters to vote. If no review is requested, the SPM holders' result becomes final."
+#~ msgstr ""
+
+#: src/app/pro.tsx:107
+msgid "Better translations"
+msgstr "Bolji prijevod"
+
+#: src/components/order-book-panel.tsx:237
+msgid "Bid"
+msgstr ""
+
+#: src/app/pro.tsx:254
+msgid "Billed annually, cancel anytime"
+msgstr "Naplaćuje se godišnje, otkažite bilo kada"
+
+#: src/app/pro.tsx:221
+msgid "Billed monthly, cancel anytime"
+msgstr "Naplaćuje se mjesečno, otkažite bilo kada"
+
+#: src/lib/account-actions.ts:70
+#: src/lib/account-actions.ts:78
+msgid "Block"
+msgstr "Blokiraj"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:219
+msgid "Block all members"
+msgstr "Blokiraj sve korisnike"
+
+#: src/components/post-context-menu.tsx:238
+#: src/components/screens/profile/profile-info.tsx:839
+msgid "Block user"
+msgstr "Blokiraj korisnika"
+
+#: src/app/venue-onboarding/[venueId].tsx:723
+#: src/lib/account-actions.ts:96
+msgid "Blocked"
+msgstr "Blokirani"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/post/[post].tsx:399
+msgid "Blocked post"
+msgstr "Blokirani post"
+
+#: src/app/settings/moderation.tsx:116
+msgid "Blocked users"
+msgstr "Blokirani korisnici"
+
+#: src/app/settings/_layout.tsx:106
+msgid "Blocked Users"
+msgstr "Blokirani korisnici"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:290
+msgid "Blocking list"
+msgstr "Lista blokiranih"
+
+#: src/app/settings/moderation.tsx:113
+msgid "Blocks & Mutes"
+msgstr "Blokirani i utišani"
+
+#: src/app/settings/account/change-handle.tsx:87
+msgid "bsky.social domain"
+msgstr "bsky.social domena"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/feeds/index.tsx:191
+#~ msgid "Built-in feeds"
+#~ msgstr ""
+
+#: src/app/market-trade.tsx:1137
+msgid "Buy"
+msgstr ""
+
+#: src/app/market-trade.tsx:1729
+#: src/app/market-trade.tsx:1734
+msgid "Buy {0}"
+msgstr ""
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:434
+#~ msgid "Buy NO"
+#~ msgstr ""
+
+#: src/app/market-trade.tsx:876
+msgid "Buy order filled"
+msgstr ""
+
+#: src/app/market-trade.tsx:597
+msgid "Buy outcome"
+msgstr ""
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:410
+#~ msgid "Buy YES"
+#~ msgstr ""
+
+#: src/app/market-trade.tsx:1301
+msgid "Buying requires USDC. Selling requires the selected outcome token."
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:469
+msgid "by @{0}"
+msgstr "od {0}"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/feed/[generator]/details.tsx:156
+#: src/app/settings/feed.tsx:227
+msgid "By @{0}"
+msgstr "Od {0}"
+
+#: src/app/settings/account/delete-account.tsx:115
+#~ msgid "By pressing confirm, you understand that this is your actual Bluesky social account you will be deleting, and it is nothing to do with Kites. Your data will be permanently deleted from the official app too."
+#~ msgstr "Pritiskom na potvrdu, prihvačate da će vaš Bluesky račun biti izbisam te da to nema nikakve veze s Kites aplikacijom. Vaši podaci bit će trajno izbrisani i iz službene aplikacije."
+
+#: src/app/settings/account/delete-account.tsx:115
+msgid "By pressing confirm, you understand that this is your actual Kites social account you will be deleting, and it is nothing to do with Kites. Your data will be permanently deleted from the official app too."
+msgstr ""
+
+#: src/app/pro.tsx:316
+msgid "By subscribing, you agree to our <0>Terms and Conditions</0> and <1>Privacy Policy</1>. Subscriptions renew automatically until cancelled."
+msgstr "Pretplatom se slažete s našim <0>Uvjetima i odredbama</0> i <1>Pravilima privatnosti</1>. Pretplata se automatski obnavljaju do otkazivanja."
+
+#: src/app/pro.tsx:281
+msgid "By subscribing, you agree to our <0>Terms and Conditions</0>, the <1>Terms of Use (EULA)</1>, and our <2>Privacy Policy</2>. Subscriptions renew automatically until cancelled."
+msgstr "Pretplatom se slažete s našim <0>Uvjetima i odredbama</0>, <1>Uvjetima korištenja (EULA)</1> i <2>Pravilima privatnosti</2>. Pretplata se automatski obnavljaju do otkazivanja."
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:194
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:224
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:318
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:333
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:395
+#: src/app/(tabs)/(feeds,search,notifications,self)/tag/[tag].tsx:99
+#: src/app/capture/[author]/[post].tsx:171
+#: src/app/composer/propose-market.tsx:208
+#: src/app/create-list.tsx:70
+#: src/app/create-list.tsx:137
+#: src/app/edit-bio.tsx:126
+#: src/app/settings/account/delete-account.tsx:119
+#: src/components/drawer/drawer-content.tsx:59
+#: src/components/feed-row.tsx:324
+#: src/components/image-viewer.tsx:274
+#: src/components/post-context-menu.tsx:91
+#: src/components/prediction-market-resolution-actions.tsx:183
+#: src/components/widgets/markets/trade-button.tsx:190
+#: src/lib/account-actions.ts:74
+#: src/lib/account-actions.ts:120
+#: src/lib/composer/buttons.tsx:126
+#: src/lib/composer/buttons.tsx:183
+#: src/lib/composer/buttons.tsx:194
+#: src/lib/composer/market-proposal-panel.tsx:568
+#: src/lib/hooks/link-press.tsx:40
+#: src/lib/hooks/link-press.tsx:101
+#: src/lib/hooks/post-actions.tsx:142
+msgid "Cancel"
+msgstr "Odustani"
+
+#: src/components/prediction-market-resolution-actions.tsx:176
+#: src/components/prediction-market-resolution-actions.tsx:252
+#: src/components/prediction-market-resolution.tsx:177
+#: src/components/prediction-market-resolution.tsx:334
+msgid "Cancelled"
+msgstr ""
+
+#: src/app/market-rules.tsx:60
+msgid "Challenges and votes must happen before their deadlines. A vote needs enough participation and support; otherwise, an earlier proposed or decided result may stand. Bond amounts, deadlines, and voting requirements can vary."
+msgstr ""
+
+#: src/app/market-rules.tsx:60
+#~ msgid "Challenges and votes must happen before their deadlines. A vote needs enough participation and support; otherwise, an earlier proposed or decided result may stand. Deadlines and voting requirements can vary."
+#~ msgstr ""
+
+#: src/app/market-rules.tsx:57
+msgid "Challenges and voting"
+msgstr ""
+
+#: src/components/send-token-modal.tsx:435
+msgid "Change"
+msgstr ""
+
+#: src/app/settings/_layout.tsx:82
+#: src/app/settings/account/index.tsx:45
+msgid "Change Handle"
+msgstr "Promijeni korisničko ime"
+
+#: src/app/settings/_layout.tsx:88
+#: src/app/settings/account/index.tsx:55
+msgid "Change Password"
+msgstr "Promijeni lozinku"
+
+#: src/lib/composer/keyboard-accessory.tsx:172
+msgid "Change post language"
+msgstr "Primijeni jezik objave"
+
+#: src/app/pro.tsx:120
+msgid "Change the accent colour"
+msgstr "Promijenite boju naglaska"
+
+#: src/components/drawer/drawer-content.tsx:74
+#: src/components/drawer/drawer-content.tsx:172
+#: src/components/drawer/drawer-content.tsx:178
+msgid "Change theme"
+msgstr "Promjeni temu"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:311
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:363
+msgid "Change to moderation list"
+msgstr "Promjene na moderiranoj listi"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:312
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:354
+msgid "Change to user list"
+msgstr "Promjene na korisnikovoj listi"
+
+#: src/app/composer/index.tsx:1009
+#~ msgid "Chart only"
+#~ msgstr ""
+
+#: src/components/prediction-market-funding.tsx:117
+#: src/components/prediction-market-resolution.tsx:359
+msgid "Check the transaction and try again."
+msgstr ""
+
+#: src/app/market-trade.tsx:1724
+msgid "Check trade status"
+msgstr ""
+
+#: src/app/composer/propose-market.tsx:196
+#: src/components/prediction-market-funding.tsx:266
+#: src/components/prediction-market-funding.tsx:563
+#: src/components/prediction-market-resolution.tsx:481
+msgid "Check transaction"
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:496
+#~ msgid "Check transfer"
+#~ msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:277
+#: src/components/send-token-modal.tsx:394
+msgid "Check transfer status"
+msgstr ""
+
+#: src/components/market-transaction-status.tsx:26
+msgid "Checking for on-chain confirmation..."
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:112
+msgid "Checking resolution status..."
+msgstr ""
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:174
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:309
+msgid "Checking trading status..."
+msgstr ""
+
+#: src/app/market-trade.tsx:1719
+msgid "Checking transaction..."
+msgstr ""
+
+#: src/app/settings/account/change-handle.tsx:102
+msgid "Choose a handle"
+msgstr "Izaberi korisničko ime"
+
+#: src/lib/composer/market-proposal-panel.tsx:252
+msgid "Choose a market end at least {DEV_MARKET_MIN_TRADING_DURATION_MINUTES} minutes from now."
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:257
+msgid "Choose a resolution date at least {MIN_TRADING_DURATION_DAYS} days from now so trading stays open after funding closes."
+msgstr ""
+
+#: src/lib/composer/keyboard-accessory.tsx:115
+msgid "Choose from Library"
+msgstr "Odaberite iz galerije"
+
+#: src/app/pro.tsx:125
+msgid "Circle graph"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:139
+msgid "Claim confirmed"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:201
+msgid "Claim not completed"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:290
+#~ msgid "Claim outcome tokens"
+#~ msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:355
+msgid "Claim still pending"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:267
+msgid "Claim tokens"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:332
+#~ msgid "Claim USDC refund"
+#~ msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:482
+msgid "Claim winnings"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:249
+msgid "Claim your YES/NO allocation"
+msgstr ""
+
+#: src/app/(auth)/_layout.tsx:24
+#: src/app/add-to-list/[handle].tsx:134
+#: src/app/capture/[author]/[post].tsx:162
+#: src/app/circle.tsx:186
+#: src/app/composer/_layout.tsx:72
+#: src/app/composer/index.tsx:482
+#: src/app/composer/index.tsx:491
+#: src/app/create-list.tsx:155
+#: src/app/discover.tsx:151
+#: src/app/market-trade.tsx:1016
+#: src/app/pro.tsx:164
+#: src/app/settings/_layout.tsx:34
+#: src/components/polymarket-withdraw-modal.tsx:396
+#: src/components/venue-funding-modal.tsx:359
+msgid "Close"
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:557
+msgid "Close date picker"
+msgstr ""
+
+#: src/components/deposit-modal.tsx:70
+#: src/components/deposit-modal.tsx:87
+msgid "Close deposit window"
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:326
+msgid "Close funding window"
+msgstr ""
+
+#: src/app/images/[post].tsx:89
+msgid "Close image modal"
+msgstr "Zatvori model slike"
+
+#: src/components/wallet-positions.tsx:781
+msgid "Close Perpl position?"
+msgstr ""
+
+#: src/components/wallet-positions.tsx:779
+msgid "Close Polymarket position?"
+msgstr ""
+
+#: src/components/send-token-modal.tsx:340
+#: src/components/send-token-modal.tsx:363
+msgid "Close send tokens window"
+msgstr ""
+
+#: src/components/order-book-panel.tsx:214
+msgid "Collapse order book"
+msgstr ""
+
+#: src/app/market-trade.tsx:135
+msgid "Coming soon"
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:316
+#: src/app/venue-onboarding/index.tsx:212
+#: src/components/wallet-venue-balances.tsx:117
+msgid "Coming soon..."
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:724
+msgid "Complete"
+msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:296
+msgid "Configure a linked wallet to finalize this proposal."
+msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:269
+msgid "Configure a linked wallet to propose an outcome."
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:493
+msgid "Configure a wallet to check for claimable winnings."
+msgstr ""
+
+#: src/components/polymarket-withdraw-modal.tsx:533
+#: src/components/venue-funding-modal.tsx:594
+msgid "Confirm"
+msgstr ""
+
+#: src/app/settings/account/delete-account.tsx:123
+msgid "Confirm and continue"
+msgstr "Potvrdi i nastavi"
+
+#: src/components/send-token-modal.tsx:647
+msgid "Confirm and send"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:522
+msgid "Confirm contribution"
+msgstr ""
+
+#: src/components/screens/change-password-flow.tsx:174
+msgid "Confirm Password"
+msgstr "Potvrdi lozinku"
+
+#: src/components/market-transaction-status.tsx:28
+msgid "Confirmation is pending. Check the transaction status."
+msgstr ""
+
+#: src/app/composer/propose-market.tsx:135
+msgid "Confirmation is still pending. Check again before attaching the market."
+msgstr ""
+
+#: src/app/composer/index.tsx:409
+msgid "Confirmation is still pending. Tap Post again to check before publishing."
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:437
+#~ msgid "Confirming will transfer this USDC amount from your wallet. The market calculates exact YES and NO share amounts after your contribution is confirmed."
+#~ msgstr ""
+
+#: src/components/prediction-market-funding.tsx:494
+msgid "Confirming will transfer this USDC amount from your wallet. Your outcome tokens will be available for claim once the market graduates."
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/_layout.tsx:38
+msgid "Connecting..."
+msgstr "Povezivanje..."
+
+#: src/app/settings/about.tsx:40
+msgid "Contact"
+msgstr "Kontakt"
+
+#: src/app/settings/moderation.tsx:128
+msgid "Content filters"
+msgstr "Filter sadržaja"
+
+#: src/app/settings/_layout.tsx:148
+msgid "Content Languages"
+msgstr "Jezik sadržaja"
+
+#: src/app/composer/_layout.tsx:106
+msgid "Content Warning"
+msgstr "Upozorenje za sadržaj"
+
+#: src/components/prediction-market-funding.tsx:378
+msgid "Contribute USDC"
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:420
+msgid "Contribution cannot exceed {MARKET_FUNDING_TARGET_LABEL}."
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:316
+#~ msgid "Contribution cannot exceed 10,000 USDC."
+#~ msgstr ""
+
+#: src/components/prediction-market-funding.tsx:140
+msgid "Contribution confirmed"
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:424
+msgid "Contribution exceeds your available USDC balance."
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:178
+msgid "Contribution not completed"
+msgstr ""
+
+#: src/app/settings/about.tsx:49
+msgid "Contributors"
+msgstr "Doprinjeli"
+
+#: src/app/market-rules.tsx:97
+msgid "Contributors can reclaim their contributions after the funding deadline. This is separate from a market being Cancelled."
+msgstr ""
+
+#: src/components/image-with-context-menu.tsx:136
+msgid "Copied image to clipboard"
+msgstr "Slika kopirana u privremenu memoriju"
+
+#: src/components/post-context-menu.tsx:69
+#: src/lib/hooks/link-press.tsx:117
+msgid "Copied link"
+msgstr "Kopiraj link"
+
+#: src/components/post-context-menu.tsx:80
+msgid "Copied post text"
+msgstr "Kopiraj tekst objave"
+
+#: src/app/venue-onboarding/[venueId].tsx:284
+msgid "Copied to clipboard"
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:706
+msgid "Copy"
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:700
+msgid "Copy {0}"
+msgstr ""
+
+#: src/components/deposit-modal.tsx:140
+msgid "Copy address"
+msgstr ""
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:528
+msgid "Copy creator address"
+msgstr ""
+
+#: src/components/image-with-context-menu.tsx:126
+msgid "Copy Image"
+msgstr "Kopiraj sliku"
+
+#: src/lib/hooks/link-press.tsx:89
+msgid "Copy link"
+msgstr "Kopiraj poveznicu"
+
+#: src/components/post-context-menu.tsx:174
+msgid "Copy link to post"
+msgstr "Kopiraj link objave"
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:529
+msgid "Copy market address"
+msgstr ""
+
+#: src/components/post-context-menu.tsx:191
+msgid "Copy post text"
+msgstr "Kopiraj tekst objave"
+
+#: src/components/screens/profile/profile-info.tsx:537
+msgid "Copy wallet address"
+msgstr ""
+
+#: src/app/settings/account/change-handle.tsx:57
+msgid "Could not change handle"
+msgstr "Nismo uspjeli promijeniti korisničko ime"
+
+#: src/components/polymarket-withdraw-modal.tsx:254
+msgid "Could not check Polymarket withdrawal"
+msgstr ""
+
+#: src/components/polymarket-withdraw-modal.tsx:264
+msgid "Could not check the withdrawal status."
+msgstr ""
+
+#: src/app/composer/propose-market.tsx:278
+msgid "Could not check this post for an existing market. Tap to retry."
+msgstr ""
+
+#: src/components/widgets/markets/trade-button.tsx:201
+msgid "Could not check venue setup: {0}"
+msgstr ""
+
+#: src/app/venue-onboarding/index.tsx:230
+msgid "Could not check venue setup. Open it to retry."
+msgstr ""
+
+#: src/components/send-token-modal.tsx:456
+msgid "Could not check whether this user has a wallet."
+msgstr ""
+
+#: src/app/pro.tsx:89
+msgid "Could not complete purchase"
+msgstr "Narudžba nije mogla biti izvršena"
+
+#: src/components/deposit-modal.tsx:53
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:506
+msgid "Could not copy address"
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:289
+msgid "Could not copy this value."
+msgstr ""
+
+#: src/components/screens/profile/profile-info.tsx:110
+msgid "Could not copy wallet address"
+msgstr ""
+
+#: src/app/(auth)/sign-up.tsx:93
+#~ msgid "Could not create account"
+#~ msgstr ""
+
+#: src/app/settings/account/delete-account.tsx:68
+msgid "Could not delete account"
+msgstr "Nije bilo moguće obrisati korisnički račun"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:687
+msgid "Could not delete list"
+msgstr "Nije bilo moguće obrisati listu"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:141
+msgid "Could not fetch list"
+msgstr "Nije bilo moguće dohvatiti listu"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:563
+msgid "Could not fetch list feed"
+msgstr "Nije bilo moguće dohvatiti feed liste"
+
+#: src/app/settings/mutes.tsx:23
+msgid "Could not fetch mutes"
+msgstr "Nije bilo moguće dohvatiti listu utišanih"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/index.tsx:289
+msgid "Could not fetch trending topics"
+msgstr "Nije bilo moguće dohvatiti listu trendova"
+
+#: src/components/screens/profile/profile-info.tsx:148
+msgid "Could not follow user"
+msgstr "Nije bilo moguće zapratiti korisnika"
+
+#: src/app/wallet-link.tsx:64
+#: src/app/wallet-link.tsx:155
+msgid "Could not load the record to verify it."
+msgstr ""
+
+#: src/app/wallet-link.tsx:66
+msgid "Could not load this profile's public wallet record."
+msgstr ""
+
+#: src/app/(auth)/sign-in.tsx:57
+#: src/components/switch-accounts.tsx:67
+msgid "Could not log you in"
+msgstr "Nije bilo moguće prijaviti se"
+
+#: src/components/venue-funding-modal.tsx:143
+msgid "Could not quote this transfer."
+msgstr ""
+
+#: src/components/polymarket-withdraw-modal.tsx:181
+msgid "Could not refresh the withdrawal status. Retrying automatically."
+msgstr ""
+
+#: src/components/wallet-venue-balances.tsx:101
+msgid "Could not refresh venue balances. Tap to retry."
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:430
+msgid "Could not refresh your Kites wallet balance."
+msgstr ""
+
+#: src/components/send-token-modal.tsx:543
+msgid "Could not search for users. Try again."
+msgstr ""
+
+#: src/app/composer/gifs.tsx:214
+msgid "Could not select GIF"
+msgstr "Nije bilo moguće odabrati GIF"
+
+#: src/components/widgets/markets/trade-button.tsx:113
+msgid "Could not unlock wallet"
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:228
+msgid "Could not update Polymarket deposit status"
+msgstr ""
+
+#: src/app/add-to-list/[handle].tsx:43
+msgid "Couldn't fetch lists"
+msgstr "Nije bilo moguće dohvatiti listu"
+
+#: src/components/prediction-market-resolution.tsx:121
+msgid "Couldn't load resolution status. Tap to retry."
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:514
+msgid "Council challenge period"
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:512
+msgid "Council vote"
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:178
+#~ msgid "Create a Kites passkey wallet first. After it is linked, Perpl and Polymarket setup starts automatically in the background."
+#~ msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:176
+msgid "Create a Kites wallet with a passkey. After it is created, Perpl and Polymarket setup starts automatically in the background."
+msgstr ""
+
+#: src/app/(tabs)/_layout.tsx:182
+#~ msgid "Create a new post"
+#~ msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:108
+msgid "Create a passkey to set up your wallet."
+msgstr ""
+
+#: src/app/market-trade.tsx:1538
+msgid "Create a passkey wallet to trade. Your private key is derived from the passkey on this device and never leaves it; only the public address is linked to your account."
+msgstr ""
+
+#: src/app/(tabs)/_layout.tsx:304
+msgid "Create a post"
+msgstr ""
+
+#: src/app/(auth)/sign-up.tsx:437
+#~ msgid "Create Account"
+#~ msgstr ""
+
+#: src/app/index.tsx:46
+#~ msgid "Create an account"
+#~ msgstr ""
+
+#: src/app/create-list.tsx:258
+msgid "Create list"
+msgstr "Stvori popis"
+
+#: src/app/_layout.tsx:529
+msgid "Create List"
+msgstr "Novi Popis"
+
+#: src/app/composer/propose-market.tsx:198
+msgid "Create market"
+msgstr ""
+
+#: src/app/add-to-list/[handle].tsx:168
+msgid "Create new list"
+msgstr "Napravite novi popis"
+
+#: src/app/(auth)/sign-in.tsx:197
+msgid "Create one at bsky.app/settings"
+msgstr "Kreirajte novi na bsky.app/settings"
+
+#: src/app/market-trade.tsx:1555
+msgid "Create passkey wallet"
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:190
+msgid "Create wallet"
+msgstr ""
+
+#: src/components/deposit-modal.tsx:148
+msgid "Create your Kites wallet to get a deposit address."
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:396
+msgid "Create your Polymarket account"
+msgstr ""
+
+#: src/components/polymarket-deposit-modal.tsx:100
+#~ msgid "Create your Polymarket wallet to get a deposit address."
+#~ msgstr ""
+
+#: src/app/settings/about.tsx:58
+#~ msgid "Created by"
+#~ msgstr "Kreirao korisnik"
+
+#: src/app/venue-onboarding/[venueId].tsx:415
+#: src/app/venue-onboarding/[venueId].tsx:579
+msgid "Creating account..."
+msgstr ""
+
+#: src/app/market-trade.tsx:1553
+msgid "Creating wallet..."
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:105
+#: src/components/screens/profile/profile-balances.tsx:188
+msgid "Creating wallet…"
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/feed/[generator]/details.tsx:286
+msgid "Creator"
+msgstr "Kreator"
+
+#: src/app/market-trade.tsx:1081
+msgid "Current probability"
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:92
+#~ msgid "Current resolution deadline"
+#~ msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:100
+#~ msgid "Current resolution deadline in"
+#~ msgstr ""
+
+#: src/app/pro.tsx:193
+msgid "Currently subscribed"
+msgstr "Trenutno pretplaćen"
+
+#: src/app/settings/account/change-handle.tsx:91
+msgid "Custom domain"
+msgstr "Vlastita domena"
+
+#: src/app/market-trade.tsx:1426
+msgid "Custom slippage percentage"
+msgstr ""
+
+#: src/app/pro.tsx:119
+msgid "Custom themes"
+msgstr "Prilagođena tema"
+
+#: src/components/drawer/drawer-content.tsx:69
+msgid "dark"
+msgstr "mrak"
+
+#: src/components/drawer/drawer-content.tsx:57
+#: src/components/drawer/drawer-content.tsx:89
+msgid "Dark"
+msgstr "Mrak"
+
+#: src/app/(auth)/sign-up.tsx:207
+#~ msgid "Date of Birth"
+#~ msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:86
+msgid "Deadline passed"
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:337
+#: src/components/post-context-menu.tsx:87
+#: src/components/post-context-menu.tsx:95
+msgid "Delete"
+msgstr "Izbriši"
+
+#: src/app/settings/_layout.tsx:94
+#: src/app/settings/account/delete-account.tsx:208
+#: src/app/settings/account/index.tsx:60
+msgid "Delete Account"
+msgstr "Izbriši račun"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:314
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:327
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:329
+msgid "Delete list"
+msgstr "Izbriši popis"
+
+#: src/components/post-context-menu.tsx:220
+msgid "Delete post"
+msgstr "Obriši objavu"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/post/[post].tsx:413
+msgid "Deleted post"
+msgstr "Objava je izbrisana"
+
+#: src/app/settings/account/delete-account.tsx:99
+#~ msgid "Deleting your Bluesky account will permanently remove all of your data, including your profile, posts, follows, and likes. This action cannot be undone."
+#~ msgstr "Brisanjem vašeg Bluesky računa trajno će se ukloniti svi vaši podaci, uključujući vaš profil, objave, praćenja i lajkovi. Ova radnja se ne može poništiti."
+
+#: src/app/settings/account/delete-account.tsx:99
+msgid "Deleting your Kites account will permanently remove all of your data, including your profile, posts, follows, and likes. This action cannot be undone."
+msgstr ""
+
+#: src/app/settings/account/delete-account.tsx:167
+msgid "Deletion Code"
+msgstr "Kod za brisanje"
+
+#: src/components/widgets/markets/perpetual/market.tsx:192
+#~ msgid "Demo trade"
+#~ msgstr ""
+
+#: src/components/deposit-modal.tsx:83
+#: src/components/screens/profile/profile-balances.tsx:260
+#: src/components/wallet-venue-balances.tsx:245
+msgid "Deposit"
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:575
+msgid "Deposit into Kites wallet"
+msgstr ""
+
+#: src/app/venue-onboarding/index.tsx:103
+#~ msgid "Deposit processing"
+#~ msgstr ""
+
+#: src/components/venue-funding-modal.tsx:439
+msgid "Deposit submitted"
+msgstr ""
+
+#: src/components/wallet-venue-balances.tsx:219
+msgid "Deposit to {0}"
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:351
+msgid "Deposit to Polymarket"
+msgstr ""
+
+#: src/app/create-list.tsx:209
+#: src/app/edit-bio.tsx:269
+msgid "Description"
+msgstr "Opis"
+
+#: src/app/settings/index.tsx:96
+msgid "Developer"
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:297
+msgid "Development markets have a 2-minute funding window. The full funding target must be reached before trading can begin."
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:348
+#~ msgid "Development preview only"
+#~ msgstr ""
+
+#: src/app/settings/app.tsx:131
+#: src/app/settings/app.tsx:139
+msgid "Disable GIF autoplay"
+msgstr "Onemogući automatsku reprodukciju GIF-a"
+
+#: src/app/settings/app.tsx:110
+msgid "Disable haptics"
+msgstr "Onemogući opipljivost"
+
+#: src/app/settings/app.tsx:126
+msgid "Disable haptics (vibrations)"
+msgstr "Onemogući opipljivost (vibracije)"
+
+#: src/app/edit-bio.tsx:180
+msgid "Discard and close"
+msgstr ""
+
+#: src/app/composer/index.tsx:303
+msgid "Discard anyway"
+msgstr ""
+
+#: src/app/composer/index.tsx:496
+#: src/lib/composer/buttons.tsx:126
+#: src/lib/composer/buttons.tsx:179
+msgid "Discard post"
+msgstr "Odustani od objave"
+
+#: src/components/screens/feeds-screen-elements.tsx:34
+msgid "Discover feeds"
+msgstr "Pronađite feedove"
+
+#: src/app/_layout.tsx:396
+msgid "Discover Feeds"
+msgstr "Pronađite Feedove"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/feeds/index.tsx:229
+msgid "Discover more feeds"
+msgstr "Pronađite još feedova"
+
+#: src/app/edit-bio.tsx:252
+msgid "Display name"
+msgstr "Prikaži ime"
+
+#: src/app/settings/account/change-handle.tsx:82
+msgid "Domain"
+msgstr "Domena"
+
+#: src/app/push-notifications.tsx:147
+msgid "Don't enable"
+msgstr "Nemoj omogućiti"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/feeds/index.tsx:303
+#: src/app/(tabs)/(feeds,search,notifications,self)/feeds/manage.tsx:42
+#: src/app/add-to-list/[handle].tsx:56
+#: src/app/composer/_layout.tsx:59
+#: src/app/discover.tsx:82
+#: src/app/success.tsx:68
+#: src/lib/composer/alt-text-editor.tsx:81
+#: src/lib/composer/market-proposal-panel.tsx:581
+msgid "Done"
+msgstr "Gotovo"
+
+#: src/app/settings/account/delete-account.tsx:113
+msgid "Double check that you understand"
+msgstr "Još jednom provjerite razumijete li"
+
+#: src/app/composer/_layout.tsx:94
+msgid "Drafts"
+msgstr "Skice"
+
+#: src/app/wallet-link.tsx:312
+msgid "During wallet linking, the server also checks that issuedAt is recent: no more than 10 minutes old or 60 seconds in the future."
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/feeds/index.tsx:303
+#: src/app/(tabs)/(feeds,search,notifications,self)/feeds/manage.tsx:42
+#: src/components/prediction-market-funding.tsx:509
+msgid "Edit"
+msgstr "Uredi"
+
+#: src/lib/composer/alt-text-editor.tsx:68
+msgid "Edit alt text"
+msgstr "Uredi alt tekst"
+
+#: src/app/edit-bio.tsx:225
+msgid "Edit avatar"
+msgstr "Uredi avatar"
+
+#: src/app/edit-bio.tsx:207
+msgid "Edit banner"
+msgstr "Uredi baner"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/feeds/manage.tsx:35
+msgid "Edit feeds"
+msgstr "Uredi feed"
+
+#: src/components/screens/profile/profile-info.tsx:723
+msgid "Edit profile"
+msgstr ""
+
+#: src/app/_layout.tsx:504
+#: src/app/settings/account/index.tsx:40
+msgid "Edit Profile"
+msgstr "Uredi profil"
+
+#: src/app/composer/index.tsx:510
+msgid "Edit who can reply"
+msgstr ""
+
+#: src/components/screens/change-password-flow.tsx:98
+msgid "Email"
+msgstr "E-pošta"
+
+#: src/app/settings/moderation.tsx:144
+msgid "Enable Adult Content"
+msgstr "Omogući sadržaj za odrasle"
+
+#: src/app/push-notifications.tsx:127
+msgid "Enable notifications"
+msgstr "Omogući obavijesti"
+
+#: src/components/widgets/markets/perpetual/market.tsx:768
+#~ msgid "Enable Perpl API access to view account details."
+#~ msgstr ""
+
+#: src/components/send-token-modal.tsx:520
+msgid "Enter a Bluesky handle or EVM address."
+msgstr ""
+
+#: src/components/send-token-modal.tsx:388
+#~ msgid "Enter a handle to find a recipient."
+#~ msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:426
+msgid "Enter a valid USDC amount with up to 6 decimals."
+msgstr ""
+
+#: src/app/market-trade.tsx:1473
+msgid "Enter a value from 0.01% to 100%, with up to 2 decimal places."
+msgstr ""
+
+#: src/app/market-trade.tsx:1656
+msgid "Enter at least 5 {0} shares to trade."
+msgstr ""
+
+#: src/components/send-token-modal.tsx:534
+msgid "Enter at least two characters."
+msgstr ""
+
+#: src/app/(auth)/sign-up.tsx:289
+#~ msgid "Enter your phone number"
+#~ msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:686
+#: src/app/capture/[author]/[post].tsx:89
+#: src/app/settings/account/change-handle.tsx:53
+msgid "Error"
+msgstr "Greška"
+
+#: src/app/market-trade.tsx:1350
+msgid "Estimated to receive"
+msgstr ""
+
+#: src/app/market-trade.tsx:1000
+#~ msgid "Estimates use the market price shown above. Trading is not enabled in this preview."
+#~ msgstr ""
+
+#: src/app/composer/threadgate.tsx:45
+msgid "Everyone can reply"
+msgstr "Svi mogu odgovoriti"
+
+#: src/app/wallet-link.tsx:255
+msgid "Exact signed message"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:356
+msgid "Exact YES and NO share allocations are calculated by the market contract and will appear here when available."
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:395
+#~ msgid "Exit preview"
+#~ msgstr ""
+
+#: src/components/order-book-panel.tsx:214
+msgid "Expand order book"
+msgstr ""
+
+#: src/components/prediction-market-post.tsx:140
+#~ msgid "Expand this market to reclaim your contribution."
+#~ msgstr ""
+
+#: src/components/send-token-modal.tsx:413
+msgid "External wallet address"
+msgstr ""
+
+#: src/app/capture/[author]/[post].tsx:89
+msgid "Failed to capture image"
+msgstr "Snimanje slike nije uspjelo"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/tag/[tag].tsx:59
+msgid "Failed to fetch feed"
+msgstr "Greška prilikom učitavanja feeda"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/tag/[tag].tsx:72
+msgid "Failed to hydrate feed"
+msgstr "Greška prilikom učitavanja feeda"
+
+#: src/lib/hooks/link-press.tsx:74
+msgid "Failed to open link"
+msgstr "Greška prilikom otvaranja linka"
+
+#: src/lib/composer/utils.tsx:209
+msgid "Failed to upload image"
+msgstr "Greška prilikom snimanja slike"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/markets/details.tsx:124
+#: src/components/feed-row.tsx:251
+msgid "Favourited"
+msgstr "Favoriti"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/feeds/index.tsx:155
+#: src/components/feeds-button.tsx:211
+msgid "Favourites"
+msgstr "Favoriti"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:87
+msgid "Feed"
+msgstr "Feed"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/markets/details.tsx:32
+#: src/app/(tabs)/(feeds,search,notifications,self)/markets/details.tsx:48
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/feed/[generator]/details.tsx:55
+#: src/components/screens/markets-feed-screen.tsx:50
+msgid "Feed Details"
+msgstr "Detalji feeda"
+
+#: src/app/(tabs)/_layout.tsx:168
+#: src/app/(tabs)/(feeds,search,notifications,self)/feeds/index.tsx:286
+#: src/app/(tabs)/(feeds,search,notifications,self)/feeds/manage.tsx:25
+#: src/app/settings/app.tsx:36
+#: src/components/screens/profile/profile-tab-view.tsx:110
+msgid "Feeds"
+msgstr "Feedovi"
+
+#: src/app/settings/feed.tsx:132
+#: src/app/settings/feed.tsx:146
+msgid "Feeds list"
+msgstr "Lista feedova"
+
+#: src/app/circle.tsx:283
+msgid "Fetch connections"
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:436
+msgid "Final outcome"
+msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:283
+msgid "Finalize resolution"
+msgstr ""
+
+#: src/components/screens/feed-screen.tsx:125
+msgid "Find people to follow"
+msgstr "Pronađi korisnike koje ćeš pratiti"
+
+#: src/app/market-trade.tsx:1596
+msgid "Finish Polymarket setup"
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:581
+msgid "Finishing setup..."
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/index.tsx:396
+#: src/components/screens/profile/profile-info.tsx:481
+msgid "Follow"
+msgstr "Prati"
+
+#: src/components/screens/feed-screen.tsx:114
+msgid "Follow people, and their posts will show up here"
+msgstr "Zaprati korisnike, a njihove objave će se prikazivati ovdje"
+
+#: src/components/screens/profile/profile-info.tsx:138
+msgid "Followed user"
+msgstr "Korisik se prati"
+
+#: src/components/lists/followers-list.tsx:54
+msgid "Followers"
+msgstr "Pratitelji"
+
+#. 'Following' - The name of the main feed
+#. 'Following' - The name of the main feed
+#. 'Following' - The name of the main feed
+#. 'Following' - The name of the main feed
+#. js-lingui-explicit-id
+#: src/app/(tabs)/(feeds,search,notifications,self)/feeds/index.tsx:139
+#: src/app/settings/feed.tsx:58
+#: src/components/feeds-button.tsx:294
+#: src/lib/hooks/feeds.ts:182
+msgid "following.feed"
+msgstr "sve koje pratim"
+
+#. 'Following' - following a user
+#. 'Following' - following a user
+#. 'Following' - following a user
+#. 'Following' - following a user
+#. js-lingui-explicit-id
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/index.tsx:398
+#: src/components/lists/person-row.tsx:47
+#: src/components/screens/profile/profile-info.tsx:459
+#: src/lib/composer/suggestion-list.tsx:52
+msgid "following.action"
+msgstr "pratitelji"
+
+#. 'Following' - List of follows
+#. js-lingui-explicit-id
+#: src/components/lists/follows-list.tsx:55
+msgid "following.list"
+msgstr "lista pratitelja"
+
+#: src/components/lists/person-row.tsx:54
+#: src/components/screens/profile/profile-info.tsx:502
+#: src/lib/composer/suggestion-list.tsx:59
+msgid "Follows you"
+msgstr "Vas prati"
+
+#: src/app/composer/propose-market.tsx:250
+msgid "For @{0}'s post"
+msgstr ""
+
+#: src/app/composer/propose-market.tsx:252
+msgid "For the selected post"
+msgstr ""
+
+#: src/app/(auth)/sign-in.tsx:154
+msgid "Forgot?"
+msgstr "Zaboravili ste nešto?"
+
+#: src/components/screens/profile/profile-info.tsx:764
+msgid "Frequently Posts Unwanted Content"
+msgstr "Često objavljuje neželjeni sadržaj"
+
+#: src/components/venue-funding-modal.tsx:530
+msgid "From"
+msgstr ""
+
+#: src/app/market-trade.tsx:1318
+msgid "Fund this Polymarket wallet"
+msgstr ""
+
+#: src/app/market-trade.tsx:1000
+#: src/components/venue-funding-modal.tsx:241
+#~ msgid "Fund this trade"
+#~ msgstr ""
+
+#: src/components/prediction-market-funding.tsx:127
+msgid "Funding action not completed"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:499
+#~ msgid "Funding closed on {0}. Contributors can reclaim their USDC."
+#~ msgstr ""
+
+#: src/components/prediction-market-funding.tsx:226
+#~ msgid "Funding complete"
+#~ msgstr ""
+
+#: src/components/prediction-market-funding.tsx:299
+msgid "Funding ended"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:608
+msgid "Funding goal"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:496
+#~ msgid "Funding goal not reached"
+#~ msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:288
+msgid "Funding target"
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:272
+msgid "Funding window"
+msgstr ""
+
+#: src/app/market-trade.tsx:1257
+msgid "Funds at Polymarket"
+msgstr ""
+
+#: src/app/settings/app.tsx:35
+#~ msgid "General"
+#~ msgstr "Općenito"
+
+#: src/app/settings/language/index.tsx:160
+msgid "Get Kites Pro for access to DeepL translations. Google Translate is used otherwise."
+msgstr ""
+
+#: src/components/screens/waiting-room.tsx:96
+msgid "Get started"
+msgstr "Započni"
+
+#: src/components/screens/waiting-room.tsx:43
+msgid "Getting queue position..."
+msgstr "Dohvaćanje pozicije u redu čekanja..."
+
+#: src/app/composer/_layout.tsx:129
+msgid "GIFs"
+msgstr "GIFovi"
+
+#: src/app/composer/index.tsx:345
+msgid "Go back"
+msgstr "Idi natrag"
+
+#: src/app/settings/language/index.tsx:158
+#: src/app/settings/pro.tsx:50
+msgid "Google Translate is used otherwise."
+msgstr "Inače se koristi Google prevoditelj."
+
+#: src/components/prediction-market-funding.tsx:232
+#~ msgid "Graduated"
+#~ msgstr ""
+
+#: src/app/settings/account/change-handle.tsx:49
+msgid "Handle already taken"
+msgstr "Korisničko ime je već zauzeto"
+
+#: src/components/handle-availability.tsx:79
+msgid "Handle is invalid"
+msgstr "Korisničko ime ima grešku"
+
+#: src/components/handle-availability.tsx:70
+msgid "Handle is taken"
+msgstr "Korisničko ime je zauzeto"
+
+#: src/app/settings/app.tsx:119
+msgid "Haptics disabled"
+msgstr "Dodiri onemogućeni"
+
+#: src/app/pro.tsx:132
+msgid "Help us keep the lights on"
+msgstr "Pomozite nam da svjetla ostanu upaljena"
+
+#: src/app/settings/moderation.tsx:104
+#: src/components/embed/index.tsx:253
+#: src/components/feed-post.tsx:179
+msgid "Hide"
+msgstr "Sakrijte"
+
+#: src/components/prediction-market-resolution.tsx:518
+msgid "Holder challenge period"
+msgstr ""
+
+#: src/app/settings/index.tsx:48
+msgid "Home feed preferences"
+msgstr "Postavke početnog feeda"
+
+#: src/app/settings/_layout.tsx:124
+msgid "Home Feed Preferences"
+msgstr "Postavke početnog feeda"
+
+#: src/app/settings/feed.tsx:122
+msgid "Home screen"
+msgstr "Početni zaslon"
+
+#: src/app/settings/feed.tsx:125
+msgid "Home screen layout"
+msgstr "Raspored početnog zaslona"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/tag/[tag].tsx:223
+msgid "Hot"
+msgstr "U trendu"
+
+#: src/lib/composer/market-proposal-panel.tsx:203
+msgid "How and when will this market be resolved?"
+msgstr ""
+
+#: src/lib/hooks/link-press.tsx:33
+msgid "How should we open this link?"
+msgstr "Kako želite da otvorimo ovu poveznicu?"
+
+#: src/app/wallet-link.tsx:214
+msgid "How the proof is made"
+msgstr ""
+
+#: src/app/wallet-link.tsx:291
+msgid "How to verify it"
+msgstr ""
+
+#: src/app/hyperliquid-event.tsx:22
+msgid "Hyperliquid Prediction Market"
+msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:551
+#~ msgid "Hyperliquid prediction markets and perpetuals use the same wallet. In-app order placement is not enabled yet; this venue is testnet only."
+#~ msgstr ""
+
+#: src/app/composer/index.tsx:1036
+#: src/components/widgets/markets/mentions.tsx:71
+msgid "Hyperliquid ticker availability could not be loaded."
+msgstr ""
+
+#: src/app/market-trade.tsx:138
+#: src/app/perpetual-trade.tsx:24
+msgid "Hyperliquid trading is coming soon."
+msgstr ""
+
+#: src/app/market-rules.tsx:94
+msgid "If a market does not reach its funding goal"
+msgstr ""
+
+#: src/app/settings/language/index.tsx:132
+msgid "If a post is marked as being in one of these languages, it will not be translated."
+msgstr "Ako je objava označena ne nekom od ovih jezika, neće biti prevedena."
+
+#: src/app/market-rules.tsx:81
+#~ msgid "If the result is YES, each whole YES share pays one unit and NO shares pay nothing; NO works the other way around. If a market is Cancelled, each YES and NO share pays half a unit. Cancelled is an outcome, not a refund of what you paid to trade."
+#~ msgstr ""
+
+#: src/app/market-rules.tsx:81
+#~ msgid "If the result is YES, each whole YES share pays one unit of the market's payout currency and NO shares pay nothing; NO works the other way around. If a market is Cancelled, each YES and NO share pays half a unit. Cancelled is an outcome, not a refund of what you paid to trade."
+#~ msgstr ""
+
+#: src/app/market-rules.tsx:82
+msgid "If the result is YES, each whole YES share pays one unit of the market’s payout currency and NO shares pay nothing; NO works the other way around. If a market is Cancelled, each YES and NO share pays half a unit. Cancelled is an outcome, not a refund of what you paid to trade."
+msgstr ""
+
+#: src/app/settings/about.tsx:165
+msgid "If you have contributed to Kites, for example helping with translations, please reach out to @kites.app so we can add you to this list!"
+msgstr ""
+
+#: src/components/post-context-menu.tsx:135
+msgid "Illegal and Urgent"
+msgstr "Ilegalno i hitno"
+
+#: src/components/image-viewer.tsx:268
+msgid "Image options"
+msgstr "Opcije slike"
+
+#: src/app/venue-onboarding/index.tsx:160
+msgid "In progress"
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:375
+#~ msgid "In your Kites wallet"
+#~ msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:274
+#~ msgid "Initial contribution"
+#~ msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:370
+msgid "Initial contribution (USDC)"
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:439
+msgid "Initial outcome probability"
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:446
+msgid "Initial YES probability"
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/tag/[tag].tsx:237
+msgid "Invalid mode"
+msgstr "Nevažeći način rada"
+
+#: src/app/wallet-link.tsx:268
+msgid "issuedAt is a Unix timestamp in seconds. The nonce is a random 32-byte value, and audience is social.kites.wallet.link."
+msgstr ""
+
+#: src/components/drawer/drawer-content.tsx:75
+msgid "It's currently set to the {current} theme"
+msgstr "Trenutno je postavljena na {current} temu"
+
+#: src/components/screens/profile/profile-info.tsx:616
+msgid "Joined {0}"
+msgstr "Pridružio se {0}"
+
+#: src/app/composer/index.tsx:301
+#: src/app/composer/propose-market.tsx:96
+msgid "Keep working"
+msgstr ""
+
+#: src/app/settings/index.tsx:79
+msgid "Kites"
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:459
+msgid "Kites creates your Perpl exchange account automatically after test funds arrive."
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:463
+msgid "Kites enables Perpl API access automatically after the exchange account is created."
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:466
+msgid "Kites enables Perpl order forwarding automatically when setup is ready."
+msgstr ""
+
+#: src/app/pro.tsx:178
+#: src/app/settings/index.tsx:82
+msgid "Kites Pro"
+msgstr ""
+
+#: src/components/deposit-modal.tsx:98
+#~ msgid "Kites wallet"
+#~ msgstr ""
+
+#: src/components/venue-funding-modal.tsx:350
+#~ msgid "Kites wallet balance: {0} pUSD"
+#~ msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:254
+msgid "Kites wallet balances are shown separately by network."
+msgstr ""
+
+#: src/app/settings/_layout.tsx:136
+#: src/app/settings/index.tsx:53
+msgid "Languages"
+msgstr "Jezici"
+
+#: src/app/composer/propose-market.tsx:98
+msgid "Leave anyway"
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:410
+msgid "Leave at 0 to create without contributing USDC. That path only needs MON for gas."
+msgstr ""
+
+#: src/components/drawer/drawer-content.tsx:68
+msgid "light"
+msgstr "svijetla"
+
+#: src/components/drawer/drawer-content.tsx:56
+#: src/components/drawer/drawer-content.tsx:86
+msgid "Light"
+msgstr "Svijetla"
+
+#: src/components/notification/index.tsx:63
+msgid "liked your post"
+msgstr "se sviđa vaša objava"
+
+#: src/components/lists/likes-list.tsx:56
+#: src/components/screens/profile/profile-tab-view.tsx:103
+msgid "Likes"
+msgstr "Lajkovi"
+
+#: src/lib/hooks/link-press.tsx:118
+msgid "Link copied to clipboard"
+msgstr "Poveznica je spremljena u međuspremnik"
+
+#: src/app/settings/app.tsx:88
+msgid "Links"
+msgstr ""
+
+#: src/app/settings/app.tsx:99
+msgid "Links will open in the app instead of your device's default browser"
+msgstr "Veze će se otvoriti u aplikaciji umjesto u zadanom pregledniku vašeg uređaja"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:120
+msgid "List"
+msgstr "Lista"
+
+#: src/app/create-list.tsx:170
+msgid "List Avatar"
+msgstr "Lista Avatar"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:239
+msgid "List blocked"
+msgstr "Lista blokiranih"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:680
+msgid "List deleted"
+msgstr "Lista obrisanih"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:258
+msgid "List favourited"
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:234
+msgid "List muted"
+msgstr "Lista utišanih"
+
+#: src/app/create-list.tsx:194
+msgid "List name"
+msgstr "Lista imena"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:259
+msgid "List unfavourited"
+msgstr ""
+
+#: src/components/screens/profile/profile-tab-view.tsx:115
+msgid "Lists"
+msgstr "Liste"
+
+#: src/components/widgets/markets/perpetual/market.tsx:173
+#: src/components/widgets/markets/perpetual/market.tsx:303
+#: src/components/widgets/markets/prediction/hyperliquid-event.tsx:212
+#~ msgid "Live feed reconnecting"
+#~ msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:743
+#~ msgid "Loading account details..."
+#~ msgstr ""
+
+#: src/app/composer/index.tsx:1030
+#: src/components/widgets/markets/perpetual/market.tsx:403
+msgid "Loading live market data…"
+msgstr ""
+
+#: src/app/market-trade.tsx:1068
+#: src/components/widgets/markets/prediction/hyperliquid-event.tsx:60
+#: src/components/widgets/markets/prediction/polymarket-event.tsx:78
+msgid "Loading market…"
+msgstr ""
+
+#: src/app/polymarket-event.tsx:68
+msgid "Loading markets…"
+msgstr ""
+
+#: src/components/order-book-panel.tsx:279
+msgid "Loading order book..."
+msgstr ""
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:231
+msgid "Loading prediction market..."
+msgstr ""
+
+#: src/app/market-trade.tsx:1263
+#: src/app/market-trade.tsx:1282
+#: src/components/venue-funding-modal.tsx:417
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:341
+msgid "Loading..."
+msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:841
+#~ msgid "Locked collateral"
+#~ msgstr ""
+
+#: src/app/(auth)/_layout.tsx:49
+#: src/app/(auth)/resume.tsx:27
+msgid "Log back in"
+msgstr "Prijavite se ponovno"
+
+#: src/app/(auth)/_layout.tsx:37
+#: src/app/(auth)/sign-in.tsx:101
+#: src/app/(auth)/sign-in.tsx:213
+#: src/app/index.tsx:54
+msgid "Log in"
+msgstr "Prijavi se"
+
+#: src/components/screens/waiting-room.tsx:100
+msgid "Log out"
+msgstr "Odjavi se"
+
+#: src/components/switch-accounts.tsx:75
+msgid "Logged in"
+msgstr "Prijavljen"
+
+#: src/app/(auth)/sign-in.tsx:213
+msgid "Logging in…"
+msgstr ""
+
+#: src/app/settings/about.tsx:169
+msgid "Logo designed by"
+msgstr "Logo dizajnirao"
+
+#: src/components/screens/feed-screen.tsx:111
+msgid "Looks like there's nothing here yet!"
+msgstr "Čini se da ovdje još nema ničega!"
+
+#: src/app/settings/app.tsx:153
+msgid "Makes adding ALT text to your images mandatory"
+msgstr "Učini dodavanje ALT teksta vašim slikama obaveznim"
+
+#: src/components/feeds-button.tsx:344
+msgid "Manage my feeds"
+msgstr "Upravljaj mojim feedovima"
+
+#: src/app/pro.tsx:205
+msgid "Manage my subscription"
+msgstr "Upravljaj pretplatom"
+
+#: src/app/market-trade.tsx:859
+#~ msgid "Manage Polymarket setup"
+#~ msgstr ""
+
+#: src/app/market-trade.tsx:1332
+msgid "Manage setup"
+msgstr ""
+
+#: src/app/settings/app.tsx:144
+msgid "Mandatory ALT text"
+msgstr "Obvezan ALT tekst"
+
+#: src/app/settings/app.tsx:39
+msgid "Manually sort non-favourite feeds"
+msgstr "Ručno sortiraj ne-omiljene feedove"
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:263
+msgid "Market address"
+msgstr ""
+
+#: src/app/composer/propose-market.tsx:160
+#: src/app/composer/propose-market.tsx:174
+msgid "Market attached to post"
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:206
+msgid "Market cancelled"
+msgstr ""
+
+#: src/app/composer/index.tsx:388
+msgid "Market created"
+msgstr ""
+
+#: src/components/prediction-market-post.tsx:170
+#~ msgid "Market created by"
+#~ msgstr ""
+
+#: src/components/screens/markets-feed-screen.tsx:190
+#: src/components/screens/profile/profile-markets.tsx:182
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:256
+msgid "Market creator"
+msgstr ""
+
+#: src/app/market-trade.tsx:1563
+msgid "Market data could not be loaded. Close and reopen the trade sheet."
+msgstr ""
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:227
+msgid "Market data couldn't be loaded. Tap to retry."
+msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:287
+#: src/components/widgets/markets/prediction/hyperliquid-event.tsx:65
+msgid "Market data is unavailable."
+msgstr ""
+
+#: src/app/polymarket-event.tsx:74
+msgid "Market data is unavailable. Please try again."
+msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:262
+#: src/components/widgets/markets/perpetual/market.tsx:338
+#: src/components/widgets/markets/prediction/hyperliquid-event.tsx:91
+#~ msgid "Market data is unavailable. Tap to open Hyperliquid testnet."
+#~ msgstr ""
+
+#: src/components/widgets/markets/prediction/polymarket-event.tsx:88
+msgid "Market data is unavailable. Tap to open Polymarket."
+msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:135
+#: src/components/widgets/markets/perpetual/market.tsx:246
+msgid "Market data is unavailable. Tap to retry."
+msgstr ""
+
+#: src/app/composer/index.tsx:391
+msgid "Market deployed at {0}"
+msgstr ""
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:235
+msgid "Market details aren't available yet."
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:292
+msgid "Market did not graduate"
+msgstr ""
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:185
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:296
+msgid "Market ends"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:294
+msgid "Market funding"
+msgstr ""
+
+#: src/app/composer/index.tsx:296
+#: src/app/composer/propose-market.tsx:91
+msgid "Market not attached"
+msgstr ""
+
+#: src/app/market-trade.tsx:976
+#~ msgid "Market orders use available liquidity and cancel any unfilled amount."
+#~ msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:177
+msgid "Market question"
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:264
+msgid "Market resolution"
+msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:114
+msgid "Market resolution finalized"
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:433
+msgid "Market resolved"
+msgstr ""
+
+#: src/app/_layout.tsx:367
+msgid "Market Rules"
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:165
+msgid "Market terms"
+msgstr ""
+
+#: src/app/composer/index.tsx:389
+#: src/app/composer/index.tsx:407
+#: src/app/composer/propose-market.tsx:133
+msgid "Market transaction submitted"
+msgstr ""
+
+#: src/app/composer/index.tsx:392
+msgid "Market transaction submitted; confirmation is pending."
+msgstr ""
+
+#: src/app/market-trade.tsx:1065
+#: src/app/market-trade.tsx:1069
+msgid "Market unavailable"
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/markets/details.tsx:69
+#: src/app/discover.tsx:212
+#: src/components/screens/markets-feed-screen.tsx:62
+#: src/components/screens/profile/profile-tab-view.tsx:106
+msgid "Markets"
+msgstr ""
+
+#: src/app/market-rules.tsx:37
+msgid "Markets are settled using the question and resolution rules shown on each market. These steps begin after trading ends."
+msgstr ""
+
+#: src/app/discover.tsx:196
+msgid "Markets feed"
+msgstr ""
+
+#: src/app/market-trade.tsx:1218
+#: src/components/perpl-collateral-modal.tsx:374
+#: src/components/polymarket-withdraw-modal.tsx:475
+#: src/components/venue-funding-modal.tsx:494
+msgid "MAX"
+msgstr ""
+
+#: src/components/screens/profile/profile-tab-view.tsx:100
+msgid "Media"
+msgstr "Mediji"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:90
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:108
+msgid "Members"
+msgstr "Članovi"
+
+#: src/app/composer/threadgate.tsx:137
+msgid "Members of list \"{0}\""
+msgstr "Član liste \"{0}\""
+
+#: src/lib/web3/custody/context.tsx:597
+#~ msgid "Mera wallet ready"
+#~ msgstr ""
+
+#: src/lib/web3/custody/context.tsx:616
+#~ msgid "Mera wallet setup needs attention"
+#~ msgstr ""
+
+#: src/app/market-trade.tsx:1293
+msgid "Minimum order: 5 {0} shares. Buys are entered in pUSD. Market orders use available liquidity and cancel any unfilled amount."
+msgstr ""
+
+#: src/components/screens/profile/profile-info.tsx:765
+msgid "Misleading Account"
+msgstr "Račun koji dovodi u zabludu"
+
+#: src/app/composer/index.tsx:330
+#: src/app/composer/index.tsx:341
+msgid "Missing alt text"
+msgstr "Nedostaje alt tekst"
+
+#: src/app/settings/_layout.tsx:100
+#: src/app/settings/index.tsx:43
+msgid "Moderation"
+msgstr "Upravljanje"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:282
+#: src/app/create-list.tsx:67
+#: src/app/create-list.tsx:247
+#: src/components/feed-row.tsx:78
+msgid "Moderation list"
+msgstr "Moderirana lista"
+
+#: src/app/market-trade.tsx:1518
+msgid "MON Balance"
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:73
+#~ msgid "Monad Testnet"
+#~ msgstr ""
+
+#: src/app/pro.tsx:214
+msgid "Monthly Plan"
+msgstr "Mjesečni plan"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/feed/[generator]/details.tsx:323
+msgid "More from {0}"
+msgstr "Više od {0}"
+
+#: src/components/venue-funding-modal.tsx:404
+msgid "Move pUSD from your Kites wallet into your Polymarket deposit wallet. Trading funds remain at Polymarket until you withdraw them."
+msgstr ""
+
+#: src/app/(auth)/sign-up.tsx:199
+#~ msgid "Must be at least 8 characters"
+#~ msgstr ""
+
+#: src/components/embed/video.tsx:158
+msgctxt "video"
+msgid "Mute"
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:218
+msgid "Mute all members"
+msgstr "Utišaj sve članove"
+
+#: src/components/post-context-menu.tsx:231
+#: src/components/screens/profile/profile-info.tsx:830
+msgid "Mute user"
+msgstr "Utišaj korisnika"
+
+#: src/lib/account-actions.ts:34
+msgid "Muted"
+msgstr "Utišano"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:286
+msgid "Muted list"
+msgstr "Lista utišanih"
+
+#: src/app/settings/moderation.tsx:121
+msgid "Muted users"
+msgstr "Utišani korisnici"
+
+#: src/app/settings/_layout.tsx:112
+msgid "Muted Users"
+msgstr "Utišani korisnici"
+
+#: src/components/lists/person-row.tsx:44
+#: src/lib/composer/suggestion-list.tsx:49
+msgid "Mutuals"
+msgstr "Zajednički"
+
+#: src/components/drawer/drawer-content.tsx:202
+msgid "My circle"
+msgstr ""
+
+#: src/app/_layout.tsx:420
+msgid "My Circle"
+msgstr ""
+
+#: src/components/drawer/drawer-content.tsx:197
+msgid "My circle of friends"
+msgstr ""
+
+#: src/components/drawer/drawer-content.tsx:123
+msgid "My feeds"
+msgstr "Moj feed"
+
+#: src/components/feeds-button.tsx:133
+msgid "My Feeds"
+msgstr "Moj feed"
+
+#: src/components/drawer/drawer-content.tsx:118
+msgid "My Feeds screen"
+msgstr "Moj feed zaslon"
+
+#: src/app/composer/language.tsx:85
+#: src/app/settings/language/index.tsx:109
+msgid "My languages"
+msgstr "Moji jezici"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/feeds/index.tsx:84
+#: src/components/feeds-button.tsx:221
+msgid "My lists"
+msgstr "Moj popis"
+
+#: src/components/screens/profile/profile-info.tsx:766
+msgid "Name or Description Violates Community Standards"
+msgstr "Naziv ili opis krše standarde zajednice"
+
+#: src/components/screens/profile/profile-balances.tsx:378
+msgid "Native network token"
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:84
+#~ msgid "Native testnet token"
+#~ msgstr ""
+
+#: src/app/add-to-list/[handle].tsx:164
+msgid "Need a new list?"
+msgstr "Trebate novu listu?"
+
+#: src/app/venue-onboarding/index.tsx:168
+msgid "Needs attention"
+msgstr ""
+
+#: src/components/deposit-modal.tsx:101
+#: src/components/send-token-modal.tsx:626
+msgid "Network"
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:540
+msgid "Network fee (estimated)"
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/tag/[tag].tsx:221
+msgid "New"
+msgstr "Novi"
+
+#: src/components/notification/index.tsx:174
+msgid "New follower: {0} @{1}"
+msgstr "Novi pratitelj: {0} @{1}"
+
+#: src/components/screens/change-password-flow.tsx:153
+msgid "New Password"
+msgstr "Nova lozinka"
+
+#: src/app/composer/_layout.tsx:92
+#: src/lib/quick-actions.ts:53
+msgid "New Post"
+msgstr "Nova objava"
+
+#: src/app/(auth)/sign-up.tsx:255
+#: src/app/(auth)/sign-up.tsx:356
+#~ msgid "Next"
+#~ msgstr ""
+
+#: src/app/market-trade.tsx:1151
+#: src/components/prediction-market-resolution-actions.tsx:237
+#: src/components/prediction-market-resolution.tsx:175
+#: src/components/prediction-market-resolution.tsx:332
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:215
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:457
+msgid "NO"
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:525
+msgid "NO allocation"
+msgstr ""
+
+#: src/app/market-trade.tsx:800
+#~ msgid "No backend wallet is linked to this account yet."
+#~ msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/feeds.tsx:76
+msgid "No feeds found - maybe try a different search term?"
+msgstr "Feed nije pronađen - pokušajte s drugim pojmom za pretraživanje?"
+
+#: src/components/widgets/markets/perpetual/market.tsx:763
+#~ msgid "No Kites wallet address is available."
+#~ msgstr ""
+
+#: src/components/order-book-panel.tsx:573
+msgid "No levels"
+msgstr ""
+
+#: src/app/market-trade.tsx:1098
+#: src/app/market-trade.tsx:1120
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:464
+msgid "No liquidity"
+msgstr ""
+
+#: src/app/market-trade.tsx:873
+msgid "No liquidity matched your order"
+msgstr ""
+
+#: src/components/screens/profile/profile-markets.tsx:111
+msgid "No markets created yet."
+msgstr ""
+
+#: src/components/prediction-market-post.tsx:143
+#~ msgid "No markets found for this creator."
+#~ msgstr ""
+
+#: src/components/screens/markets-feed-screen.tsx:125
+msgid "No markets have been created yet."
+msgstr ""
+
+#: src/app/composer/threadgate.tsx:55
+msgid "No one can reply"
+msgstr "Nitko ne može odgovoriti"
+
+#: src/components/wallet-positions.tsx:590
+msgid "No open positions"
+msgstr ""
+
+#: src/app/market-trade.tsx:1162
+msgid "NO order book"
+msgstr ""
+
+#: src/components/send-token-modal.tsx:579
+msgid "No other users found for that handle."
+msgstr ""
+
+#: src/app/market-trade.tsx:1075
+msgid "NO outcome"
+msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:785
+#~ msgid "No Perpl exchange account was found for this wallet. Create and fund one to start trading."
+#~ msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/posts.tsx:109
+msgid "No posts found - maybe try a different search term?"
+msgstr "Post nije pronađen - pokušajte s drugim pojmom za pretraživanje?"
+
+#: src/components/widgets/markets/prediction/hyperliquid-event.tsx:90
+msgid "No prediction markets are available for this event."
+msgstr ""
+
+#: src/app/settings/feed.tsx:84
+#: src/app/settings/moderation.tsx:43
+msgid "No preferences"
+msgstr "Bez preferencija"
+
+#: src/app/market-trade.tsx:1111
+msgid "NO price"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:346
+msgid "NO shares"
+msgstr ""
+
+#: src/components/widgets/markets/spot/asset.tsx:62
+msgid "No spot exchanges are configured yet."
+msgstr ""
+
+#: src/app/market-trade.tsx:1113
+msgid "NO token"
+msgstr ""
+
+#: src/app/venue-onboarding/index.tsx:77
+msgid "No trading venues are available yet."
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/people.tsx:82
+msgid "No users found - maybe try a different search term?"
+msgstr "Korisnik nije pronađen - pokušajte s drugim pojmom za pretraživanje?"
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:367
+msgid "No wallet address"
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:173
+msgid "No wallet is linked to this account yet."
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:204
+msgid "NO won"
+msgstr ""
+
+#: src/app/polymarket-event.tsx:157
+#: src/components/widgets/markets/prediction/polymarket-event.tsx:143
+msgid "No YES/NO markets are available for this event yet."
+msgstr ""
+
+#: src/components/primary-post.tsx:250
+msgid "Nobody can reply"
+msgstr "Nitko ne može odgovoriti"
+
+#: src/components/widgets/markets/perpetual/market.tsx:351
+msgid "Not enough price history to chart."
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/markets/details.tsx:124
+#: src/components/feed-row.tsx:251
+msgid "Not favourited"
+msgstr "Nemoj favorizirati"
+
+#: src/app/venue-onboarding/index.tsx:161
+msgid "Not set up"
+msgstr ""
+
+#: src/lib/hooks/link-press.tsx:76
+msgid "Not sure why, sorry :("
+msgstr "Nisam siguran zašto, oprosti :("
+
+#: src/app/settings/account/change-handle.tsx:95
+msgid "Not yet implemented"
+msgstr "Još nije implementirano"
+
+#: src/app/settings/moderation.tsx:133
+msgid "Note: Adult content settings cannot be changed on iOS. Please use the web app instead."
+msgstr "Napomena: Postavke sadržaja za odrasle ne mogu se promijeniti na iOS-u. Umjesto toga upotrijebite web aplikaciju."
+
+#: src/app/(tabs)/_layout.tsx:262
+#: src/app/(tabs)/(feeds,search,notifications,self)/notifications.tsx:315
+#: src/app/settings/app.tsx:69
+#: src/app/settings/index.tsx:68
+msgid "Notifications"
+msgstr "Obavijesti"
+
+#: src/components/widgets/markets/perpetual/market.tsx:391
+msgid "Now"
+msgstr ""
+
+#: src/app/composer/content-warning.tsx:28
+msgid "Nudity"
+msgstr "Golotinja"
+
+#: src/components/order-book-panel.tsx:243
+#~ msgid "Offer"
+#~ msgstr ""
+
+#: src/app/settings/feed.tsx:264
+msgid "Only show replies from your follows"
+msgstr "Prikaži samo odgovore od mojih pratitelja"
+
+#: src/components/widgets/markets/index.tsx:94
+msgid "Open {0}"
+msgstr ""
+
+#: src/components/wallet-venue-balances.tsx:160
+msgid "Open {0} venue"
+msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:595
+#~ msgid "Open {venue}"
+#~ msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:223
+#~ msgid "Open Add tab"
+#~ msgstr ""
+
+#: src/components/screens/markets-feed-screen.tsx:219
+#: src/components/screens/profile/profile-markets.tsx:211
+msgid "Open associated post"
+msgstr ""
+
+#: src/components/open-drawer-avatar.tsx:18
+#: src/components/open-drawer-avatar.tsx:34
+msgid "Open drawer menu"
+msgstr "Otvori izbornik ladice"
+
+#: src/lib/hooks/link-press.tsx:88
+msgid "Open link"
+msgstr "Otvori poveznicu"
+
+#: src/components/widgets/markets/index.tsx:81
+#~ msgid "Open venue"
+#~ msgstr ""
+
+#: src/components/prediction-market-post.tsx:151
+#~ msgid "Opening probability"
+#~ msgstr ""
+
+#: src/components/embed/index.tsx:263
+msgid "Opens embedded post"
+msgstr "Otvari ugrađeni post"
+
+#: src/components/feed-post.tsx:305
+#: src/components/feed-post.tsx:503
+msgid "Opens parent post"
+msgstr "Otvori povezanu objavu"
+
+#: src/components/feed-post.tsx:340
+msgid "Opens post details"
+msgstr "Otvori detalje objave"
+
+#: src/components/feed-post.tsx:251
+#: src/components/feed-post.tsx:419
+#: src/components/notification/index.tsx:164
+#: src/components/primary-post.tsx:128
+msgid "Opens profile"
+msgstr "Otvori profil"
+
+#: src/components/screens/profile/profile-info.tsx:523
+msgid "Opens the public wallet-link document"
+msgstr ""
+
+#: src/app/polymarket-event.tsx:129
+#: src/components/widgets/markets/prediction/polymarket-event.tsx:142
+#~ msgid "Opens the trade screen"
+#~ msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:346
+#: src/components/widgets/markets/perpetual/market.tsx:509
+#: src/components/widgets/markets/prediction/hyperliquid-event.tsx:129
+#~ msgid "Opens this Hyperliquid testnet market"
+#~ msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:181
+#: src/components/widgets/markets/perpetual/market.tsx:258
+#: src/components/widgets/markets/perpetual/market.tsx:508
+#~ msgid "Opens this Perpl market"
+#~ msgstr ""
+
+#: src/app/create-list.tsx:217
+msgid "Optional"
+msgstr "Neobavezno"
+
+#: src/components/perpl-trade-screen.tsx:481
+msgid "Order book"
+msgstr ""
+
+#: src/app/market-trade.tsx:1726
+msgid "Order processing"
+msgstr ""
+
+#: src/components/order-book-panel.tsx:403
+msgid "Orders"
+msgstr ""
+
+#: src/components/post-context-menu.tsx:138
+#: src/components/screens/profile/profile-info.tsx:767
+msgid "Other"
+msgstr "Ostalo"
+
+#: src/components/prediction-market-funding.tsx:295
+#~ msgid "Outcome tokens claimed"
+#~ msgstr ""
+
+#: src/components/prediction-market-funding.tsx:246
+msgid "Outcome tokens ready"
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:208
+msgid "Outcome unavailable"
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:516
+msgid "Outcome-holder vote"
+msgstr ""
+
+#: src/app/market-trade.tsx:657
+#~ msgid "Passkey wallet · preview"
+#~ msgstr ""
+
+#: src/app/settings/account/delete-account.tsx:183
+msgid "Password"
+msgstr "Lozinka"
+
+#: src/components/screens/change-password-flow.tsx:227
+msgid "Password changed successfully!"
+msgstr "Lozinka je uspješno promijenjena!"
+
+#: src/components/screens/change-password-flow.tsx:60
+msgid "Password must be at least 8 characters"
+msgstr "Lozinka mora sadržavati minimalno 8 znakova"
+
+#: src/app/market-trade.tsx:1199
+msgid "Pay with"
+msgstr ""
+
+#: src/components/screens/waiting-room.tsx:79
+msgid "people ahead of you."
+msgstr "korisnika ispred vas."
+
+#: src/app/composer/threadgate.tsx:93
+msgid "People mentioned in the thread"
+msgstr "Korisnici spomenuti u ovoj niti"
+
+#: src/app/composer/threadgate.tsx:115
+msgid "People you follow"
+msgstr "Korisnike koje vi pratite"
+
+#: src/components/image-with-context-menu.tsx:156
+#: src/lib/composer/utils.tsx:526
+#: src/lib/composer/utils.tsx:536
+#: src/lib/composer/utils.tsx:555
+#: src/lib/composer/utils.tsx:563
+msgid "Permission required"
+msgstr "Potrebno dopuštenje"
+
+#: src/components/widgets/markets/perpetual/market.tsx:59
+msgid "Perpetual"
+msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:66
+msgid "Perpetual market"
+msgstr ""
+
+#: src/app/venue-onboarding/index.tsx:179
+msgid "Perpetual markets"
+msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:114
+#: src/components/widgets/markets/perpetual/market.tsx:231
+msgid "PERPETUAL MARKETS"
+msgstr ""
+
+#: src/app/perpetual-trade.tsx:20
+msgid "Perpetual trade"
+msgstr ""
+
+#: src/app/composer/index.tsx:1007
+#~ msgid "Perpetual widget"
+#~ msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:111
+msgid "PERPL"
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:499
+msgid "Perpl API access may be restricted in some locations."
+msgstr ""
+
+#: src/app/venue-onboarding/index.tsx:44
+msgid "Perpl setup will continue after your wallet receives test funds. Other venue setup can finish independently."
+msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:559
+#~ msgid "Perpl uses isolated margin. Open its secure trading app to connect your wallet, enable trading, and place an order."
+#~ msgstr ""
+
+#: src/app/(auth)/sign-up.tsx:281
+#~ msgid "Phone number"
+#~ msgstr ""
+
+#: src/components/embed/video.tsx:108
+msgid "Play video"
+msgstr ""
+
+#: src/app/composer/index.tsx:332
+msgid "Please add descriptive alt text to all images before posting."
+msgstr "Dodajte opisni alternativni tekst svim slikama prije objave."
+
+#: src/components/prediction-market-funding.tsx:182
+#: src/components/prediction-market-funding.tsx:205
+#: src/components/prediction-market-resolution-actions.tsx:153
+#: src/components/prediction-market-resolution.tsx:403
+#: src/components/send-token-modal.tsx:272
+msgid "Please check your wallet and try again."
+msgstr ""
+
+#: src/lib/composer/utils.tsx:556
+#: src/lib/composer/utils.tsx:564
+msgid "Please enable camera access in your settings"
+msgstr "Omogućite pristup kameri u postavkama"
+
+#: src/components/image-with-context-menu.tsx:158
+#: src/lib/composer/utils.tsx:528
+#: src/lib/composer/utils.tsx:538
+msgid "Please enable photo gallery access in your settings"
+msgstr "Omogućite pristup foto galeriji u svojim postavkama"
+
+#: src/app/(auth)/sign-up.tsx:303
+#~ msgid "Please enter a phone number that can receive SMS text messages."
+#~ msgstr ""
+
+#: src/app/composer/gifs.tsx:215
+#: src/app/composer/index.tsx:559
+#: src/components/screens/change-password-flow.tsx:72
+msgid "Please try again"
+msgstr "Molimo pokušajte ponovno"
+
+#: src/components/screens/change-password-flow.tsx:80
+msgid "Please try again - are you sure your reset code is correct?"
+msgstr "Pokušajte ponovo - jeste li sigurni da je vaš kod za poništavanje točan?"
+
+#: src/components/screens/profile/profile-balances.tsx:139
+msgid "Please try setting up your wallet again."
+msgstr ""
+
+#: src/components/wallet-locked-overlay.tsx:76
+#: src/components/widgets/markets/trade-button.tsx:117
+msgid "Please try unlocking your wallet again."
+msgstr ""
+
+#: src/app/settings/account/change-handle.tsx:96
+msgid "Please use the official app in the meantime. Sorry!"
+msgstr "U međuvremenu koristite službenu aplikaciju. Oprostite!"
+
+#: src/components/send-token-modal.tsx:157
+msgid "Please wait while your transfer is confirmed."
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:110
+#: src/lib/web3/custody/context.tsx:588
+#~ msgid "Please wait while your wallet is set up."
+#~ msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:107
+#: src/components/wallet-locked-overlay.tsx:53
+#: src/components/widgets/markets/trade-button.tsx:102
+msgid "Please wait while your wallet unlocks."
+msgstr ""
+
+#: src/components/deposit-modal.tsx:93
+#~ msgid "Polymarket"
+#~ msgstr ""
+
+#: src/components/widgets/markets/prediction/polymarket-event.tsx:67
+msgid "POLYMARKET"
+msgstr ""
+
+#: src/app/market-trade.tsx:1615
+msgid "Polymarket account data could not be refreshed."
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:315
+#~ msgid "Polymarket account ready"
+#~ msgstr ""
+
+#: src/components/venue-funding-modal.tsx:220
+msgid "Polymarket deposit failed"
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:277
+msgid "Polymarket deposit not completed"
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:253
+msgid "Polymarket deposit pending"
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:168
+msgid "Polymarket deposit still pending"
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:164
+#~ msgid "Polymarket direct EOA trading may require the address to be allowlisted by Polymarket. Depositing funds and approving contracts does not guarantee that Polymarket will grant trading access."
+#~ msgstr ""
+
+#: src/app/polymarket-event.tsx:38
+msgid "Polymarket Event"
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:211
+msgid "Polymarket funding confirmed"
+msgstr ""
+
+#: src/app/market-trade.tsx:820
+#~ msgid "Polymarket order accepted"
+#~ msgstr ""
+
+#: src/app/market-trade.tsx:810
+#~ msgid "Polymarket order is processing"
+#~ msgstr ""
+
+#: src/app/market-trade.tsx:633
+msgid "Polymarket order not submitted"
+msgstr ""
+
+#: src/app/market-trade.tsx:1579
+msgid "Polymarket trading approvals are missing. Finish account setup before trading."
+msgstr ""
+
+#: src/app/market-trade.tsx:1570
+msgid "Polymarket trading approvals could not be verified. Try again before trading."
+msgstr ""
+
+#: src/app/market-trade.tsx:1248
+msgid "Polymarket trading is unavailable in your location."
+msgstr ""
+
+#: src/app/market-trade.tsx:921
+#~ msgid "Polymarket wallet"
+#~ msgstr ""
+
+#: src/components/polymarket-withdraw-modal.tsx:219
+msgid "Polymarket withdrawal confirmed"
+msgstr ""
+
+#: src/components/polymarket-withdraw-modal.tsx:237
+msgid "Polymarket withdrawal failed"
+msgstr ""
+
+#: src/components/polymarket-withdraw-modal.tsx:338
+msgid "Polymarket withdrawal not completed"
+msgstr ""
+
+#: src/components/polymarket-withdraw-modal.tsx:276
+msgid "Polymarket withdrawal pending"
+msgstr ""
+
+#: src/app/composer/content-warning.tsx:33
+msgid "Pornographic content"
+msgstr "Pornografski sadržaj"
+
+#: src/components/wallet-positions.tsx:597
+msgid "Position data is unavailable from {0}."
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:241
+msgid "Positions"
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/post/[post].tsx:371
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/post/[post].tsx:384
+#: src/lib/composer/buttons.tsx:78
+msgid "Post"
+msgstr "Objavi"
+
+#: src/app/composer/index.tsx:345
+msgid "Post anyway"
+msgstr "Svejedno objavite"
+
+#: src/app/circle.tsx:281
+msgid "Post circle"
+msgstr ""
+
+#: src/components/post-context-menu.tsx:104
+msgid "Post deleted"
+msgstr "Objava obrisana"
+
+#: src/app/composer/_layout.tsx:101
+msgid "Post Language"
+msgstr "Jezik objave"
+
+#: src/app/settings/language/index.tsx:86
+msgid "Post languages"
+msgstr "Jezik objave"
+
+#: src/components/post-context-menu.tsx:70
+msgid "Post link copied to clipboard"
+msgstr "Poveznica objave je spremljena u međuspremnik"
+
+#: src/app/composer/index.tsx:375
+#: src/app/composer/index.tsx:438
+msgid "Post published!"
+msgstr "Post je objavljen!"
+
+#: src/app/circle.tsx:245
+msgid "Post text (optional)"
+msgstr ""
+
+#: src/components/post-context-menu.tsx:81
+msgid "Post text copied to clipboard"
+msgstr "Tekst objave spremljen je u međuspremnik"
+
+#: src/components/screens/profile/profile-tab-view.tsx:94
+msgid "Posts"
+msgstr "Objave"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/feeds/index.tsx:145
+#: src/components/feeds-button.tsx:300
+msgid "Posts from people you follow"
+msgstr "Objave od korisnika koje pratite"
+
+#: src/app/settings/language/index.tsx:103
+msgid "Posts will be translated into {primaryLanguageLabel}."
+msgstr "Objave će biti prevedene na {primaryLanguageLabel}."
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/tag/[tag].tsx:186
+msgid "Powered by Skyfeed"
+msgstr "Pokreće Skyfeed"
+
+#: src/components/prediction-market-funding.tsx:301
+msgid "Pre-market"
+msgstr ""
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:413
+msgid "Prediction market"
+msgstr ""
+
+#: src/app/venue-onboarding/index.tsx:175
+msgid "Prediction markets"
+msgstr ""
+
+#: src/components/widgets/markets/prediction/polymarket-event.tsx:70
+msgid "PREDICTION MARKETS"
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/markets/details.tsx:75
+#: src/app/discover.tsx:221
+#: src/lib/hooks/feeds.ts:69
+msgid "Prediction markets and their posts"
+msgstr ""
+
+#: src/app/venue-onboarding/index.tsx:40
+msgid "Preparing your testnet wallet"
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:203
+#~ msgid "Preview first-time setup"
+#~ msgstr ""
+
+#: src/components/order-book-panel.tsx:193
+#~ msgid "Price"
+#~ msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:349
+msgid "Price history is unavailable."
+msgstr ""
+
+#: src/app/market-trade.tsx:624
+msgid "Price moved"
+msgstr ""
+
+#: src/components/widgets/markets/spot/asset.tsx:97
+msgid "Price unavailable"
+msgstr ""
+
+#: src/components/widgets/markets/spot/asset.tsx:95
+msgid "Price unavailable: {0}"
+msgstr ""
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:462
+msgid "Price:"
+msgstr ""
+
+#: src/app/settings/feed.tsx:134
+#: src/app/settings/feed.tsx:157
+#: src/app/settings/feed.tsx:173
+msgid "Primary feed"
+msgstr "Primarni feed"
+
+#: src/app/settings/language/index.tsx:89
+msgid "Primary language"
+msgstr "Primarni jezik"
+
+#: src/app/settings/_layout.tsx:142
+msgid "Primary Language"
+msgstr "Primarni jezik"
+
+#: src/app/wallet-link.tsx:240
+msgid "Primary type and field types"
+msgstr ""
+
+#: src/app/settings/_layout.tsx:70
+msgid "Pro Settings"
+msgstr "Pro postavke"
+
+#: src/components/drawer/drawer-content.tsx:175
+#~ msgid "Pro version information and purchase"
+#~ msgstr "Informacije o Pro verziji i kupnji"
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:180
+msgid "Probability"
+msgstr ""
+
+#: src/app/(tabs)/_layout.tsx:282
+#: src/components/screens/profile/profile-tab-view.tsx:59
+msgid "Profile"
+msgstr "Profil"
+
+#: src/app/settings/account/index.tsx:37
+msgid "Profile Settings"
+msgstr "Postavke profila"
+
+#: src/components/prediction-market-resolution.tsx:510
+msgid "Proposal challenge period"
+msgstr ""
+
+#: src/app/market-rules.tsx:68
+#~ msgid "Proposals and challenges require a bond. It is returned only if the final result matches the choice it backed; otherwise, it is lost. Requesting the final attester review does not require a bond."
+#~ msgstr ""
+
+#: src/app/market-rules.tsx:68
+msgid "Proposals and challenges require a deposit (bond) to back the choice. It is returned only if the final result matches that choice; otherwise, it is lost. Requesting a final review requires no deposit."
+msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:178
+#~ msgid "Propose {outcome}"
+#~ msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:171
+#~ msgid "Propose {outcome}?"
+#~ msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:185
+msgid "Propose {outcomeLabel}"
+msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:178
+msgid "Propose {outcomeLabel}?"
+msgstr ""
+
+#: src/components/post-action-row.tsx:147
+msgid "Propose a market for this post"
+msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:234
+#~ msgid "Propose Cancelled"
+#~ msgstr ""
+
+#: src/app/composer/_layout.tsx:97
+#: src/app/composer/propose-market.tsx:204
+#: src/lib/composer/keyboard-accessory.tsx:140
+#: src/lib/composer/keyboard-accessory.tsx:166
+msgid "Propose Market"
+msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:226
+#~ msgid "Propose NO"
+#~ msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:202
+msgid "Propose the market outcome"
+msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:220
+#~ msgid "Propose YES"
+#~ msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:161
+msgid "Proposed outcome"
+msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:215
+#~ msgid "Proposing requires this USDC bond. The contract settles it under the market's resolution rules."
+#~ msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:101
+#~ msgid "Protocol collateral"
+#~ msgstr ""
+
+#: src/app/_layout.tsx:428
+msgid "Purchase Successful"
+msgstr "Uspješna kupnja"
+
+#: src/app/create-list.tsx:233
+msgid "Purpose"
+msgstr "Svrha"
+
+#: src/app/settings/index.tsx:71
+msgid "Push notifications"
+msgstr "Push obavijesti"
+
+#: src/app/_layout.tsx:543
+#: src/app/push-notifications.tsx:35
+msgid "Push Notifications"
+msgstr "Push obavijesti"
+
+#: src/components/order-book-panel.tsx:409
+msgid "Qty"
+msgstr ""
+
+#: src/lib/hooks/post-actions.tsx:141
+msgid "Quote"
+msgstr "Citiraj"
+
+#: src/app/settings/feed.tsx:309
+msgid "Quote post settings"
+msgstr "Postavke citirajućih objava"
+
+#: src/components/prediction-market-funding.tsx:597
+msgid "Raised"
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/tag/[tag].tsx:235
+msgid "Random"
+msgstr "Nasumično"
+
+#: src/components/image-viewer.tsx:146
+msgid "Read full ALT text"
+msgstr "Pročitajte cijeli ALT tekst"
+
+#: src/components/deposit-modal.tsx:98
+msgid "Receive funds into your Kites wallet."
+msgstr ""
+
+#: src/components/wallet-activity-preview.tsx:42
+msgid "Recent activity"
+msgstr ""
+
+#: src/components/send-token-modal.tsx:403
+msgid "Recipient"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:369
+msgid "Reclaim USDC"
+msgstr ""
+
+#: src/app/wallet-link.tsx:99
+msgid "Record document"
+msgstr ""
+
+#: src/app/wallet-link.tsx:160
+msgid "Record fields"
+msgstr ""
+
+#: src/app/wallet-link.tsx:89
+msgid "Record URI"
+msgstr ""
+
+#: src/app/market-trade.tsx:1024
+#: src/app/polymarket-event.tsx:43
+msgid "Refresh market data"
+msgstr ""
+
+#: src/app/market-trade.tsx:1605
+msgid "Refreshing Polymarket trading balance..."
+msgstr ""
+
+#: src/components/screens/profile/profile-tab-view.tsx:97
+msgid "Replies"
+msgstr "Odgovori"
+
+#: src/app/composer/_layout.tsx:116
+msgid "Reply Controls"
+msgstr "Kontrola odgovora"
+
+#: src/app/settings/feed.tsx:245
+msgid "Reply settings"
+msgstr "Postavke odgovora"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/post/[post].tsx:345
+msgid "Reply to {0}"
+msgstr "Odgovori {0}"
+
+#: src/components/feed-post.tsx:319
+#: src/components/feed-post.tsx:515
+msgid "replying to {0}"
+msgstr "odgovori {0}"
+
+#: src/app/composer/index.tsx:621
+msgid "Replying to @{0}"
+msgstr "Odgovori @{0}"
+
+#: src/components/feed-post.tsx:474
+msgid "replying to a blocked user"
+msgstr "odgovori blokiranom korisniku"
+
+#: src/components/feed-post.tsx:477
+msgid "replying to a deleted post"
+msgstr "odgovori izbrisanoj objavi"
+
+#: src/components/feed-post.tsx:469
+msgid "replying to a post that couldn't be fetched"
+msgstr "odgovori na objavu koja se nije mogla prikazati"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/post/[post].tsx:431
+msgid "Replying to some sort of post"
+msgstr "Odgovori na neki oblik objave"
+
+#: src/components/feed-post.tsx:471
+msgid "replying to..."
+msgstr "odgovori..."
+
+#: src/components/screens/profile/profile-info.tsx:848
+msgid "Report account"
+msgstr "Prijavi račun"
+
+#: src/components/post-context-menu.tsx:246
+msgid "Report post"
+msgstr "Prijavi objavu"
+
+#: src/components/post-context-menu.tsx:126
+#: src/components/screens/profile/profile-info.tsx:779
+msgid "Report submitted"
+msgstr "Prijava podnesena"
+
+#: src/lib/hooks/post-actions.tsx:140
+msgid "Repost"
+msgstr "Ponovi objavu"
+
+#: src/app/settings/feed.tsx:288
+msgid "Repost settings"
+msgstr "Postavke ponovljene objave"
+
+#: src/components/lists/reposts-list.tsx:54
+msgid "Reposted by"
+msgstr "Ponovna objava od"
+
+#: src/components/feed-post.tsx:434
+msgid "Reposted by {0}"
+msgstr "Ponovna objava od {0}"
+
+#: src/components/notification/index.tsx:84
+msgid "reposted your post"
+msgstr "objavio je tvoju objavu"
+
+#: src/app/(auth)/sign-up.tsx:317
+#~ msgid "Request code"
+#~ msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:629
+msgid "Request testnet AUSD"
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:621
+msgid "Requesting AUSD..."
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:722
+msgid "Required"
+msgstr ""
+
+#: src/components/screens/change-password-flow.tsx:137
+msgid "Reset Code"
+msgstr "Resetirajte kod"
+
+#: src/app/(auth)/_layout.tsx:43
+msgid "Reset password"
+msgstr "Resetiraj lozinku"
+
+#: src/components/prediction-market-resolution-actions.tsx:101
+msgid "Resolution action failed"
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:277
+#: src/lib/composer/market-proposal-panel.tsx:193
+msgid "Resolution criteria"
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:212
+#: src/lib/composer/market-proposal-panel.tsx:572
+msgid "Resolution Date"
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:94
+#~ msgid "Resolution deadline passed; awaiting on-chain update"
+#~ msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:522
+msgid "Resolution finalized"
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:524
+msgid "Resolution in progress"
+msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:149
+msgid "Resolution not finalized"
+msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:148
+msgid "Resolution not proposed"
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:85
+#~ msgid "Resolution pending"
+#~ msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:113
+msgid "Resolution proposed"
+msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:89
+#~ msgid "Resolution transaction still pending"
+#~ msgstr ""
+
+#: src/app/polymarket-event.tsx:104
+#: src/components/prediction-market-resolution.tsx:220
+msgid "Resolved"
+msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:210
+msgid "Resolver bond"
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:380
+#~ msgid "Restart preview"
+#~ msgstr ""
+
+#: src/app/pro.tsx:350
+#: src/app/pro.tsx:365
+msgid "Restore purchases"
+msgstr "Obnovi kupovinu"
+
+#: src/app/pro.tsx:348
+#: src/app/pro.tsx:363
+msgid "Restoring purchases..."
+msgstr "Obnovi kupovinu..."
+
+#: src/app/venue-onboarding/[venueId].tsx:382
+#: src/app/venue-onboarding/[venueId].tsx:429
+#: src/app/venue-onboarding/index.tsx:70
+#: src/components/error-boundary.tsx:34
+#: src/components/query-without-data.tsx:34
+#: src/components/screens/profile/profile-balances.tsx:458
+#: src/components/send-token-modal.tsx:462
+#: src/components/wallet-venue-balances.tsx:203
+msgid "Retry"
+msgstr "Pokušaj ponovo"
+
+#: src/app/venue-onboarding/[venueId].tsx:554
+msgid "Retry API access"
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:434
+msgid "Retry loading {0} balances"
+msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:808
+#~ msgid "Retry loading account details"
+#~ msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:361
+msgid "Retry loading balances"
+msgstr ""
+
+#: src/app/market-trade.tsx:1624
+msgid "Retry Polymarket refresh"
+msgstr ""
+
+#: src/app/composer/index.tsx:462
+#: src/app/composer/index.tsx:520
+msgid "Retry save"
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:368
+msgid "Retry setup"
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:242
+msgid "Retry setup to continue Perpl setup."
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:448
+#~ msgid "Retrying the post will not create another market."
+#~ msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:542
+msgid "Retrying will not create another market."
+msgstr ""
+
+#: src/components/polymarket-withdraw-modal.tsx:533
+#: src/components/venue-funding-modal.tsx:596
+msgid "Review"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:535
+msgid "Review contribution"
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:523
+msgid "Review deposit"
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:502
+#~ msgid "Review funding"
+#~ msgstr ""
+
+#: src/components/send-token-modal.tsx:619
+#: src/components/send-token-modal.tsx:649
+msgid "Review transfer"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:480
+msgid "Review your contribution"
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/tag/[tag].tsx:225
+msgid "Rising"
+msgstr "Rastuće"
+
+#: src/components/venue-funding-modal.tsx:544
+msgid "Route"
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/markets/details.tsx:108
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/feed/[generator]/details.tsx:210
+#: src/app/edit-bio.tsx:146
+#: src/app/edit-bio.tsx:188
+#: src/app/settings/account/change-handle.tsx:163
+#: src/components/screens/change-password-flow.tsx:209
+msgid "Save"
+msgstr "Spremi"
+
+#: src/app/pro.tsx:236
+msgid "Save {0}%"
+msgstr "Spremanje {0}%"
+
+#: src/components/image-with-context-menu.tsx:151
+msgid "Save Image"
+msgstr "Spremi sliku"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/markets/details.tsx:101
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/feed/[generator]/details.tsx:199
+msgid "Saved"
+msgstr "Spremljeno"
+
+#: src/components/image-with-context-menu.tsx:168
+msgid "Saved image to gallery"
+msgstr "Spremi sliku u galeriju"
+
+#: src/app/(tabs)/_layout.tsx:195
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/index.tsx:89
+#: src/lib/quick-actions.ts:47
+msgid "Search"
+msgstr "Traži"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/index.tsx:185
+msgid "Search all users"
+msgstr "Pretraži sve korisnike"
+
+#: src/components/send-token-modal.tsx:510
+msgid "Search by handle or wallet address"
+msgstr ""
+
+#: src/components/send-token-modal.tsx:378
+#~ msgid "Search by social handle"
+#~ msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/feeds.tsx:116
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/index.tsx:154
+#: src/app/discover.tsx:42
+msgid "Search feeds"
+msgstr "Pretraži feedove"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/feeds.tsx:127
+msgid "Search Feeds"
+msgstr "Pretraži feedove"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/feeds.tsx:80
+msgid "Search for feeds"
+msgstr "Pretraži feedove"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/posts.tsx:113
+msgid "Search for posts"
+msgstr "Pretraži objave"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/people.tsx:86
+msgid "Search for users"
+msgstr "Pretraži korisnike"
+
+#: src/lib/composer/keyboard-accessory.tsx:126
+msgid "Search GIFs"
+msgstr "Pretraži GIF-ove"
+
+#: src/app/composer/language.tsx:32
+#: src/app/settings/language/content.tsx:27
+#: src/app/settings/language/primary.tsx:28
+msgid "Search languages"
+msgstr "Pretraži jezike"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/people.tsx:114
+msgid "Search people"
+msgstr "Pretraži ljude"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/people.tsx:125
+msgid "Search People"
+msgstr "Pretraži ljude"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/index.tsx:149
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/posts.tsx:142
+msgid "Search posts"
+msgstr "Pretraži objave"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/posts.tsx:153
+msgid "Search Posts"
+msgstr "Pretraži objave"
+
+#: src/components/send-token-modal.tsx:373
+#~ msgid "Search recipient by handle"
+#~ msgstr ""
+
+#: src/components/send-token-modal.tsx:495
+msgid "Search recipient by handle or address"
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/index.tsx:160
+msgid "Search users"
+msgstr "Pretraži korisnike"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/index.tsx:61
+msgid "Search users, posts, feeds"
+msgstr "Traži korisnike, objave, feedove"
+
+#: src/components/post-context-menu.tsx:202
+msgid "See likes"
+msgstr "Vidi lajkove"
+
+#: src/components/post-context-menu.tsx:209
+msgid "See reposts"
+msgstr "Pogledaj ponovljene objave"
+
+#: src/app/pro.tsx:126
+msgid "See your closest connections"
+msgstr ""
+
+#: src/app/(auth)/sign-up.tsx:229
+#~ msgid "Select date of birth"
+#~ msgstr ""
+
+#: src/app/create-list.tsx:249
+msgid "Select list purpose"
+msgstr "Odaberi svrhu liste"
+
+#: src/app/composer/threadgate.tsx:90
+msgid "Select one or more options"
+msgstr "Odaberite jednu ili više opcija"
+
+#: src/lib/composer/market-proposal-panel.tsx:216
+msgid "Select resolution date and time"
+msgstr ""
+
+#: src/app/composer/index.tsx:997
+msgid "Select the venue widget to post with"
+msgstr ""
+
+#: src/app/composer/index.tsx:1000
+#~ msgid "Select the widget to post with"
+#~ msgstr ""
+
+#: src/app/market-trade.tsx:1138
+#: src/app/market-trade.tsx:1201
+msgid "Sell"
+msgstr ""
+
+#: src/app/market-trade.tsx:1731
+#: src/app/market-trade.tsx:1736
+msgid "Sell {0}"
+msgstr ""
+
+#: src/components/wallet-positions.tsx:796
+msgid "Sell all of your shares in {0} at the current market price. The order fills available liquidity and may close only part of it."
+msgstr ""
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:446
+#~ msgid "Sell NO"
+#~ msgstr ""
+
+#: src/app/market-trade.tsx:875
+msgid "Sell order filled"
+msgstr ""
+
+#: src/app/market-trade.tsx:597
+msgid "Sell outcome"
+msgstr ""
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:422
+#~ msgid "Sell YES"
+#~ msgstr ""
+
+#: src/app/composer/index.tsx:520
+#: src/components/screens/profile/profile-balances.tsx:515
+msgid "Send"
+msgstr ""
+
+#: src/components/send-token-modal.tsx:359
+msgid "Send {0}"
+msgstr ""
+
+#: src/app/settings/account/delete-account.tsx:130
+msgid "Send confirmation email"
+msgstr "Pošalji email za provjeru"
+
+#: src/components/deposit-modal.tsx:126
+#~ msgid "Send funds on {0} to this address."
+#~ msgstr ""
+
+#: src/components/deposit-modal.tsx:116
+msgid "Send funds on {0}to this address."
+msgstr ""
+
+#: src/components/deposit-modal.tsx:124
+#~ msgid "Send funds on Polygon to this address."
+#~ msgstr ""
+
+#: src/components/polymarket-deposit-modal.tsx:79
+#~ msgid "Send funds to this Polygon address."
+#~ msgstr ""
+
+#: src/components/screens/change-password-flow.tsx:118
+msgid "Send reset email"
+msgstr "Pošalji e-poštu za poništavanje"
+
+#: src/components/send-token-modal.tsx:471
+#~ msgid "Send tokens"
+#~ msgstr ""
+
+#: src/components/send-token-modal.tsx:156
+msgid "Sending transfer…"
+msgstr ""
+
+#: src/components/send-token-modal.tsx:196
+msgid "Sent {0} {1} to {2}."
+msgstr ""
+
+#: src/components/send-token-modal.tsx:122
+#~ msgid "Sent {0} {1} to @{2}."
+#~ msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:242
+msgid "Set market end to {DEV_MARKET_TRADING_DURATION_MINUTES} minutes from now"
+msgstr ""
+
+#: src/components/widgets/markets/trade-button.tsx:172
+msgid "Set up {0}"
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:365
+#~ msgid "Set up a passkey wallet to get started."
+#~ msgstr ""
+
+#: src/app/venue-onboarding/index.tsx:23
+#~ msgid "Set up a venue before trading there. Each venue may have different wallet, approval, and deposit requirements."
+#~ msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:212
+#~ msgid "Set up a wallet from the Add tab to view this section."
+#~ msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:582
+#~ msgid "Set up Hyperliquid"
+#~ msgstr ""
+
+#: src/components/venue-funding-modal.tsx:394
+msgid "Set up Kites wallet"
+msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:580
+#: src/components/widgets/markets/perpetual/market.tsx:777
+#: src/components/widgets/markets/perpetual/market.tsx:797
+#~ msgid "Set up Perpl"
+#~ msgstr ""
+
+#: src/components/venue-funding-modal.tsx:378
+msgid "Set up Polymarket"
+msgstr ""
+
+#: src/app/venue-onboarding/index.tsx:23
+#~ msgid "Set up Polymarket trading."
+#~ msgstr ""
+
+#: src/components/venue-funding-modal.tsx:370
+msgid "Set up the Polymarket deposit wallet before moving funds."
+msgstr ""
+
+#: src/components/wallet-venue-balances.tsx:201
+msgid "Set up venue"
+msgstr ""
+
+#: src/components/deposit-modal.tsx:153
+msgid "Set up wallet"
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:388
+msgid "Set up your Kites wallet to fund Polymarket."
+msgstr ""
+
+#: src/components/polymarket-withdraw-modal.tsx:417
+msgid "Set up your Polymarket deposit wallet before withdrawing."
+msgstr ""
+
+#: src/components/deposit-modal.tsx:152
+#~ msgid "Set up your Polymarket wallet to get a deposit address."
+#~ msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:399
+msgid "Set up your Polymarket wallet, then deposit."
+msgstr ""
+
+#: src/app/venue-onboarding/index.tsx:26
+msgid "Set up your trading venues."
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:435
+msgid "Set YES probability"
+msgstr ""
+
+#: src/app/venue-onboarding/index.tsx:164
+msgid "Setting up"
+msgstr ""
+
+#: src/lib/web3/custody/context.tsx:172
+msgid "Setting up {venueName}…"
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:342
+msgid "Setting up in the background"
+msgstr ""
+
+#: src/lib/web3/custody/context.tsx:587
+#~ msgid "Setting up Mera wallet…"
+#~ msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:107
+#: src/components/screens/profile/profile-balances.tsx:190
+#~ msgid "Setting up wallet…"
+#~ msgstr ""
+
+#: src/app/settings/_layout.tsx:56
+#: src/components/drawer/drawer-content.tsx:227
+#: src/lib/quick-actions.ts:59
+msgid "Settings"
+msgstr "Postavke"
+
+#: src/components/drawer/drawer-content.tsx:222
+msgid "Settings menu"
+msgstr "Izbornik postavki"
+
+#: src/app/venue-onboarding/index.tsx:158
+msgid "Setup complete"
+msgstr ""
+
+#: src/lib/web3/custody/context.tsx:182
+msgid "Setup is continuing in the background."
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:345
+msgid "Setup needs attention"
+msgstr ""
+
+#: src/app/composer/content-warning.tsx:23
+msgid "Sexual content"
+msgstr "Seksualni sadržaj"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/feed/[generator]/details.tsx:376
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:313
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:346
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:395
+msgid "Share"
+msgstr "Podijeli"
+
+#: src/app/capture/[author]/[post].tsx:83
+msgid "Share {0}'s post"
+msgstr "Podijeli objavu korisnika {0}"
+
+#: src/components/post-context-menu.tsx:181
+msgid "Share as image"
+msgstr "Podijeli kao sliku"
+
+#: src/app/_layout.tsx:553
+msgid "Share as Image"
+msgstr "Podijeli sliku"
+
+#: src/app/capture/[author]/[post].tsx:146
+#: src/components/image-with-context-menu.tsx:191
+msgid "Share image"
+msgstr "Podijeli sliku"
+
+#: src/lib/hooks/link-press.tsx:90
+msgid "Share link"
+msgstr "Podijeli poveznicu"
+
+#: src/components/post-context-menu.tsx:167
+msgid "Share link to post"
+msgstr "Podijeli poveznicu"
+
+#: src/components/post-context-menu.tsx:161
+msgid "Share post"
+msgstr "Podijeli objavu"
+
+#: src/components/screens/profile/profile-info.tsx:730
+#: src/components/screens/profile/profile-info.tsx:798
+msgid "Share profile"
+msgstr "Podijeli profil"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/feed/[generator]/details.tsx:404
+msgid "Share this feed"
+msgstr "Podijeli ovaj feed"
+
+#: src/components/image-with-context-menu.tsx:185
+msgid "Share via..."
+msgstr "Podijelite putem..."
+
+#: src/components/prediction-market-resolution.tsx:457
+msgid "shares"
+msgstr ""
+
+#: src/app/settings/moderation.tsx:102
+#: src/components/embed/index.tsx:253
+#: src/components/feed-post.tsx:179
+msgid "Show"
+msgstr "Prikaži"
+
+#: src/app/settings/app.tsx:53
+msgid "Show \"My Lists\" above \"All Feeds\""
+msgstr "Pokaži \"Moju listu\" iznad \"Ostalih listi\""
+
+#: src/components/lists/people-list.tsx:128
+msgid "Show {0} more"
+msgstr "Pokaži {0} više"
+
+#: src/components/order-book-panel.tsx:359
+msgid "Show 20 depth"
+msgstr ""
+
+#: src/components/lists/people-list.tsx:126
+msgid "Show all"
+msgstr "Prikaži sve"
+
+#: src/components/screens/profile/profile-info.tsx:521
+msgid "Show AT Protocol wallet record"
+msgstr ""
+
+#: src/app/settings/app.tsx:72
+msgid "Show each notification individually"
+msgstr "Pokaži svaku obavijest individualno"
+
+#: src/app/settings/app.tsx:80
+msgid "Show each notification individually in the notification tab"
+msgstr "Prikaži svaku obavijest zasebno u tabu obavijesti"
+
+#: src/components/order-book-panel.tsx:357
+msgid "Show less"
+msgstr ""
+
+#: src/app/settings/app.tsx:61
+msgid "Show lists above feeds in the feeds tab"
+msgstr "Prikaži listu iznad feeda u glavnom tabu"
+
+#: src/app/settings/feed.tsx:312
+msgid "Show quote posts"
+msgstr "Prikaži spomenutu objavu"
+
+#: src/app/settings/feed.tsx:248
+msgid "Show replies"
+msgstr "Pokaži odgovore"
+
+#: src/app/settings/feed.tsx:291
+msgid "Show reposts"
+msgstr "Pogledaj ponovljene objave"
+
+#: src/lib/composer/market-proposal-panel.tsx:227
+msgid "Shown in your local time zone"
+msgstr ""
+
+#: src/components/drawer/drawer-content.tsx:235
+#: src/components/drawer/drawer-content.tsx:241
+#: src/components/switch-accounts.tsx:136
+msgid "Sign out"
+msgstr "Odjavi se"
+
+#: src/app/(auth)/_layout.tsx:43
+#~ msgid "Sign up"
+#~ msgstr ""
+
+#: src/app/settings/about.tsx:41
+#~ msgid "Sign up for project updates"
+#~ msgstr "Prijavite se za buduće informacije o projektu"
+
+#: src/app/wallet-link.tsx:275
+msgid "Signature"
+msgstr ""
+
+#: src/app/wallet-link.tsx:226
+msgid "Signing domain"
+msgstr ""
+
+#: src/components/order-book-panel.tsx:199
+#~ msgid "Size"
+#~ msgstr ""
+
+#: src/components/wallet-positions.tsx:666
+msgid "Size: {0}"
+msgstr ""
+
+#: src/app/(tabs)/_layout.tsx:168
+#: src/app/(tabs)/(feeds,search,notifications,self)/feeds/index.tsx:264
+msgid "Skyline"
+msgstr "Skyline"
+
+#: src/app/market-trade.tsx:1378
+msgid "Slippage tolerance"
+msgstr ""
+
+#: src/app/pro.tsx:90
+msgid "Something went wrong, please try again later."
+msgstr "Nešto je pošlo po zlu. Pokušajte ponovno."
+
+#: src/app/_layout.tsx:133
+#: src/app/_layout.tsx:235
+msgid "Sorry! Your session expired. Please log in again."
+msgstr "Oprostite, ali vaša sesija je istekla! Molimo prijavite se ponovo."
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/tag/[tag].tsx:102
+msgid "Sort posts by"
+msgstr "Sortiraj postove"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/tag/[tag].tsx:115
+msgid "Sort: {0}"
+msgstr "Sortiraj: {0}"
+
+#: src/components/post-context-menu.tsx:134
+msgid "Spam"
+msgstr "Spam"
+
+#: src/app/composer/threadgate.tsx:67
+msgid "Specific people can reply"
+msgstr "Određene osobe mogu odgovoriti"
+
+#: src/app/market-rules.tsx:17
+msgid "SPM holders may vote"
+msgstr ""
+
+#: src/app/settings/about.tsx:67
+#~ msgid "Sponsor my work"
+#~ msgstr "Sponzorirajte moj rad"
+
+#: src/components/widgets/markets/spot/asset.tsx:31
+msgid "Spot asset"
+msgstr ""
+
+#: src/app/venue-onboarding/index.tsx:177
+msgid "Spot markets"
+msgstr ""
+
+#: src/app/_layout.tsx:470
+#: src/app/spot-trade.tsx:16
+msgid "Spot trade"
+msgstr ""
+
+#: src/components/order-book-panel.tsx:258
+msgid "Spread"
+msgstr ""
+
+#: src/app/settings/about.tsx:32
+msgid "Star us on GitHub!"
+msgstr "Ocijenite nas na GitHub-u!"
+
+#: src/components/notification/index.tsx:111
+#: src/components/notification/index.tsx:171
+msgid "started following you"
+msgstr "vas je počeo/la pratiti"
+
+#: src/app/venue-onboarding/[venueId].tsx:157
+#~ msgid "Steps and requirements are provided by {0}. Review each permission before approving it. Your passkey signs transactions locally; Kites does not receive your private key."
+#~ msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/feeds/manage.tsx:35
+msgid "Stop editing"
+msgstr "Prekini uređivanje"
+
+#: src/components/wallet-positions.tsx:802
+msgid "Submit a market close order for your {0} {1} position ({2}). The order fills available liquidity and may close only part of it."
+msgstr ""
+
+#: src/app/market-trade.tsx:1721
+msgid "Submitting trade..."
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:264
+#: src/components/prediction-market-funding.tsx:521
+msgid "Submitting..."
+msgstr ""
+
+#: src/app/pro.tsx:274
+msgid "Subscribe & pay"
+msgstr "Pretplatite se i platite"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:223
+msgid "Subscribe to {0}"
+msgstr "Pretplati se na {0}"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:283
+msgid "Subscribe to list"
+msgstr "Pretplatite se na listu"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/index.tsx:296
+msgid "Suggested follows"
+msgstr "Korisnike koje možete pratiti"
+
+#: src/app/pro.tsx:131
+msgid "Support development"
+msgstr "Podržite razvoj"
+
+#: src/components/widgets/markets/spot/asset.tsx:151
+msgid "Swapping for this venue is not connected yet."
+msgstr ""
+
+#: src/app/(tabs)/_layout.tsx:122
+msgid "Switch Accounts"
+msgstr "Promijeni račun"
+
+#: src/components/drawer/drawer-content.tsx:70
+msgid "system"
+msgstr "sustav"
+
+#: src/components/drawer/drawer-content.tsx:58
+#: src/components/drawer/drawer-content.tsx:92
+msgid "System"
+msgstr "Sustav"
+
+#: src/lib/composer/keyboard-accessory.tsx:104
+msgid "Take photo"
+msgstr "Snimi fotografiju"
+
+#: src/components/embed/video.tsx:149
+msgid "Tap to enter full screen"
+msgstr ""
+
+#: src/components/embed/video.tsx:160
+msgid "Tap to toggle sound"
+msgstr ""
+
+#: src/app/venue-onboarding/index.tsx:41
+msgid "Testnet funding is not ready"
+msgstr ""
+
+#: src/components/widgets/markets/prediction/hyperliquid-event.tsx:53
+msgid "TESTNET PREDICTION MARKETS"
+msgstr ""
+
+#: src/app/_layout.tsx:108
+#~ msgid "Testnet wallet funding is pending. Please sign in again later to retry."
+#~ msgstr ""
+
+#: src/app/_layout.tsx:108
+#~ msgid "Testnet wallet setup failed. It will be retried on your next sign-in."
+#~ msgstr ""
+
+#: src/app/_layout.tsx:108
+#~ msgid "Testnet wallet setup failed. Please contact support."
+#~ msgstr ""
+
+#: src/components/post-context-menu.tsx:127
+#: src/components/screens/profile/profile-info.tsx:780
+msgid "Thank you for making the skyline a safer place"
+msgstr "Hvala vam što skyline činite sigurnijim mjestom"
+
+#: src/components/list-footer.tsx:35
+msgid "That's everything!"
+msgstr "To je sve!"
+
+#: src/components/handle-availability.tsx:50
+msgid "That's you!"
+msgstr "To si ti!"
+
+#: src/components/prediction-market-resolution-actions.tsx:210
+#~ msgid "The app may need to approve the resolution hub before proposing. The resolver bond may be returned or slashed under the market's rules."
+#~ msgstr ""
+
+#: src/app/wallet-link.tsx:131
+msgid "The app re-reads the public AT Protocol record and checks the signature locally on this device."
+msgstr ""
+
+#: src/app/settings/app.tsx:121
+msgid "The app won't trigger haptic feedback manually anymore, however some UI elements may still have haptics. If you are sensitive to this, please disable haptics in your device's system accessibility settings."
+msgstr "Aplikacija više neće pokretati povratne dodirne informacije, no neki elementi korisničkog sučelja mogu i dalje imati dodirne informacije. Ako ste osjetljivi na ovo, onemogućite dodirne opcije u postavkama pristupačnosti sustava vašeg uređaja."
+
+#: src/components/screens/markets-feed-screen.tsx:204
+#: src/components/screens/profile/profile-markets.tsx:196
+msgid "The associated post could not be loaded."
+msgstr ""
+
+#: src/app/wallet-link.tsx:172
+msgid "The AT Protocol collection that defines this record. It is not a field in the wallet signature."
+msgstr ""
+
+#: src/app/wallet-link.tsx:233
+msgid "The chainId is part of the signature domain; it does not mean the wallet or funds are on Ethereum mainnet."
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:369
+msgid "The claim transaction failed on-chain."
+msgstr ""
+
+#: src/app/market-rules.tsx:18
+msgid "The Council's result can be challenged before the next deadline. If it is, holders of the SPM token vote. If nobody challenges, the Council's result becomes final."
+msgstr ""
+
+#: src/app/market-trade.tsx:1201
+#~ msgid "The current Polymarket order book could not be loaded. Refresh market data before trading."
+#~ msgstr ""
+
+#: src/app/wallet-link.tsx:319
+msgid "The current server does not keep a used-nonce list. It enforces challenge freshness with issuedAt; the public signature remains verifiable after that registration window expires."
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:178
+msgid "The deposit is still pending. Its status will update automatically."
+msgstr ""
+
+#: src/app/wallet-link.tsx:206
+msgid "The DID, address, nonce, issue time, audience, and wallet signature used to prove the link."
+msgstr ""
+
+#: src/app/market-trade.tsx:1748
+msgid "The estimate uses current pool reserves. The final amount may change with market activity, within your slippage tolerance."
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:451
+#~ msgid "The fee is paid from your Kites wallet in POL. No bridge or venue approval is requested."
+#~ msgstr ""
+
+#: src/components/venue-funding-modal.tsx:551
+msgid "The fee is paid in POL from your Kites wallet."
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:329
+msgid "The funding deadline passed before the goal was reached. Your contribution can be reclaimed below."
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:515
+#~ msgid "The funding goal has been reached. Market graduation is in progress."
+#~ msgstr ""
+
+#: src/components/prediction-market-funding.tsx:640
+msgid "The funding period expired before the goal was reached. This market will not graduate."
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:128
+msgid "The funding transaction failed on-chain."
+msgstr ""
+
+#: src/components/widgets/markets/prediction/hyperliquid-event.tsx:88
+msgid "The linked market is unavailable."
+msgstr ""
+
+#: src/components/widgets/markets/prediction/hyperliquid-event.tsx:167
+#~ msgid "The linked market is unavailable. Tap to open Hyperliquid testnet."
+#~ msgstr ""
+
+#: src/components/widgets/markets/prediction/polymarket-event.tsx:137
+msgid "The linked market is unavailable. Tap to open Polymarket."
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:530
+#~ msgid "The market is confirmed, but allocation details could not be loaded. You can open the market and refresh its data."
+#~ msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:118
+msgid "The market outcome is finalized on-chain."
+msgstr ""
+
+#: src/app/composer/propose-market.tsx:303
+msgid "The market transaction has already been submitted. Retrying will not create another market."
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:421
+#~ msgid "The market will calculate the exact YES and NO share amounts after your contribution is confirmed."
+#~ msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:252
+msgid "The Perpl AUSD request could not be completed."
+msgstr ""
+
+#: src/app/market-trade.tsx:637
+msgid "The Polymarket order could not be submitted."
+msgstr ""
+
+#: src/components/polymarket-withdraw-modal.tsx:342
+#: src/components/polymarket-withdraw-modal.tsx:348
+msgid "The Polymarket withdrawal could not be submitted."
+msgstr ""
+
+#: src/app/composer/index.tsx:554
+msgid "The post is already published. Tap Retry save to record its association without posting again."
+msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:117
+msgid "The proposal is now in its challenge period."
+msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:276
+msgid "The proposal was not challenged before its deadline. Anyone can now finalize it."
+msgstr ""
+
+#: src/app/wallet-link.tsx:190
+msgid "The public EVM address. It must match the address inside the signed proof."
+msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:215
+msgid "The resolver bond may be returned or slashed under the market's rules."
+msgstr ""
+
+#: src/app/market-rules.tsx:13
+msgid "The result can be challenged"
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:468
+msgid "The selected contribution and probability are passed to the market contract. Exact YES/NO allocations are read from the confirmed market; this ABI has no preview calculation."
+msgstr ""
+
+#: src/app/market-trade.tsx:1178
+msgid "The selected outcome has no available order book."
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:232
+msgid "The submitted transaction is still recorded as pending."
+msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:102
+msgid "The transaction failed on-chain."
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:238
+msgid "The transaction is still recorded as pending."
+msgstr ""
+
+#: src/components/send-token-modal.tsx:217
+msgid "The transaction is still waiting for network confirmation. Check again before sending another transfer."
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:281
+#: src/components/venue-funding-modal.tsx:287
+msgid "The transfer could not be submitted."
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:221
+#: src/components/venue-funding-modal.tsx:224
+msgid "The transfer failed on Polygon."
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:176
+#~ msgid "The transfer is still waiting for Polygon confirmation. Check again before sending another transfer."
+#~ msgstr ""
+
+#: src/components/send-token-modal.tsx:184
+msgid "The transfer transaction failed on-chain."
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:212
+msgid "The venue setup step could not be completed."
+msgstr ""
+
+#: src/app/wallet-link.tsx:181
+msgid "The version of this record format. It is not a field in the wallet signature."
+msgstr ""
+
+#: src/components/polymarket-withdraw-modal.tsx:235
+msgid "The withdrawal failed on Polygon."
+msgstr ""
+
+#: src/components/lists/people-list.tsx:138
+msgid "There's nothing here..."
+msgstr "Ovdje nema ničega..."
+
+#: src/components/wallet-venue-balances.tsx:85
+msgid "These funds are held by each trading venue and are separate from your Kites wallet."
+msgstr ""
+
+#: src/app/market-trade.tsx:1650
+msgid "This amount is estimated to buy fewer than 5 {0} shares. Increase the pUSD amount to continue."
+msgstr ""
+
+#: src/app/wallet-link.tsx:82
+msgid "This AT Protocol record publicly links an EVM wallet address to this profile's DID. The wallet signs a typed message to prove control of the address."
+msgstr ""
+
+#: src/app/polymarket-event.tsx:155
+#: src/components/widgets/markets/prediction/polymarket-event.tsx:141
+msgid "This event has resolved markets."
+msgstr ""
+
+#: src/components/screens/feed-screen.tsx:134
+msgid "This feed is empty"
+msgstr "Ovaj feed je prazan"
+
+#: src/app/settings/account/change-handle.tsx:50
+msgid "This handle is already taken. Please choose another."
+msgstr "Ovo korisničko ime je zauzeto. Molimo odaberite drugo."
+
+#: src/components/widgets/markets/perpetual/market.tsx:457
+#~ msgid "This Hyperliquid testnet market is not available."
+#~ msgstr ""
+
+#: src/app/wallet-link.tsx:282
+msgid "This is a 65-byte ECDSA signature encoded as hexadecimal. A verifier recovers the signing address from the EIP-712 domain, typed message, and signature. The recovered address must equal proof.address and the record's address."
+msgstr ""
+
+#: src/app/market-trade.tsx:695
+#~ msgid "This is a trade UI preview. No order will be submitted."
+#~ msgstr ""
+
+#: src/components/send-token-modal.tsx:480
+msgid "This is your own wallet."
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:507
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:638
+msgid "This list is empty"
+msgstr "Ova lista je prazna"
+
+#: src/components/screens/markets-feed-screen.tsx:206
+#: src/components/screens/profile/profile-markets.tsx:198
+msgid "This market is not associated with a post as the author may have deleted it."
+msgstr ""
+
+#: src/app/market-trade.tsx:1703
+msgid "This order is still processing. Check Polymarket before trading again. Order ID: {pendingPolymarketOrderId}"
+msgstr ""
+
+#: src/app/perpetual-trade.tsx:32
+msgid "This perpetual market is unavailable."
+msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:197
+msgid "This Perpl market is not available."
+msgstr ""
+
+#: src/app/polymarket-event.tsx:61
+msgid "This Polymarket event link is invalid."
+msgstr ""
+
+#: src/app/composer/propose-market.tsx:265
+msgid "This post already has a market attached."
+msgstr ""
+
+#: src/app/composer/content-warning.tsx:29
+msgid "This post contains artistic or non-erotic nudity."
+msgstr "Ova objava sadrži umjetničku ili neerotsku golotinju."
+
+#: src/app/composer/content-warning.tsx:24
+msgid "This post contains pictures intended for adults."
+msgstr "Ova objava sadrži slike namijenjene odraslima."
+
+#: src/app/composer/content-warning.tsx:35
+msgid "This post contains sexual activity or erotic nudity."
+msgstr "Ova objava sadrži seksualnu aktivnost ili erotsku golotinju."
+
+#: src/app/composer/propose-market.tsx:270
+msgid "This post could not be identified. Close and try again."
+msgstr ""
+
+#: src/components/embed/index.tsx:249
+#: src/components/feed-post.tsx:175
+msgid "This post is from someone you have blocked"
+msgstr "Objava je on nekoga koga ste blokirali"
+
+#: src/components/embed/index.tsx:247
+#: src/components/feed-post.tsx:173
+msgid "This post is from someone you have muted"
+msgstr "Objava je od nekoga koga ste utišali"
+
+#: src/components/screens/profile/profile-balances.tsx:360
+#~ msgid "This preview changes only the screen. It does not create a passkey or wallet."
+#~ msgstr ""
+
+#: src/app/wallet-link.tsx:335
+msgid "This profile has no valid public wallet record."
+msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:304
+msgid "This proposal was challenged and cannot be finalized as unchallenged."
+msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:173
+#~ msgid "This requires a {bondText} USDC resolver bond. The contract determines how the bond is settled."
+#~ msgstr ""
+
+#: src/components/prediction-market-resolution-actions.tsx:208
+#~ msgid "This resolver bond may be returned or slashed under the market's resolution rules."
+#~ msgstr ""
+
+#: src/components/widgets/markets/spot/asset.tsx:153
+msgid "This spot venue is not configured yet."
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/post/[post].tsx:343
+msgid "This thread is locked"
+msgstr "Ova nit je zaključana"
+
+#: src/components/screens/profile/profile-info.tsx:696
+msgid "This user has blocked you"
+msgstr "Ovaj korisnik vas je blokirao"
+
+#: src/components/send-token-modal.tsx:470
+msgid "This user has not set up a Kites wallet with an EVM address, so they cannot receive tokens here yet."
+msgstr ""
+
+#: src/components/screens/profile/profile-info.tsx:661
+msgid "This user is on the \"{0}\" block list"
+msgstr "Ovaj korisnik je na \"{0}\" blokiranoj listi"
+
+#: src/components/screens/profile/profile-info.tsx:630
+msgid "This user is on the \"{0}\" mute list"
+msgstr "Ovaj korisnik je na \"{0}\" utišanoj listi"
+
+#: src/app/venue-onboarding/[venueId].tsx:300
+msgid "This venue is not available for setup."
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:489
+msgid "This wallet has no winning shares to claim."
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:186
+msgid "Time left in this step"
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:535
+msgid "To"
+msgstr ""
+
+#: src/components/screens/feeds-screen-elements.tsx:25
+msgid "To get started, add some feeds to your home screen."
+msgstr "Za početak dodajte neki feed na početni zaslon."
+
+#: src/components/prediction-market-funding.tsx:610
+msgid "To graduate"
+msgstr ""
+
+#: src/components/feed-row.tsx:254
+msgid "Toggle favourite status"
+msgstr "Uključi/isključi status favorita"
+
+#: src/lib/composer/utils.tsx:418
+msgid "Too many images selected"
+msgstr "Odabrano je previše slika"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/tag/[tag].tsx:227
+msgid "Top (10h)"
+msgstr "Top (10h)"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/tag/[tag].tsx:229
+msgid "Top (24h)"
+msgstr "Top (24h)"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/tag/[tag].tsx:231
+msgid "Top (3d)"
+msgstr "Top (3d)"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/tag/[tag].tsx:233
+msgid "Top (7d)"
+msgstr "Top (7d)"
+
+#: src/components/order-book-panel.tsx:434
+msgid "Total"
+msgstr ""
+
+#: src/app/polymarket-event.tsx:121
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:416
+#: src/components/widgets/markets/prediction/polymarket-event.tsx:115
+#: src/components/widgets/markets/trade-button.tsx:262
+msgid "Trade"
+msgstr ""
+
+#: src/components/widgets/markets/prediction/polymarket-event.tsx:114
+#~ msgid "Trade {0}"
+#~ msgstr ""
+
+#: src/components/widgets/markets/trade-button.tsx:196
+#: src/components/widgets/markets/trade-button.tsx:238
+msgid "Trade {marketName}"
+msgstr ""
+
+#: src/app/market-trade.tsx:1224
+msgid "Trade amount"
+msgstr ""
+
+#: src/app/market-trade.tsx:609
+msgid "Trade confirmed"
+msgstr ""
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:361
+#: src/components/widgets/markets/trade-button.tsx:197
+#: src/components/widgets/markets/trade-button.tsx:238
+msgid "Trade market"
+msgstr ""
+
+#: src/app/polymarket-event.tsx:123
+#: src/components/widgets/markets/prediction/hyperliquid-event.tsx:140
+#~ msgid "Trade NO"
+#~ msgstr ""
+
+#: src/app/market-trade.tsx:625
+msgid "Trade not completed"
+msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:78
+#: src/components/widgets/markets/spot/asset.tsx:49
+msgid "Trade on {0}"
+msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:314
+#~ msgid "Trade on Hyperliquid testnet"
+#~ msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:193
+#~ msgid "Trade on Perpl"
+#~ msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:179
+msgid "Trade Perpl testnet"
+msgstr ""
+
+#: src/app/market-trade.tsx:1366
+msgid "Trade settings"
+msgstr ""
+
+#: src/app/polymarket-event.tsx:122
+#: src/components/widgets/markets/prediction/hyperliquid-event.tsx:118
+#~ msgid "Trade YES"
+#~ msgstr ""
+
+#: src/app/polymarket-event.tsx:102
+#: src/components/widgets/markets/prediction/prediction-market-card.tsx:47
+msgid "Trading closed"
+msgstr ""
+
+#: src/app/market-trade.tsx:989
+#~ msgid "Trading coming soon"
+#~ msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:851
+#~ msgid "Trading enabled"
+#~ msgstr ""
+
+#: src/components/prediction-market-post.tsx:179
+#: src/components/prediction-market-post.tsx:254
+#~ msgid "Trading ends in"
+#~ msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:152
+#~ msgid "Trading ends in (days)"
+#~ msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:547
+#~ msgid "Trading for this venue is not connected yet."
+#~ msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:853
+#~ msgid "Trading forwarding disabled"
+#~ msgstr ""
+
+#: src/components/prediction-market-post.tsx:180
+#: src/components/prediction-market-post.tsx:255
+#~ msgid "Trading has ended"
+#~ msgstr ""
+
+#: src/components/widgets/markets/index.tsx:84
+msgid "Trading is not configured for this venue yet."
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:168
+#~ msgid "Trading must last at least {MIN_TRADING_DURATION_DAYS} days so it stays open after funding closes."
+#~ msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:169
+#~ msgid "Trading must last at least 6 days so it stays open after funding closes."
+#~ msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:297
+msgid "Trading venue"
+msgstr ""
+
+#: src/app/venue-onboarding/index.tsx:23
+#: src/components/drawer/drawer-content.tsx:210
+#: src/components/drawer/drawer-content.tsx:215
+msgid "Trading venues"
+msgstr ""
+
+#: src/components/market-transaction-status.tsx:41
+msgid "Transaction"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:113
+msgid "Transaction still pending"
+msgstr ""
+
+#: src/components/market-transaction-status.tsx:22
+#: src/lib/composer/market-proposal-panel.tsx:487
+msgid "Transaction submitted"
+msgstr ""
+
+#: src/components/send-token-modal.tsx:194
+msgid "Transfer confirmed"
+msgstr ""
+
+#: src/components/send-token-modal.tsx:183
+msgid "Transfer failed"
+msgstr ""
+
+#: src/components/send-token-modal.tsx:268
+msgid "Transfer not sent"
+msgstr ""
+
+#: src/components/polymarket-withdraw-modal.tsx:435
+msgid "Transfer pUSD from your Polymarket deposit wallet back to your Kites wallet on Polygon."
+msgstr ""
+
+#: src/components/send-token-modal.tsx:215
+msgid "Transfer still pending"
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:389
+#~ msgid "Transfer submitted"
+#~ msgstr ""
+
+#: src/components/send-token-modal.tsx:444
+msgid "Transfers to this address cannot be reversed."
+msgstr ""
+
+#: src/components/screens/profile/profile-info.tsx:813
+msgid "Translate bio"
+msgstr "Prevedi biografiju"
+
+#: src/components/post-context-menu.tsx:154
+#: src/components/translation.tsx:86
+msgid "Translate post"
+msgstr "Prevedi objavu"
+
+#: src/app/pro.tsx:108
+msgid "Translate posts using DeepL"
+msgstr "Prevedi objavu koristeći DeepL"
+
+#: src/components/translation.tsx:146
+msgid "Translated by DeepL"
+msgstr "Preveo DeepL"
+
+#: src/components/translation.tsx:135
+msgid "Translated by Google"
+msgstr "Preveo Google"
+
+#: src/app/settings/language/index.tsx:136
+#: src/app/settings/pro.tsx:29
+msgid "Translation provider"
+msgstr "Pružatelj usluga prijevoda"
+
+#: src/app/success.tsx:38
+msgid "Translations are now powered by DeepL"
+msgstr "Prijevode sada pokreće DeepL"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/search/index.tsx:252
+msgid "Trending topics"
+msgstr "Popularne teme"
+
+#: src/app/polymarket-event.tsx:83
+msgid "Try again"
+msgstr ""
+
+#: src/components/polymarket-withdraw-modal.tsx:258
+msgid "Try checking the withdrawal again shortly."
+msgstr ""
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:339
+msgid "Unable to load"
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:427
+msgid "Unable to load {0} requirements."
+msgstr ""
+
+#: src/components/wallet-positions.tsx:579
+msgid "Unable to load positions from your trading venues."
+msgstr ""
+
+#: src/components/widgets/markets/perpetual/market.tsx:749
+#~ msgid "Unable to load your Kites wallet."
+#~ msgstr ""
+
+#: src/app/venue-onboarding/index.tsx:58
+msgid "Unable to load your wallet and venue setup."
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:87
+#~ msgid "Unable to load your wallet."
+#~ msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:381
+msgid "Unable to load your wallet. Retry to continue."
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:160
+msgid "Unable to read your wallet link from Bluesky."
+msgstr ""
+
+#: src/components/wallet-positions.tsx:621
+msgid "Unable to refresh positions from {0}."
+msgstr ""
+
+#: src/app/market-trade.tsx:1262
+#: src/app/market-trade.tsx:1281
+#: src/app/venue-onboarding/[venueId].tsx:313
+#: src/app/venue-onboarding/index.tsx:218
+#: src/app/venue-onboarding/index.tsx:224
+#: src/components/prediction-market-resolution.tsx:336
+#: src/components/screens/profile/profile-balances.tsx:499
+#: src/components/venue-funding-modal.tsx:418
+#: src/components/wallet-venue-balances.tsx:129
+#: src/lib/composer/market-proposal-panel.tsx:630
+msgid "Unavailable"
+msgstr ""
+
+#: src/components/screens/profile/profile-info.tsx:671
+#: src/lib/account-actions.ts:116
+#: src/lib/account-actions.ts:124
+msgid "Unblock"
+msgstr "Odblokiraj"
+
+#: src/lib/account-actions.ts:142
+msgid "Unblocked"
+msgstr "Odblokirano"
+
+#: src/lib/hooks/post-actions.tsx:140
+msgid "Undo Repost"
+msgstr "Poništi ponovnu objavu"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:300
+msgid "Unfavorite list"
+msgstr "Neomiljeni popis"
+
+#: src/components/screens/profile/profile-info.tsx:139
+msgid "Unfollowed user"
+msgstr "Korisnik je otpraćen"
+
+#: src/app/(auth)/sign-in.tsx:58
+#: src/app/settings/account/delete-account.tsx:69
+#: src/components/switch-accounts.tsx:68
+msgid "Unknown error"
+msgstr "Nepoznata greška"
+
+#: src/components/screens/profile/profile-balances.tsx:164
+#~ msgid "Unlock it to sign transactions or add funds."
+#~ msgstr ""
+
+#: src/components/wallet-locked-overlay.tsx:155
+#: src/components/widgets/markets/trade-button.tsx:145
+msgid "Unlock wallet"
+msgstr ""
+
+#: src/components/wallet-locked-overlay.tsx:143
+msgid "Unlock your wallet to view your balances and positions."
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:105
+#: src/components/wallet-locked-overlay.tsx:52
+#: src/components/wallet-locked-overlay.tsx:153
+#: src/components/widgets/markets/trade-button.tsx:101
+#: src/components/widgets/markets/trade-button.tsx:262
+msgid "Unlocking wallet…"
+msgstr ""
+
+#: src/components/embed/video.tsx:157
+msgctxt "video"
+msgid "Unmute"
+msgstr ""
+
+#: src/components/screens/profile/profile-info.tsx:640
+msgid "Unmute"
+msgstr "Ponovno uključi"
+
+#: src/lib/account-actions.ts:53
+msgid "Unmuted"
+msgstr "Ponovno uključi"
+
+#: src/components/feed-row.tsx:324
+msgid "Unsave"
+msgstr "Poništi spremanje"
+
+#: src/components/feed-row.tsx:323
+msgid "Unsave this feed?"
+msgstr "Poništi spremanje feeda?"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:194
+msgid "Unsubscribe from list"
+msgstr "Odjavi se s popisa"
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:210
+msgid "Unsubscribed from list"
+msgstr "Odjavi se s liste"
+
+#: src/components/post-context-menu.tsx:136
+msgid "Unwanted Sexual Content"
+msgstr "Neželjeni seksualni sadržaj"
+
+#: src/components/venue-funding-modal.tsx:500
+#~ msgid "Update amount"
+#~ msgstr ""
+
+#: src/components/widgets/markets/prediction/polymarket-event.tsx:84
+#~ msgid "Updated {0} ago"
+#~ msgstr ""
+
+#: src/components/prediction-market-post.tsx:220
+#~ msgid "USDC balance"
+#~ msgstr ""
+
+#: src/components/prediction-market-funding.tsx:386
+msgid "USDC contribution amount"
+msgstr ""
+
+#: src/app/settings/language/index.tsx:139
+#: src/app/settings/pro.tsx:32
+msgid "Use DeepL for translations"
+msgstr "Koristi DeepL za prijevod"
+
+#: src/app/settings/language/index.tsx:151
+#: src/app/settings/pro.tsx:44
+msgid "Use DeepL for translations instead of Google Translate"
+msgstr "Koristi DeepL za prijevod umjesto Google Translate"
+
+#: src/app/settings/app.tsx:91
+#: src/lib/hooks/link-press.tsx:38
+msgid "Use in-app browser"
+msgstr "Koristite preglednik unutar aplikacije"
+
+#: src/lib/composer/market-proposal-panel.tsx:386
+msgid "Use max"
+msgstr ""
+
+#: src/app/market-trade.tsx:1206
+#: src/components/venue-funding-modal.tsx:462
+msgid "Use maximum available balance"
+msgstr ""
+
+#: src/lib/hooks/link-press.tsx:39
+msgid "Use my default browser"
+msgstr "Koristi moj zadani preglednik"
+
+#: src/app/market-trade.tsx:1239
+msgid "Use no more than {inputDecimals} decimal places for this token."
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:295
+#: src/app/create-list.tsx:67
+#: src/app/create-list.tsx:245
+#: src/components/feed-row.tsx:75
+msgid "User list"
+msgstr "Lista korisnika"
+
+#: src/app/(auth)/sign-in.tsx:115
+msgid "Username or email address"
+msgstr "Korisničko ime ili e-mail adresa"
+
+#: src/components/primary-post.tsx:308
+msgid "Users in the list"
+msgstr "Korisnici na popisu"
+
+#: src/components/primary-post.tsx:310
+msgid "Users in the lists"
+msgstr "Korisnici na popisu"
+
+#: src/components/primary-post.tsx:265
+msgid "Users mentioned in this thread"
+msgstr "Korisnici spomenuti u ovoj niti"
+
+#: src/components/primary-post.tsx:272
+msgid "Users that <0>{0}</0> follows"
+msgstr "Korisnik koji <0>{0}</0> prati"
+
+#: src/components/wallet-venue-balances.tsx:82
+msgid "Venue balances"
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:274
+msgid "Venue setup could not be resumed."
+msgstr ""
+
+#: src/app/(auth)/sign-up.tsx:325
+#~ msgid "Verification code"
+#~ msgstr ""
+
+#: src/app/wallet-link.tsx:151
+#: src/app/wallet-link.tsx:331
+msgid "Verification failed: no valid signed wallet record was found."
+msgstr ""
+
+#: src/app/wallet-link.tsx:146
+msgid "Verified: the signature resolves to this wallet address and is linked to this DID."
+msgstr ""
+
+#: src/app/wallet-link.tsx:126
+msgid "Verify wallet link"
+msgstr ""
+
+#: src/app/wallet-link.tsx:124
+msgid "Verifying wallet link…"
+msgstr ""
+
+#: src/app/settings/about.tsx:184
+#: src/components/drawer/drawer-content.tsx:246
+msgid "Version {0}"
+msgstr "Verzija {0}"
+
+#: src/app/settings/about.tsx:185
+#: src/components/drawer/drawer-content.tsx:248
+msgid "Version unknown"
+msgstr "Nepoznata verzija"
+
+#: src/components/embed/video.tsx:80
+#: src/components/embed/video.tsx:148
+msgid "Video"
+msgstr ""
+
+#: src/components/embed/video.tsx:80
+msgid "Video: {0}"
+msgstr ""
+
+#: src/components/screens/profile/profile-info.tsx:640
+#: src/components/screens/profile/profile-info.tsx:671
+msgid "View"
+msgstr "Pogledaj"
+
+#: src/components/wallet-activity-preview.tsx:52
+msgid "View all"
+msgstr ""
+
+#: src/components/widgets/markets/prediction/hyperliquid-event.tsx:118
+#: src/components/widgets/markets/prediction/polymarket-event.tsx:170
+msgid "View all {0} markets"
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/feed/[generator]/details.tsx:359
+msgid "View all feeds"
+msgstr "Pregledaj sve feedove"
+
+#: src/components/embed/image.tsx:216
+msgid "View ALT text"
+msgstr "Vidi ALT tekst"
+
+#: src/components/wallet-activity-preview.tsx:133
+msgid "View transaction"
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:725
+#: src/app/venue-onboarding/index.tsx:166
+msgid "Waiting"
+msgstr ""
+
+#: src/components/wallet-positions.tsx:697
+msgid "Waiting for live mark price"
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:490
+msgid "Waiting for network confirmation..."
+msgstr ""
+
+#: src/components/polymarket-withdraw-modal.tsx:409
+#: src/components/venue-funding-modal.tsx:445
+msgid "Waiting for Polygon confirmation. The status is checked automatically."
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:191
+msgid "Waiting for the current resolution step to begin"
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:344
+msgid "Waiting to continue setup"
+msgstr ""
+
+#: src/app/(tabs)/_layout.tsx:210
+#: src/app/(tabs)/wallet/index.tsx:29
+#: src/app/balances.tsx:25
+#: src/components/drawer/drawer-content.tsx:184
+#: src/components/drawer/drawer-content.tsx:189
+msgid "Wallet"
+msgstr ""
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:365
+msgid "Wallet {0}"
+msgstr ""
+
+#: src/components/screens/profile/profile-info.tsx:105
+msgid "Wallet address copied"
+msgstr ""
+
+#: src/components/send-token-modal.tsx:527
+msgid "Wallet address recognized."
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:118
+msgid "Wallet created"
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:135
+msgid "Wallet creation did not finish"
+msgstr ""
+
+#: src/components/wallet-locked-overlay.tsx:137
+msgid "Wallet locked"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:540
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:337
+msgid "Wallet not configured"
+msgstr ""
+
+#: src/app/market-trade.tsx:980
+msgid "Wallet ready"
+msgstr ""
+
+#: src/app/_layout.tsx:374
+#: src/app/wallet-link.tsx:55
+msgid "Wallet record"
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:137
+#~ msgid "Wallet setup did not finish"
+#~ msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:134
+#: src/components/wallet-locked-overlay.tsx:72
+msgid "Wallet unlock failed"
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:118
+#: src/components/wallet-locked-overlay.tsx:65
+#: src/components/widgets/markets/trade-button.tsx:124
+msgid "Wallet unlocked"
+msgstr ""
+
+#: src/app/settings/moderation.tsx:103
+msgid "Warn"
+msgstr "Upozori"
+
+#: src/app/settings/account/delete-account.tsx:96
+msgid "Warning: Account deletion is permanent"
+msgstr "Upozorenje: Brisanje računa je trajno"
+
+#: src/app/_layout.tsx:94
+#~ msgid "We added 3 testnet MON and 100,000 USDC to your wallet. You're ready to trade."
+#~ msgstr ""
+
+#: src/components/screens/feeds-screen-elements.tsx:22
+#~ msgid "Welcome to Bluesky!"
+#~ msgstr "Dobrodošli u Bluesky!"
+
+#: src/components/screens/waiting-room.tsx:59
+#~ msgid "Welcome to Bluesky! We're excited to have you."
+#~ msgstr "Dobrodošli u Bluesky! Uzbuđeni smo što ste s nama."
+
+#: src/app/success.tsx:29
+msgid "Welcome to Kites Pro!"
+msgstr ""
+
+#: src/components/screens/feeds-screen-elements.tsx:22
+msgid "Welcome to Kites!"
+msgstr ""
+
+#: src/components/screens/waiting-room.tsx:64
+msgid "Welcome to Kites! We're excited to have you."
+msgstr ""
+
+#: src/app/market-rules.tsx:79
+msgid "What the final result means"
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:184
+msgid "What will happen?"
+msgstr ""
+
+#: src/app/composer/index.tsx:623
+msgid "What's on your mind?"
+msgstr "Što vam je na umu?"
+
+#: src/components/screens/profile/profile-info.tsx:858
+msgid "What's the issue with this account?"
+msgstr "Koji je problem s ovim računom?"
+
+#: src/components/post-context-menu.tsx:256
+msgid "What's the issue with this post?"
+msgstr "Koji je problem s ovom objavom?"
+
+#: src/app/wallet-link.tsx:217
+msgid "When the wallet is linked, the app requests a random 32-byte nonce and an issue time. The passkey-backed wallet signs the EIP-712 typed message below. This is a signature request, not a blockchain transaction, so it does not move funds or require gas."
+msgstr ""
+
+#: src/components/deposit-modal.tsx:89
+#~ msgid "Where would you like to deposit?"
+#~ msgstr ""
+
+#: src/app/composer/threadgate.tsx:42
+#: src/components/primary-post.tsx:221
+msgid "Who can reply?"
+msgstr "Tko može odgovoriti?"
+
+#: src/components/prediction-market-resolution.tsx:303
+#~ msgid "Winning outcome"
+#~ msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:368
+msgid "Winning shares not claimed"
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:453
+msgid "Winning shares ready"
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:442
+msgid "Winning-share redemption is not available for this outcome."
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:376
+msgid "Winnings claimed"
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:399
+msgid "Winnings not claimed"
+msgstr ""
+
+#: src/components/wallet-venue-balances.tsx:280
+msgid "Withdraw"
+msgstr ""
+
+#: src/components/wallet-venue-balances.tsx:251
+msgid "Withdraw from {0}"
+msgstr ""
+
+#: src/components/polymarket-withdraw-modal.tsx:388
+msgid "Withdraw from Polymarket"
+msgstr ""
+
+#: src/components/polymarket-withdraw-modal.tsx:454
+msgid "Withdraw maximum available"
+msgstr ""
+
+#: src/components/polymarket-withdraw-modal.tsx:493
+msgid "Withdrawal amount"
+msgstr ""
+
+#: src/components/polymarket-withdraw-modal.tsx:403
+msgid "Withdrawal submitted"
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:546
+#: src/app/venue-onboarding/[venueId].tsx:582
+msgid "Working..."
+msgstr ""
+
+#: src/app/market-trade.tsx:1150
+#: src/components/prediction-market-resolution-actions.tsx:223
+#: src/components/prediction-market-resolution.tsx:173
+#: src/components/prediction-market-resolution.tsx:330
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:209
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:457
+msgid "YES"
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:518
+msgid "YES allocation"
+msgstr ""
+
+#: src/app/market-trade.tsx:1160
+msgid "YES order book"
+msgstr ""
+
+#: src/app/market-trade.tsx:1073
+msgid "YES outcome"
+msgstr ""
+
+#: src/app/market-trade.tsx:1089
+msgid "YES price"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:442
+msgid "YES probability for your contribution"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:338
+msgid "YES shares"
+msgstr ""
+
+#: src/app/market-trade.tsx:1091
+msgid "YES token"
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:202
+msgid "YES won"
+msgstr ""
+
+#: src/components/screens/profile/profile-info.tsx:143
+msgid "You are no longer following @{0}"
+msgstr "Više ne pratite @{0}"
+
+#: src/components/screens/profile/profile-info.tsx:142
+msgid "You are now following @{0}"
+msgstr "Pratite @{0}"
+
+#: src/components/switch-accounts.tsx:76
+msgid "You are now logged in as @{0}"
+msgstr "Prijavili ste se kao @{0}"
+
+#: src/app/(auth)/sign-up.tsx:391
+#~ msgid "You can change it later"
+#~ msgstr ""
+
+#: src/app/success.tsx:47
+msgid "You can now change the accent colour"
+msgstr "Sada možete promijeniti boju naglaska"
+
+#: src/lib/composer/utils.tsx:420
+msgid "You can only attach up to {MAX_IMAGES} images, additional images will be ignored"
+msgstr "Možete priložiti najviše {MAX_IMAGES} slika, dodatne slike će se zanemariti"
+
+#: src/app/push-notifications.tsx:38
+msgid "You can receive push notifications for likes, replies, and more! However, there are some caveats you should be aware of."
+msgstr "Možete primati push obavijesti za lajkove, odgovore i još mnogo toga! Međutim, postoje neka upozorenja kojih biste trebali biti svjesni."
+
+#: src/app/add-to-list/[handle].tsx:159
+msgid "You don't have any moderation lists yet."
+msgstr "Još nemate nijedan popis za moderiranje."
+
+#: src/components/screens/profile/profile-info.tsx:666
+msgid "You have blocked this user"
+msgstr "Blokirali ste ovog korisnika"
+
+#: src/components/screens/profile/profile-info.tsx:635
+msgid "You have muted this user"
+msgstr "Utišali ste ovog korisnika"
+
+#: src/app/settings/blocks.tsx:45
+msgid "You haven't blocked anyone"
+msgstr "Nikoga niste blokirali"
+
+#: src/app/settings/mutes.tsx:45
+msgid "You haven't muted anyone"
+msgstr "Nikoga niste utišali"
+
+#: src/app/push-notifications.tsx:65
+msgid "You may receive notifications from people you have muted. <0>Learn more</0>"
+msgstr "Možda ćete primati obavijesti od osoba koje ste utišali. <0>Saznajte više</0>"
+
+#: src/app/push-notifications.tsx:88
+msgid "You may receive notifications from people you've blocked or muted via moderation list. <0>Learn more</0>"
+msgstr "Možda ćete primati obavijesti od osoba koje ste blokirali ili isključili putem popisa za moderiranje. <0>Saznajte više</0>"
+
+#: src/app/push-notifications.tsx:52
+#~ msgid "You might receive the same notifications via other Bluesky clients."
+#~ msgstr "Možete primiti iste obavijesti putem drugih Bluesky klijenata."
+
+#: src/app/push-notifications.tsx:52
+msgid "You might receive the same notifications via other Kites clients."
+msgstr ""
+
+#: src/app/(auth)/sign-in.tsx:180
+msgid "You might want to use an App Password rather than your main password - this helps keep your account secure, but it's not required."
+msgstr "Možda ćete htjeti upotrijebiti lozinku aplikacije umjesto svoje glavne - to pomaže u zaštiti vašeg računa, ali nije obavezno."
+
+#: src/app/market-trade.tsx:1691
+msgid "You need MON in your wallet to pay transaction gas."
+msgstr ""
+
+#: src/components/send-token-modal.tsx:622
+msgid "You send"
+msgstr ""
+
+#: src/lib/account-actions.ts:35
+msgid "You will no longer see posts from @{handle}"
+msgstr "Više nećete vidjeti objave od @{handle}"
+
+#: src/components/screens/waiting-room.tsx:65
+#~ msgid "You're in the queue to join Bluesky!"
+#~ msgstr "U redu ste za pridruživanje u Bluesky!"
+
+#: src/components/screens/waiting-room.tsx:70
+msgid "You're in the queue to join Kites!"
+msgstr ""
+
+#: src/components/screens/waiting-room.tsx:58
+msgid "You're in!"
+msgstr "Upali ste!"
+
+#: src/components/send-token-modal.tsx:379
+msgid "Your {0} {1} transfer to {2} is waiting for confirmation."
+msgstr ""
+
+#: src/components/send-token-modal.tsx:279
+#~ msgid "Your {0} {1} transfer to @{2} is waiting for confirmation."
+#~ msgstr ""
+
+#: src/app/market-trade.tsx:1637
+msgid "Your {0} balance is too low for this trade."
+msgstr ""
+
+#: src/app/market-trade.tsx:1276
+msgid "Your {0} shares"
+msgstr ""
+
+#: src/app/settings/index.tsx:35
+msgid "Your account"
+msgstr ""
+
+#: src/lib/composer/market-proposal-panel.tsx:306
+msgid "Your available balances"
+msgstr ""
+
+#: src/lib/hooks/link-press.tsx:35
+msgid "Your choice will be saved, but can be changed in settings"
+msgstr "Vaš izbor će biti spremljen, ali se može promijeniti u postavkama"
+
+#: src/components/prediction-market-funding.tsx:318
+msgid "Your contribution"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:143
+msgid "Your contribution is confirmed on-chain."
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:170
+msgid "Your deposit is submitted. We will keep checking its status automatically."
+msgstr ""
+
+#: src/app/venue-onboarding/[venueId].tsx:317
+#~ msgid "Your deposit wallet is set up. Deposit pUSD when you're ready."
+#~ msgstr ""
+
+#: src/app/settings/account/change-handle.tsx:130
+msgid "Your handle will be: <0>@{derivedHandle}</0>"
+msgstr "Vaša korisničko ime će biti: <0>@{derivedHandle}</0>"
+
+#: src/components/venue-funding-modal.tsx:130
+msgid "Your Kites wallet does not have enough pUSD."
+msgstr ""
+
+#: src/app/(tabs)/(feeds,search,notifications,self)/profile/[author]/lists/[list].tsx:681
+msgid "Your list has been deleted"
+msgstr "Vaša lista je obrisana"
+
+#: src/components/prediction-market-funding.tsx:142
+msgid "Your market claim is confirmed on-chain."
+msgstr ""
+
+#: src/components/wallet-positions.tsx:602
+msgid "Your open positions will appear here."
+msgstr ""
+
+#: src/app/market-trade.tsx:1742
+msgid "Your order is signed by your passkey and sent to Polymarket. Execution is subject to your slippage setting and available liquidity."
+msgstr ""
+
+#: src/app/market-trade.tsx:981
+msgid "Your passkey wallet is linked to your Bluesky account."
+msgstr ""
+
+#: src/app/market-trade.tsx:567
+#~ msgid "Your passkey wallet is linked. Testnet funds are on the way."
+#~ msgstr ""
+
+#: src/components/venue-funding-modal.tsx:133
+msgid "Your Polygon POL balance may not cover the network fee."
+msgstr ""
+
+#: src/app/market-trade.tsx:1680
+msgid "Your Polymarket {0} position is too small for this order."
+msgstr ""
+
+#: src/app/market-trade.tsx:1668
+msgid "Your Polymarket balance is too low for this order. Fund this trade from your Kites wallet first."
+msgstr ""
+
+#: src/components/polymarket-withdraw-modal.tsx:277
+msgid "Your Polymarket withdrawal is being submitted."
+msgstr ""
+
+#: src/lib/composer/utils.tsx:198
+msgid "Your post is too long - there is a character limit of 300 characters"
+msgstr "Vaša objava je predugačka - postoji ograničenje od 300 znakova"
+
+#: src/components/polymarket-withdraw-modal.tsx:220
+msgid "Your pUSD is back in your Kites wallet."
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:213
+msgid "Your pUSD transfer arrived at the Polymarket deposit wallet."
+msgstr ""
+
+#: src/components/venue-funding-modal.tsx:254
+msgid "Your pUSD transfer is being submitted."
+msgstr ""
+
+#: src/components/wallet-activity-preview.tsx:80
+msgid "Your sends and trades will appear here."
+msgstr ""
+
+#: src/app/market-trade.tsx:610
+msgid "Your trade is confirmed on-chain."
+msgstr ""
+
+#: src/lib/web3/custody/context.tsx:181
+msgid "Your trading account is ready."
+msgstr ""
+
+#: src/components/send-token-modal.tsx:214
+#~ msgid "Your transfer is pending confirmation on {0}."
+#~ msgstr ""
+
+#: src/components/widgets/markets/prediction/custom-contract-card.tsx:377
+msgid "Your USDC"
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:467
+msgid "Your USDC amount and selected probability are sent to the market."
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:409
+#~ msgid "Your USDC amount and selected probability are sent to the market. Exact share amounts are calculated on-chain, not estimated here."
+#~ msgstr ""
+
+#: src/app/market-trade.tsx:1505
+msgid "Your USDC balance"
+msgstr ""
+
+#: src/app/market-trade.tsx:1635
+msgid "Your USDC balance is too low for this trade."
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:295
+#~ msgid "Your USDC refund has already been claimed."
+#~ msgstr ""
+
+#: src/app/wallet-activity.tsx:73
+msgid "Your wallet activity will appear here."
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:161
+#~ msgid "Your wallet is already linked."
+#~ msgstr ""
+
+#: src/app/_layout.tsx:92
+#~ msgid "Your wallet is ready"
+#~ msgstr ""
+
+#: src/components/widgets/markets/trade-button.tsx:125
+msgid "Your wallet is ready to trade."
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:120
+#: src/components/wallet-locked-overlay.tsx:66
+msgid "Your wallet is ready to use."
+msgstr ""
+
+#: src/components/screens/profile/profile-balances.tsx:121
+msgid "Your wallet is ready."
+msgstr ""
+
+#: src/components/prediction-market-funding.tsx:545
+msgid "Your wallet needs MON to pay transaction gas."
+msgstr ""
+
+#: src/components/polymarket-withdraw-modal.tsx:506
+msgid "Your wallet will sign a Polygon transfer from the Polymarket deposit wallet back to your Kites wallet."
+msgstr ""
+
+#: src/components/prediction-market-resolution.tsx:377
+msgid "Your winning shares were redeemed for USDC."
+msgstr ""

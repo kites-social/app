@@ -1,0 +1,11 @@
+{
+  "extensionName": {
+    "message": "Open in Kites",
+    "description": "Name of the extension."
+  },
+
+  "extensionDescription": {
+    "message": "Opens supported social links in Kites.",
+    "description": "Description of the extension."
+  }
+}

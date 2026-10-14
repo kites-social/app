@@ -1,0 +1,26 @@
+{
+  "name": "@kites-social/venues",
+  "version": "0.1.0",
+  "type": "module",
+  "devDependencies": {
+    "@kites-social/eslint-config": "0.1.0",
+    "@kites-social/prettier-config": "0.1.0",
+    "@kites-social/tsconfig": "0.1.0",
+    "eslint": "^9.39.2",
+    "prettier": "^3.7.4",
+    "typescript": "^5.9.3"
+  },
+  "license": "MIT",
+  "main": "./src/index.ts",
+  "prettier": "@kites-social/prettier-config",
+  "scripts": {
+    "format": "prettier --check \"**/*.{mjs,ts,json}\"",
+    "format:fix": "prettier --write \"**/*.{mjs,ts,json}\"",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit"
+  },
+  "types": "./src/index.ts",
+  "dependencies": {
+    "viem": "^2.57.2"
+  }
+}

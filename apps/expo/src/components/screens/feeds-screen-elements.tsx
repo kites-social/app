@@ -1,0 +1,119 @@
+import {
+  TouchableHighlight,
+  TouchableOpacity,
+  View,
+  type StyleProp,
+  type ViewStyle,
+} from "react-native";
+import { Link } from "expo-router";
+import { Trans } from "@lingui/macro";
+import { useTheme } from "@react-navigation/native";
+import { CompassIcon } from "lucide-react-native";
+
+import { Text } from "~/components/themed/text";
+import { cx } from "~/lib/utils/cx";
+
+export const NoFeeds = ({ onPress }: { onPress?: () => void }) => {
+  const theme = useTheme();
+  return (
+    <View className="flex-1 items-center justify-center">
+      <View className="w-3/4 flex-col items-start">
+        <Text className="mb-4 text-4xl font-medium">
+          <Trans>Welcome to Kites!</Trans>
+        </Text>
+        <Text className="text-lg">
+          <Trans>To get started, add some feeds to your home screen.</Trans>
+        </Text>
+        <Link asChild href="/discover" onPress={onPress}>
+          <TouchableOpacity
+            className="mt-8 flex-row items-center rounded-full py-2 pl-4 pr-8"
+            style={{ backgroundColor: theme.colors.primary }}
+          >
+            <CompassIcon size={20} className="text-white" />
+            <Text className="ml-4 text-xl text-white">
+              <Trans>Discover feeds</Trans>
+            </Text>
+          </TouchableOpacity>
+        </Link>
+      </View>
+    </View>
+  );
+};
+
+export const SectionHeader = ({ title }: { title: string }) => {
+  const theme = useTheme();
+  return (
+    <View
+      className="w-full px-5 pb-2 pt-5"
+      style={{
+        backgroundColor: theme.dark
+          ? theme.colors.card
+          : theme.colors.background,
+      }}
+    >
+      <Text
+        className={cx(
+          "text-[11px] font-semibold tracking-wider",
+          theme.dark ? "text-neutral-400" : "text-neutral-600",
+        )}
+      >
+        {title.toLocaleUpperCase()}
+      </Text>
+    </View>
+  );
+};
+
+interface LargeRowProps {
+  icon: React.ReactNode;
+  title: string;
+  subtitle: string;
+  className?: string;
+  style?: StyleProp<ViewStyle>;
+  right?: React.ReactNode;
+  onPress?: () => void;
+  replace?: boolean;
+}
+
+export const LargeRow = ({
+  icon,
+  title,
+  subtitle,
+  className,
+  style,
+  right,
+  onPress,
+  replace,
+}: LargeRowProps) => {
+  const theme = useTheme();
+  return (
+    <Link href="/feeds/following" asChild onPress={onPress} replace={replace}>
+      <TouchableHighlight>
+        <View
+          className={cx(
+            "mx-4 my-2 flex-row items-center rounded-[18px] border px-4 py-4",
+            className,
+          )}
+          style={[
+            {
+              backgroundColor: theme.colors.card,
+              borderColor: theme.dark ? "#2b352e" : "#e1e9e3",
+            },
+            style,
+          ]}
+        >
+          <View
+            className="h-10 w-10 shrink-0 items-center justify-center rounded-xl"
+            style={{ backgroundColor: theme.colors.primary }}
+          >
+            {icon}
+          </View>
+          <View className="flex-1 px-3">
+            <Text className="text-lg leading-5">{title}</Text>
+            <Text className="text-sm text-neutral-500">{subtitle}</Text>
+          </View>
+          {right}
+        </View>
+      </TouchableHighlight>
+    </Link>
+  );
+};

@@ -1,0 +1,69 @@
+{
+  "cli": {
+    "version": ">= 3.10.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development-simulator": {
+      "developmentClient": true,
+      "node": "20.19.4",
+      "ios": {
+        "simulator": true
+      },
+      "env": {
+        "DEV_CLIENT": "true"
+      }
+    },
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "node": "20.19.4",
+      "ios": {
+        "resourceClass": "m-medium"
+      },
+      "env": {
+        "DEV_CLIENT": "true"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "node": "20.19.4",
+      "channel": "preview",
+      "ios": {
+        "resourceClass": "m-medium"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "node": "20.19.4",
+      "channel": "production",
+      "ios": {
+        "resourceClass": "m-medium"
+      }
+    },
+    "production-apk": {
+      "autoIncrement": true,
+      "node": "20.19.4",
+      "channel": "production",
+      "ios": {
+        "resourceClass": "m-medium"
+      },
+      "android": {
+        "gradleCommand": ":app:assembleRelease",
+        "buildType": "apk"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "android": {
+        "track": "internal"
+      },
+      "ios": {
+        "appleId": "mozzius@protonmail.com",
+        "ascAppId": "6448234181",
+        "appleTeamId": "54BH7CRWVK"
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "@kites-social/api",
+  "version": "0.1.0",
+  "type": "module",
+  "dependencies": {
+    "@atproto/api": "^0.13.31",
+    "@atproto/identity": "^0.4.10",
+    "@atproto/xrpc-server": "^0.10.4",
+    "@kites-social/db": "0.1.0",
+    "@trpc/client": "^11.8.1",
+    "@trpc/server": "^11.8.1",
+    "@vercel/analytics": "^1.6.1",
+    "@vercel/kv": "^3.0.0",
+    "encoding": "^0.1.13",
+    "lande": "^1.0.10",
+    "libsodium-wrappers": "^0.8.4",
+    "sharp": "0.32.6",
+    "superjson": "2.2.6",
+    "viem": "^2.57.2",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@kites-social/eslint-config": "0.1.0",
+    "@kites-social/prettier-config": "0.1.0",
+    "@kites-social/tsconfig": "0.1.0",
+    "eslint": "^9.39.2",
+    "prettier": "^3.7.4",
+    "typescript": "^5.9.3"
+  },
+  "license": "MIT",
+  "main": "./index.ts",
+  "prettier": "@kites-social/prettier-config",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "format": "prettier --check \"**/*.{mjs,ts,json}\"",
+    "format:fix": "prettier --write \"**/*.{mjs,ts,json}\"",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit"
+  },
+  "types": "./index.ts"
+}

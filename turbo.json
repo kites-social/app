@@ -1,0 +1,80 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "globalDependencies": ["**/.env"],
+  "tasks": {
+    "topo": {
+      "dependsOn": ["^topo"]
+    },
+    "build": {
+      "dependsOn": ["^build", "^db:generate"],
+      "outputs": [".next/**", "!.next/cache/**", "next-env.d.ts", ".expo/**"]
+    },
+    "db:generate": {
+      "inputs": ["prisma/schema.prisma"],
+      "cache": false
+    },
+    "db:push": {
+      "inputs": ["prisma/schema.prisma"],
+      "cache": false
+    },
+    "db:studio": {
+      "inputs": ["prisma/schema.prisma"],
+      "cache": false
+    },
+    "dev": {
+      "dependsOn": ["^db:generate"],
+      "persistent": true,
+      "cache": false
+    },
+    "format": {
+      "outputs": ["node_modules/.cache/.prettiercache"],
+      "outputLogs": "new-only"
+    },
+    "lint": {
+      "dependsOn": ["^topo"],
+      "outputs": ["node_modules/.cache/.eslintcache"]
+    },
+    "typecheck": {
+      "dependsOn": ["^topo"],
+      "outputs": ["node_modules/.cache/tsbuildinfo.json"]
+    },
+    "clean": {
+      "cache": false
+    },
+    "//#clean": {
+      "cache": false
+    }
+  },
+  "globalEnv": [
+    "CI",
+    "EXPO_ROUTER_APP_ROOT",
+    "NODE_ENV",
+    "SKIP_ENV_VALIDATION",
+    "VERCEL",
+    "VERCEL_URL",
+    "DATABASE_URL",
+    "PRISMA_CLI_BINARY_TARGETS",
+    "PRISMA_SCHEMA_ENGINE_BINARY",
+    "PRISMA_QUERY_ENGINE_LIBRARY",
+    "EVM_WALLET_MASTER_KEY",
+    "GOOGLE_API_KEY",
+    "POLYMARKET_BUILDER_API_KEY",
+    "POLYMARKET_BUILDER_SECRET",
+    "POLYMARKET_BUILDER_PASSPHRASE",
+    "MONAD_ADMIN_PRIVATE_KEY",
+    "KV_REST_API_URL",
+    "KV_REST_API_TOKEN",
+    "REVENUECAT_API_KEY_IOS",
+    "REVENUECAT_API_KEY_ANDROID",
+    "SENTRY_DSN",
+    "DEEPL_API_KEY",
+    "ATPROTO_SERVICE_URL",
+    "ATPROTO_PLC_URL",
+    "EXPO_PUBLIC_ATPROTO_PLC_URL",
+    "MARKET_BOT_HANDLE",
+    "MARKET_BOT_APP_PASSWORD",
+    "MARKET_BOT_DATABASE_PATH",
+    "MARKET_BOT_DRY_RUN",
+    "MARKET_BOT_POLL_INTERVAL_SECONDS"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "name": "@kites-social/nextjs",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "NODE_USE_ENV_PROXY=1 pnpm with-env next build",
+    "clean": "git clean -xdf .next .turbo node_modules",
+    "dev": "NODE_USE_ENV_PROXY=1 pnpm with-env next dev",
+    "format": "prettier --check \"**/*.{js,cjs,mjs,ts,tsx,md,json}\"",
+    "format:fix": "prettier --write \"**/*.{js,cjs,mjs,ts,tsx,md,json}\"",
+    "lint": "eslint",
+    "start": "NODE_USE_ENV_PROXY=1 pnpm with-env next start",
+    "typecheck": "tsc --noEmit",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "dependencies": {
+    "@atproto/api": "^0.13.31",
+    "@atproto/identity": "^0.4.10",
+    "@atproto/xrpc-server": "^0.10.4",
+    "@kites-social/api": "0.1.0",
+    "@kites-social/db": "0.1.0",
+    "@kites-social/tailwind-config": "0.1.0",
+    "@tanstack/react-query": "^5.90.12",
+    "@trpc/client": "^11.8.1",
+    "@trpc/next": "^11.8.1",
+    "@trpc/react-query": "^11.8.1",
+    "@trpc/server": "^11.8.1",
+    "@vercel/kv": "^3.0.0",
+    "next": "16.1.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "sharp": "0.32.6",
+    "superjson": "2.2.6",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@kites-social/eslint-config": "0.1.0",
+    "@kites-social/prettier-config": "0.1.0",
+    "@kites-social/tsconfig": "0.1.0",
+    "@types/node": "^25.0.3",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.23",
+    "dotenv-cli": "^11.0.0",
+    "eslint": "^9.39.2",
+    "postcss": "^8.5.6",
+    "prettier": "^3.7.4",
+    "tailwindcss": "4.1.18",
+    "typescript": "^5.9.3"
+  },
+  "prettier": "@kites-social/prettier-config",
+  "private": true,
+  "engines": {
+    "node": ">=22.21.0"
+  }
+}

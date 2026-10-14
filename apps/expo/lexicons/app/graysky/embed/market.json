@@ -1,0 +1,35 @@
+{
+  "lexicon": 1,
+  "id": "app.graysky.embed.market",
+  "description": "A market link for a supported trading venue.",
+  "defs": {
+    "main": {
+      "type": "object",
+      "required": ["url", "marketType", "venue", "marketId"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "marketType": {
+          "type": "string",
+          "knownValues": ["prediction", "spot", "perpetual"]
+        },
+        "venue": { "type": "string", "maxLength": 64 },
+        "marketId": { "type": "string", "maxLength": 256 },
+        "subMarketId": { "type": "string", "maxLength": 256 }
+      }
+    },
+    "view": {
+      "type": "object",
+      "required": ["url", "marketType", "venue", "marketId"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "marketType": {
+          "type": "string",
+          "knownValues": ["prediction", "spot", "perpetual"]
+        },
+        "venue": { "type": "string", "maxLength": 64 },
+        "marketId": { "type": "string", "maxLength": 256 },
+        "subMarketId": { "type": "string", "maxLength": 256 }
+      }
+    }
+  }
+}

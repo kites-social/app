@@ -1,0 +1,206 @@
+import { Linking, View } from "react-native";
+import Constants from "expo-constants";
+import { Image, type ImageSource } from "expo-image";
+import { msg } from "@lingui/macro";
+import { useLingui } from "@lingui/react";
+import {
+  AtSignIcon,
+  GithubIcon,
+  SendIcon,
+  WrenchIcon,
+} from "lucide-react-native";
+
+import { GroupedList } from "~/components/grouped-list";
+import { Text } from "~/components/themed/text";
+import { TransparentHeaderUntilScrolled } from "~/components/transparent-header";
+import { useLinkPress } from "~/lib/hooks/link-press";
+
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const appIcon = require("../../../assets/icon.png") as ImageSource;
+
+export default function AboutPage() {
+  const { openLink } = useLinkPress();
+  const { _ } = useLingui();
+
+  return (
+    <TransparentHeaderUntilScrolled>
+      <GroupedList
+        groups={[
+          {
+            options: [
+              {
+                title: _(msg`Star us on GitHub!`),
+                accessibilityRole: "link",
+                onPress: () =>
+                  openLink("https://github.com/cantaloupebob/pm-social-app"),
+                icon: GithubIcon,
+                chevron: true,
+              },
+              {
+                title: _(msg`Contact`),
+                accessibilityRole: "link",
+                onPress: () => Linking.openURL("mailto:hello@kites.app"),
+                icon: SendIcon,
+                chevron: true,
+              },
+            ],
+          },
+          {
+            title: _(msg`Contributors`),
+            options: [
+              {
+                title: "alice.bsky.sh",
+                accessibilityRole: "link",
+                href: "/profile/did:plc:by3jhwdqgbtrcc7q4tkkv3cf",
+                icon: AtSignIcon,
+              },
+              {
+                title: "holden.bsky.social",
+                accessibilityRole: "link",
+                href: "/profile/did:plc:tzq3i67wnarn6x2kbjcprnfx",
+                icon: AtSignIcon,
+              },
+              {
+                title: "matthewstanciu.com",
+                accessibilityRole: "link",
+                href: "/profile/did:plc:ming7lqd64h7zh4da2c6sgxx",
+                icon: AtSignIcon,
+              },
+              {
+                title: "jcsalterego.bsky.social",
+                accessibilityRole: "link",
+                href: "/profile/did:plc:vc7f4oafdgxsihk4cry2xpze",
+                icon: AtSignIcon,
+              },
+              {
+                title: "st-cyr.bsky.social",
+                accessibilityRole: "link",
+                href: "/profile/did:plc:5rcf7fsqqx3ckxps3ir6etsg",
+                icon: AtSignIcon,
+              },
+              {
+                title: "haileyok.com",
+                accessibilityRole: "link",
+                href: "/profile/did:plc:oisofpd7lj26yvgiivf3lxsi",
+                icon: AtSignIcon,
+              },
+              {
+                title: "surfdude29.ispost.ing",
+                accessibilityRole: "link",
+                href: "/profile/did:plc:sflxm2fxohaqpfgahgdlm7rl",
+                icon: AtSignIcon,
+              },
+              {
+                // ja translator
+                title: "reindex.bsky.social",
+                accessibilityRole: "link",
+                href: "/profile/did:plc:aeh2msk2nvakndnhovbdmzqq",
+                icon: AtSignIcon,
+              },
+              {
+                // ja translator
+                title: "narooo.com",
+                accessibilityRole: "link",
+                href: "/profile/did:plc:2wlwhbmg2yga6vvei4zpwcjt",
+                icon: AtSignIcon,
+              },
+              {
+                // fr translator
+                title: "yanyannoche.bsky.social",
+                accessibilityRole: "link",
+                href: "/profile/did:plc:5on2afqpkkltppdaongk2ywo",
+                icon: AtSignIcon,
+              },
+              {
+                // be translator
+                title: "bielarusajed.gay",
+                accessibilityRole: "link",
+                href: "/profile/did:plc:cc6igt4stjocuhiz4mlarhu4",
+                icon: AtSignIcon,
+              },
+              {
+                // de translator
+                title: "turbotommi.bsky.social",
+                accessibilityRole: "link",
+                href: "/profile/did:plc:poeyfpephkz63koenojgtzsm",
+                icon: AtSignIcon,
+              },
+              {
+                // cs translator
+                title: "poniczech.gay",
+                accessibilityRole: "link",
+                href: "/profile/did:plc:4mxujtveqpcqv4mlwwhcqqpt",
+                icon: AtSignIcon,
+              },
+              {
+                // ml translator
+                title: "abhijithgopan.com",
+                accessibilityRole: "link",
+                href: "/profile/did:plc:wmy6jwdxbkizrbhegvegy3xs",
+                icon: AtSignIcon,
+              },
+              {
+                // pt-BR translator
+                title: "deck.blue",
+                accessibilityRole: "link",
+                href: "/profile/did:plc:w342borqxtyo2pul67ec2pwt",
+                icon: AtSignIcon,
+              },
+              {
+                // uk translator
+                title: "cpthorn1100.bsky.social",
+                accessibilityRole: "link",
+                href: "/profile/did:plc:3loo4eggng7s7njjox2qbdcv",
+                icon: AtSignIcon,
+              },
+              {
+                // hr translator
+                title: "mattmarenic.com",
+                accessibilityRole: "link",
+                href: "/profile/did:plc:5fd357reo5rjbjbf6n3iji2s",
+                icon: AtSignIcon,
+              },
+            ],
+            footer: _(
+              msg`If you have contributed to Kites, for example helping with translations, please reach out to @kites.app so we can add you to this list!`,
+            ),
+          },
+          {
+            title: _(msg`Logo designed by`),
+            options: [
+              {
+                title: "roselia.gay",
+                accessibilityRole: "link",
+                href: "/profile/roselia.gay",
+                icon: AtSignIcon,
+              },
+            ],
+          },
+          {
+            title: _(msg`App info`),
+            options: [
+              {
+                title: Constants.expoConfig?.version
+                  ? _(msg`Version ${Constants.expoConfig.version}`)
+                  : _(msg`Version unknown`),
+                icon: WrenchIcon,
+              },
+            ],
+          },
+        ]}
+      >
+        <View className="flex-row items-center justify-center pb-8">
+          <View
+            className="h-20 w-20 overflow-hidden rounded-2xl"
+            style={{ borderCurve: "continuous" }}
+          >
+            <Image alt="Kites" source={appIcon} className="flex-1" />
+          </View>
+          <View className="ml-6">
+            <Text className="text-lg font-medium">Kites</Text>
+          </View>
+        </View>
+      </GroupedList>
+    </TransparentHeaderUntilScrolled>
+  );
+}

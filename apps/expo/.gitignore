@@ -1,0 +1,16 @@
+pc-api-*.json
+
+ios
+android
+
+.idea
+
+expo.iml
+
+*.tar.gz
+
+google-services.json
+
+eas-workingdir
+
+src/i18n/locales/*/messages.js

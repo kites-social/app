@@ -1,0 +1,25 @@
+{
+  "lexicon": 1,
+  "id": "social.kites.embed.polymarket",
+  "description": "A Polymarket event link embedded in a post.",
+  "defs": {
+    "main": {
+      "type": "object",
+      "required": ["url", "slug"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "slug": { "type": "string", "maxLength": 256 },
+        "marketSlug": { "type": "string", "maxLength": 256 }
+      }
+    },
+    "view": {
+      "type": "object",
+      "required": ["url", "slug"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "slug": { "type": "string", "maxLength": 256 },
+        "marketSlug": { "type": "string", "maxLength": 256 }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "@kites-social/eslint-config",
+  "version": "0.1.0",
+  "dependencies": {
+    "@eslint/compat": "^2.0.0",
+    "@next/eslint-plugin-next": "^16.1.0",
+    "@types/eslint": "^9.6.1",
+    "@typescript-eslint/eslint-plugin": "^8.50.0",
+    "@typescript-eslint/parser": "^8.50.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-config-turbo": "^2.7.1",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-compiler": "19.1.0-rc.2",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "typescript-eslint": "^8.50.0"
+  },
+  "devDependencies": {
+    "@kites-social/prettier-config": "0.1.0",
+    "@kites-social/tsconfig": "0.1.0",
+    "eslint": "^9.39.2",
+    "typescript": "^5.9.3"
+  },
+  "type": "module",
+  "exports": {
+    "./base": "./base.js",
+    "./nextjs": "./nextjs.js",
+    "./react": "./react.js"
+  },
+  "license": "MIT",
+  "prettier": "@kites-social/prettier-config",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "format": "prettier --check \"**/*.{js,json}\"",
+    "format:fix": "prettier --write \"**/*.{js,json}\"",
+    "typecheck": "tsc --noEmit"
+  }
+}

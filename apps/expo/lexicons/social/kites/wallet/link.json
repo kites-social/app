@@ -1,0 +1,32 @@
+{
+  "lexicon": 1,
+  "id": "social.kites.wallet.link",
+  "description": "A public, proof-backed link between an AT Protocol identity and an EVM wallet.",
+  "defs": {
+    "main": {
+      "type": "record",
+      "key": "literal:self",
+      "record": {
+        "type": "object",
+        "required": ["version", "address", "createdAt", "proof"],
+        "properties": {
+          "version": { "type": "integer", "const": 1 },
+          "address": { "type": "string", "maxLength": 42 },
+          "createdAt": { "type": "string", "format": "datetime" },
+          "proof": {
+            "type": "object",
+            "required": ["did", "address", "nonce", "issuedAt", "audience", "signature"],
+            "properties": {
+              "did": { "type": "string", "format": "did" },
+              "address": { "type": "string", "maxLength": 42 },
+              "nonce": { "type": "string", "maxLength": 66 },
+              "issuedAt": { "type": "integer" },
+              "audience": { "type": "string", "const": "social.kites.wallet.link" },
+              "signature": { "type": "string", "maxLength": 132 }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+import {
+  Text,
+  TouchableOpacity,
+  type StyleProp,
+  type ViewStyle,
+} from "react-native";
+import { useTheme } from "@react-navigation/native";
+import { KitesColors } from "~/lib/theme";
+
+interface Props {
+  disabled?: boolean;
+  onPress?: () => void;
+  className?: string;
+  title: string;
+  style?: StyleProp<ViewStyle>;
+}
+
+export const TextButton = ({ disabled, onPress, title, style }: Props) => {
+  const theme = useTheme();
+  return (
+    <TouchableOpacity onPress={onPress} disabled={disabled} hitSlop={10}>
+      <Text
+        className="text-lg"
+        style={[
+          {
+            color: disabled
+              ? theme.colors.border
+              : theme.dark
+                ? "#9BB0FF"
+                : KitesColors.secondary,
+          },
+          style,
+        ]}
+      >
+        {title}
+      </Text>
+    </TouchableOpacity>
+  );
+};

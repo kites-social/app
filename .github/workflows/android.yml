@@ -1,0 +1,81 @@
+name: Android APK
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      architectures:
+        description: Comma-separated React Native architectures to build
+        required: false
+        default: "arm64-v8a,armeabi-v7a"
+        type: string
+
+# Only one APK build per ref; cancel older runs when a new commit lands.
+concurrency:
+  group: android-apk-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  apk:
+    name: Build release APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # The Android SDK, Node, Gradle and Nix stores are all large. Drop the
+      # preinstalled toolchains we don't use (we get the Android SDK from Nix).
+      - name: Free disk space
+        uses: jlumbroso/free-disk-space@v1.3.1
+        with:
+          tool-cache: false
+          android: true
+          dotnet: true
+          haskell: true
+          large-packages: false
+          swap-storage: false
+
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@main
+
+      - name: Enable the Nix store cache
+        uses: DeterminateSystems/magic-nix-cache-action@main
+
+      - name: Cache Gradle and pnpm downloads
+        uses: actions/cache@v4
+        with:
+          path: |
+            .gradle
+            ~/.local/share/pnpm/store
+            ~/.cache/node/corepack
+          key: android-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml', 'flake.lock') }}
+          restore-keys: |
+            android-${{ runner.os }}-
+
+      - name: Build release APK
+        env:
+          # If this secret is set, Sentry source maps are uploaded; otherwise
+          # the build wrapper skips the upload instead of failing.
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          ARCHITECTURES: ${{ github.event.inputs.architectures }}
+        run: |
+          set -euo pipefail
+          archs="${ARCHITECTURES:-arm64-v8a,armeabi-v7a}"
+          echo "Building APK for architectures: $archs"
+          ANDROID_APK_GRADLE_ARGS="-PreactNativeArchitectures=$archs" \
+            nix run .#android-apk
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: kites-android-apk
+          path: apps/expo/android/app/build/outputs/apk/release/*.apk
+          if-no-files-found: error
+          retention-days: 14

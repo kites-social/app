@@ -1,0 +1,331 @@
+<div id="wallet-deposit-preview" class="wdp" aria-label="Interactive deposit flow mockup">
+  <style>
+    #wallet-deposit-preview {
+      color-scheme: light dark;
+      --wdp-bg: light-dark(#fff, #000);
+      --wdp-surface: light-dark(#fff, #1c1c1e);
+      --wdp-secondary: light-dark(#f2f2f7, #2c2c2e);
+      --wdp-ink: light-dark(#111, #f5f5f7);
+      --wdp-muted: light-dark(#6d6d72, #a1a1a6);
+      --wdp-border: light-dark(#d2d2d7, #3a3a3c);
+      --wdp-primary: light-dark(#007aff, #0a84ff);
+      --wdp-note: light-dark(#f2f7ff, #172536);
+      width: min(100%, 440px);
+      margin: 0 auto;
+      color: var(--wdp-ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    }
+    #wallet-deposit-preview * { box-sizing: border-box; }
+    #wallet-deposit-preview button { font: inherit; cursor: pointer; }
+    #wallet-deposit-preview .wdp-controls { display: grid; gap: 9px; margin-bottom: 12px; }
+    #wallet-deposit-preview .wdp-control-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    #wallet-deposit-preview .wdp-control-label { color: var(--wdp-muted); font-size: 11px; font-weight: 650; }
+    #wallet-deposit-preview .wdp-segment { display: inline-flex; padding: 2px; border: 1px solid var(--wdp-border); border-radius: 10px; background: var(--wdp-secondary); }
+    #wallet-deposit-preview .wdp-segment button { min-height: 28px; padding: 0 9px; border: 0; border-radius: 8px; background: transparent; color: var(--wdp-muted); font-size: 10px; font-weight: 550; white-space: nowrap; }
+    #wallet-deposit-preview .wdp-segment button[aria-pressed="true"] { background: var(--wdp-surface); color: var(--wdp-ink); box-shadow: 0 1px 3px light-dark(rgb(0 0 0 / 12%), rgb(0 0 0 / 28%)); }
+    #wallet-deposit-preview .wdp-device { position: relative; height: 790px; overflow: hidden; border: 1px solid var(--wdp-border); border-radius: 28px; background: var(--wdp-bg); box-shadow: 0 14px 42px light-dark(rgb(0 0 0 / 12%), rgb(0 0 0 / 45%)); }
+    #wallet-deposit-preview .wdp-status { display: flex; height: 34px; align-items: center; justify-content: space-between; padding: 7px 21px 1px; font-size: 11px; font-weight: 650; }
+    #wallet-deposit-preview .wdp-status-icons { display: flex; gap: 6px; color: var(--wdp-muted); font-size: 10px; }
+    #wallet-deposit-preview .wdp-page-header { display: flex; height: 58px; align-items: center; padding: 4px 20px 10px; }
+    #wallet-deposit-preview .wdp-page-header h2 { margin: 0; font-size: 22px; font-weight: 650; letter-spacing: -.035em; }
+    #wallet-deposit-preview .wdp-page-tabs { display: grid; grid-template-columns: 1fr 1fr; margin: 0 16px; border-bottom: 1px solid var(--wdp-border); }
+    #wallet-deposit-preview .wdp-page-tabs span { position: relative; padding: 13px 0 12px; color: var(--wdp-muted); font-size: 13px; text-align: center; }
+    #wallet-deposit-preview .wdp-page-tabs span:first-child { color: var(--wdp-ink); font-weight: 650; }
+    #wallet-deposit-preview .wdp-page-tabs span:first-child::after { position: absolute; right: 20px; bottom: -1px; left: 20px; height: 2px; border-radius: 2px 2px 0 0; background: var(--wdp-primary); content: ""; }
+    #wallet-deposit-preview .wdp-page-body { padding: 17px 17px; }
+    #wallet-deposit-preview .wdp-balance-card { padding: 16px; border: 1px solid var(--wdp-border); border-radius: 18px; background: var(--wdp-surface); }
+    #wallet-deposit-preview .wdp-eyebrow { margin: 0 0 7px; color: var(--wdp-muted); font-size: 12px; }
+    #wallet-deposit-preview .wdp-total { margin: 0; font-size: 27px; font-weight: 680; letter-spacing: -.04em; }
+    #wallet-deposit-preview .wdp-balance-actions { display: flex; gap: 9px; margin-top: 15px; }
+    #wallet-deposit-preview .wdp-background-button { min-height: 35px; padding: 0 14px; border: 0; border-radius: 999px; background: var(--wdp-secondary); color: var(--wdp-ink); font-size: 12px; font-weight: 620; }
+    #wallet-deposit-preview .wdp-chain-heading { margin: 20px 2px 8px; color: var(--wdp-muted); font-size: 12px; font-weight: 600; }
+    #wallet-deposit-preview .wdp-token-list { overflow: hidden; border: 1px solid var(--wdp-border); border-radius: 16px; background: var(--wdp-surface); }
+    #wallet-deposit-preview .wdp-token-row { display: flex; min-height: 54px; align-items: center; justify-content: space-between; padding: 8px 13px; font-size: 13px; }
+    #wallet-deposit-preview .wdp-token-row + .wdp-token-row { border-top: 1px solid var(--wdp-border); }
+    #wallet-deposit-preview .wdp-token-row small { display: block; margin-top: 2px; color: var(--wdp-muted); font-size: 10px; }
+    #wallet-deposit-preview .wdp-token-amount { font-variant-numeric: tabular-nums; }
+    #wallet-deposit-preview .wdp-price-card { padding: 16px; border: 1px solid var(--wdp-border); border-radius: 18px; background: var(--wdp-surface); }
+    #wallet-deposit-preview .wdp-price-card strong { display: block; margin-top: 5px; font-size: 24px; letter-spacing: -.03em; }
+    #wallet-deposit-preview .wdp-price-up { color: #248a3d; font-size: 11px; font-weight: 600; }
+    #wallet-deposit-preview .wdp-chart { height: 105px; margin-top: 14px; border-radius: 10px; background: linear-gradient(165deg, transparent 43%, #34c759 44%, #34c759 46%, transparent 47%), linear-gradient(180deg, transparent, light-dark(#e8f8ec, #14251a)); }
+    #wallet-deposit-preview .wdp-bottom-nav { position: absolute; right: 0; bottom: 0; left: 0; display: flex; height: 66px; align-items: center; justify-content: space-around; border-top: 1px solid var(--wdp-border); background: var(--wdp-surface); }
+    #wallet-deposit-preview .wdp-nav-item { display: grid; gap: 3px; justify-items: center; color: var(--wdp-muted); font-size: 9px; }
+    #wallet-deposit-preview .wdp-nav-item.is-active { color: var(--wdp-primary); font-weight: 650; }
+    #wallet-deposit-preview .wdp-nav-icon { font-size: 17px; line-height: 1; }
+    #wallet-deposit-preview .wdp-compose { position: absolute; right: 18px; bottom: 79px; z-index: 1; display: grid; width: 44px; height: 44px; place-items: center; border: 0; border-radius: 15px; background: var(--wdp-primary); color: #fff; font-size: 23px; box-shadow: 0 4px 12px light-dark(rgb(0 0 0 / 18%), rgb(0 0 0 / 50%)); }
+    #wallet-deposit-preview .wdp-dimmer { position: absolute; z-index: 2; inset: 0; display: flex; align-items: flex-end; background: rgb(0 0 0 / 48%); }
+    #wallet-deposit-preview .wdp-sheet { width: 100%; max-height: 91%; overflow: auto; padding: 10px 20px 24px; border-radius: 25px 25px 0 0; background: var(--wdp-surface); box-shadow: 0 -8px 28px rgb(0 0 0 / 12%); }
+    #wallet-deposit-preview .wdp-grabber { width: 35px; height: 4px; margin: 0 auto 15px; border-radius: 99px; background: var(--wdp-border); }
+    #wallet-deposit-preview .wdp-sheet-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
+    #wallet-deposit-preview .wdp-sheet-header h1 { margin: 0; font-size: 21px; font-weight: 680; letter-spacing: -.03em; }
+    #wallet-deposit-preview .wdp-sheet-header p { margin: 4px 0 0; color: var(--wdp-muted); font-size: 12px; line-height: 1.4; }
+    #wallet-deposit-preview .wdp-close { display: grid; width: 32px; height: 32px; flex: none; place-items: center; border: 0; border-radius: 50%; background: var(--wdp-secondary); color: var(--wdp-muted); font-size: 20px; line-height: 1; }
+    #wallet-deposit-preview .wdp-section-label { margin: 19px 0 8px; color: var(--wdp-muted); font-size: 11px; font-weight: 650; }
+    #wallet-deposit-preview .wdp-destinations { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    #wallet-deposit-preview .wdp-destination { display: flex; min-height: 57px; align-items: center; gap: 9px; padding: 8px 10px; border: 1px solid var(--wdp-border); border-radius: 14px; background: var(--wdp-surface); color: var(--wdp-ink); text-align: left; }
+    #wallet-deposit-preview .wdp-destination[aria-pressed="true"] { border: 1.5px solid var(--wdp-primary); background: light-dark(#f5faff, #142131); }
+    #wallet-deposit-preview .wdp-dest-icon { display: grid; width: 28px; height: 28px; flex: none; place-items: center; border-radius: 9px; background: var(--wdp-secondary); font-size: 14px; font-weight: 700; }
+    #wallet-deposit-preview .wdp-dest-copy strong { display: block; font-size: 12px; font-weight: 650; }
+    #wallet-deposit-preview .wdp-dest-copy small { display: block; margin-top: 3px; color: var(--wdp-muted); font-size: 9px; }
+    #wallet-deposit-preview .wdp-network-row { display: flex; flex-wrap: wrap; gap: 7px; }
+    #wallet-deposit-preview .wdp-network { display: inline-flex; min-height: 32px; align-items: center; gap: 6px; padding: 0 11px; border: 1px solid var(--wdp-border); border-radius: 999px; background: var(--wdp-surface); color: var(--wdp-ink); font-size: 11px; font-weight: 560; }
+    #wallet-deposit-preview .wdp-network[aria-pressed="true"] { border-color: var(--wdp-primary); background: light-dark(#f5faff, #142131); color: var(--wdp-primary); font-weight: 650; }
+    #wallet-deposit-preview .wdp-chain-dot { width: 8px; height: 8px; border-radius: 50%; background: #8a63d2; }
+    #wallet-deposit-preview .wdp-network[data-chain="polygon"] .wdp-chain-dot { background: #8247e5; }
+    #wallet-deposit-preview .wdp-network[data-chain="monad"] .wdp-chain-dot { background: #7a63ff; }
+    #wallet-deposit-preview .wdp-selected-network { display: flex; min-height: 38px; align-items: center; gap: 8px; padding: 0 11px; border: 1px solid var(--wdp-border); border-radius: 12px; background: var(--wdp-secondary); font-size: 12px; font-weight: 600; }
+    #wallet-deposit-preview .wdp-destination-note { margin: 9px 0 0; color: var(--wdp-muted); font-size: 11px; line-height: 1.4; }
+    #wallet-deposit-preview .wdp-address-card { margin-top: 13px; padding: 12px; border: 1px solid var(--wdp-border); border-radius: 15px; background: var(--wdp-bg); }
+    #wallet-deposit-preview .wdp-address-grid { display: grid; grid-template-columns: 94px minmax(0, 1fr); align-items: center; gap: 12px; }
+    #wallet-deposit-preview .wdp-qr-wrap { display: grid; gap: 4px; justify-items: center; }
+    #wallet-deposit-preview .wdp-qr { display: grid; width: 88px; height: 88px; place-items: center; padding: 6px; border: 1px solid var(--wdp-border); border-radius: 9px; background: #fff; }
+    #wallet-deposit-preview .wdp-qr svg { display: block; width: 100%; height: 100%; shape-rendering: crispEdges; }
+    #wallet-deposit-preview .wdp-qr-caption { color: var(--wdp-muted); font-size: 8px; }
+    #wallet-deposit-preview .wdp-address-copy { min-width: 0; }
+    #wallet-deposit-preview .wdp-address-title { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 9px; }
+    #wallet-deposit-preview .wdp-address-title strong { font-size: 11px; font-weight: 640; }
+    #wallet-deposit-preview .wdp-example-tag { padding: 3px 6px; border-radius: 6px; background: var(--wdp-secondary); color: var(--wdp-muted); font-size: 9px; }
+    #wallet-deposit-preview .wdp-address { overflow-wrap: anywhere; color: var(--wdp-muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; line-height: 1.5; }
+    #wallet-deposit-preview .wdp-copy { display: flex; width: 100%; min-height: 40px; align-items: center; justify-content: center; gap: 7px; margin-top: 10px; border: 0; border-radius: 999px; background: var(--wdp-primary); color: white; font-size: 12px; font-weight: 650; }
+    #wallet-deposit-preview .wdp-copy svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+    #wallet-deposit-preview .wdp-safety { display: flex; gap: 8px; margin-top: 12px; padding: 10px; border-radius: 12px; background: var(--wdp-note); color: var(--wdp-muted); font-size: 10px; line-height: 1.4; }
+    #wallet-deposit-preview .wdp-safety-mark { flex: none; color: var(--wdp-primary); font-size: 13px; }
+    #wallet-deposit-preview .wdp-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 13px; }
+    #wallet-deposit-preview .wdp-step { display: flex; align-items: flex-start; gap: 6px; color: var(--wdp-muted); font-size: 9px; line-height: 1.35; }
+    #wallet-deposit-preview .wdp-step-num { display: grid; width: 16px; height: 16px; flex: none; place-items: center; border-radius: 50%; background: var(--wdp-secondary); color: var(--wdp-ink); font-size: 9px; font-weight: 650; }
+    #wallet-deposit-preview .wdp-empty { margin-top: 13px; padding: 15px; border: 1px solid var(--wdp-border); border-radius: 15px; background: var(--wdp-bg); text-align: center; }
+    #wallet-deposit-preview .wdp-empty-icon { display: grid; width: 35px; height: 35px; margin: 0 auto 8px; place-items: center; border-radius: 11px; background: var(--wdp-secondary); font-size: 17px; }
+    #wallet-deposit-preview .wdp-empty h3 { margin: 0; font-size: 13px; font-weight: 650; }
+    #wallet-deposit-preview .wdp-empty p { max-width: 290px; margin: 6px auto 11px; color: var(--wdp-muted); font-size: 11px; line-height: 1.4; }
+    #wallet-deposit-preview .wdp-setup { min-height: 38px; padding: 0 16px; border: 0; border-radius: 999px; background: var(--wdp-primary); color: white; font-size: 11px; font-weight: 650; }
+    #wallet-deposit-preview .wdp-setup-message { margin: 9px 0 0; color: var(--wdp-primary); font-size: 10px; line-height: 1.4; }
+    #wallet-deposit-preview .wdp-funding-summary { display: grid; gap: 10px; margin-top: 18px; }
+    #wallet-deposit-preview .wdp-funding-venue { display: flex; align-items: center; gap: 9px; }
+    #wallet-deposit-preview .wdp-funding-venue strong, #wallet-deposit-preview .wdp-funding-venue small { display: block; }
+    #wallet-deposit-preview .wdp-funding-venue strong { font-size: 12px; }
+    #wallet-deposit-preview .wdp-funding-venue small { margin-top: 3px; color: var(--wdp-muted); font-size: 10px; }
+    #wallet-deposit-preview .wdp-market { display: grid; gap: 4px; padding: 11px 12px; border: 1px solid var(--wdp-border); border-radius: 13px; background: var(--wdp-bg); }
+    #wallet-deposit-preview .wdp-market span, #wallet-deposit-preview .wdp-funding-label { color: var(--wdp-muted); font-size: 9px; font-weight: 650; letter-spacing: .04em; }
+    #wallet-deposit-preview .wdp-market strong { font-size: 11px; font-weight: 600; }
+    #wallet-deposit-preview .wdp-funding-flow { display: grid; grid-template-columns: 1fr 24px 1fr; align-items: center; gap: 9px; margin-top: 17px; padding: 14px 12px; border: 1px solid var(--wdp-border); border-radius: 15px; }
+    #wallet-deposit-preview .wdp-funding-flow > div { display: grid; gap: 5px; min-width: 0; }
+    #wallet-deposit-preview .wdp-funding-flow strong { font-size: 11px; }
+    #wallet-deposit-preview .wdp-funding-flow small { color: var(--wdp-muted); font-size: 9px; line-height: 1.3; }
+    #wallet-deposit-preview .wdp-funding-arrow { display: grid; width: 23px; height: 23px; place-items: center; border-radius: 50%; background: var(--wdp-secondary); color: var(--wdp-muted); font-size: 14px; }
+    #wallet-deposit-preview .wdp-funding-amount { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; padding: 12px; border: 1px solid var(--wdp-border); border-radius: 13px; }
+    #wallet-deposit-preview .wdp-funding-amount small, #wallet-deposit-preview .wdp-funding-amount strong { display: block; }
+    #wallet-deposit-preview .wdp-funding-amount small { margin-bottom: 4px; color: var(--wdp-muted); font-size: 10px; }
+    #wallet-deposit-preview .wdp-funding-amount strong { font-size: 18px; font-weight: 670; }
+    #wallet-deposit-preview .wdp-amount-token { padding: 5px 8px; border-radius: 8px; background: var(--wdp-secondary); font-size: 10px; font-weight: 650; }
+    #wallet-deposit-preview .wdp-hidden { display: none !important; }
+    #wallet-deposit-preview .wdp-preview-note { margin: 0 0 7px; color: var(--wdp-muted); font-size: 10px; }
+    #wallet-deposit-preview .wdp-toast { position: absolute; z-index: 4; bottom: 76px; left: 50%; padding: 9px 14px; transform: translateX(-50%); border-radius: 999px; background: #262626; color: white; font-size: 11px; font-weight: 600; box-shadow: 0 3px 12px rgb(0 0 0 / 24%); white-space: nowrap; }
+    #wallet-deposit-preview .wdp-closed { position: absolute; z-index: 4; top: 55px; right: 13px; left: 13px; display: none; }
+    #wallet-deposit-preview .wdp-closed button { width: 100%; min-height: 40px; border: 0; border-radius: 999px; background: var(--wdp-primary); color: white; font-weight: 650; }
+    @media (max-width: 380px) {
+      #wallet-deposit-preview .wdp-sheet { padding-right: 15px; padding-left: 15px; }
+      #wallet-deposit-preview .wdp-destination { gap: 6px; padding-right: 7px; padding-left: 7px; }
+      #wallet-deposit-preview .wdp-dest-copy strong { font-size: 11px; }
+    }
+  </style>
+
+  <p class="wdp-preview-note">Preview controls only — these are separate screens, not app tabs.</p>
+  <div class="wdp-controls" aria-label="Mockup preview controls">
+    <div class="wdp-control-row">
+      <span class="wdp-control-label">Preview flow</span>
+      <div class="wdp-segment">
+        <button type="button" data-view="wallet" aria-pressed="true">Deposit</button>
+        <button type="button" data-view="funding" aria-pressed="false">Fund this trade</button>
+      </div>
+    </div>
+    <div class="wdp-control-row">
+      <span class="wdp-control-label">Kites wallet</span>
+      <div class="wdp-segment">
+        <button type="button" data-wallet-state="ready" aria-pressed="true">Set up</button>
+        <button type="button" data-wallet-state="missing" aria-pressed="false">Not set up</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="wdp-device">
+    <div class="wdp-status"><span>9:41</span><span class="wdp-status-icons"><span>●●●</span><span>◖</span><span>▰</span></span></div>
+    <div data-wallet-background>
+      <div class="wdp-page-header"><h2>Wallet</h2></div>
+      <div class="wdp-page-tabs"><span>Balances</span><span>Positions</span></div>
+      <div class="wdp-page-body">
+        <div class="wdp-balance-card">
+          <p class="wdp-eyebrow">Total assets across wallet and venues</p>
+          <p class="wdp-total">$1,284.50</p>
+          <div class="wdp-balance-actions"><button class="wdp-background-button" type="button">Deposit</button><button class="wdp-background-button" type="button">Send</button></div>
+        </div>
+        <p class="wdp-chain-heading">Available in Kites wallet · Monad Testnet</p>
+        <div class="wdp-token-list"><div class="wdp-token-row"><span>USDC<small>Protocol collateral</small></span><span class="wdp-token-amount">$640.00</span></div><div class="wdp-token-row"><span>MON<small>Network token</small></span><span class="wdp-token-amount">$12.50</span></div></div>
+        <p class="wdp-chain-heading">At venue · Polymarket</p>
+        <div class="wdp-token-list"><div class="wdp-token-row"><span>pUSD<small>Polymarket USD</small></span><span class="wdp-token-amount">$632.00</span></div></div>
+      </div>
+    </div>
+    <div class="wdp-hidden" data-market-background>
+      <div class="wdp-page-header"><h2>BTC / USDC</h2></div>
+      <div class="wdp-page-tabs"><span>Market</span><span>Order book</span></div>
+      <div class="wdp-page-body"><div class="wdp-price-card"><span class="wdp-eyebrow">BTC perpetual</span><strong>$63,480</strong><span class="wdp-price-up">+0.8% today</span><div class="wdp-chart"></div></div><p class="wdp-chain-heading">Open a position</p><div class="wdp-token-list"><div class="wdp-token-row"><span>Long BTC<small>Available collateral required</small></span><button class="wdp-background-button" type="button">Trade</button></div></div></div>
+    </div>
+    <button class="wdp-compose" data-wallet-only type="button" aria-label="Create post">＋</button>
+    <nav class="wdp-bottom-nav" data-wallet-only aria-label="App navigation">
+      <div class="wdp-nav-item"><span class="wdp-nav-icon">⌂</span><span>Feeds</span></div>
+      <div class="wdp-nav-item"><span class="wdp-nav-icon">⌕</span><span>Search</span></div>
+      <div class="wdp-nav-item is-active"><span class="wdp-nav-icon">◉</span><span>Wallet</span></div>
+      <div class="wdp-nav-item"><span class="wdp-nav-icon">♧</span><span>Notifications</span></div>
+      <div class="wdp-nav-item"><span class="wdp-nav-icon">◌</span><span>Profile</span></div>
+    </nav>
+
+    <div class="wdp-dimmer" data-sheet>
+      <section class="wdp-sheet" role="dialog" aria-modal="true" aria-labelledby="wdp-title">
+        <div class="wdp-grabber"></div>
+        <div class="wdp-sheet-header">
+          <div><h1 id="wdp-title" data-sheet-title>Deposit</h1><p data-sheet-subtitle>Receive funds into your Kites wallet.</p></div>
+          <button class="wdp-close" type="button" aria-label="Close deposit sheet" data-close>×</button>
+        </div>
+
+        <div data-wallet-content>
+          <p class="wdp-section-label">Network</p>
+          <div class="wdp-network-row">
+            <button class="wdp-network" type="button" data-network="monad" aria-pressed="false"><span class="wdp-chain-dot" data-chain="monad"></span>Monad Testnet</button>
+            <button class="wdp-network" type="button" data-network="polygon" aria-pressed="true"><span class="wdp-chain-dot" data-chain="polygon"></span>Polygon</button>
+          </div>
+          <p class="wdp-destination-note" data-wallet-note>Send funds on Monad Testnet to this address.</p>
+          <div data-wallet-address>
+            <div class="wdp-address-card">
+              <div class="wdp-address-grid">
+                <div class="wdp-qr-wrap"><div class="wdp-qr" data-qr="wallet" aria-hidden="true"></div><span class="wdp-qr-caption">Preview only</span></div>
+                <div class="wdp-address-copy"><div class="wdp-address-title"><strong>Kites wallet</strong><span class="wdp-example-tag">Example</span></div><div class="wdp-address">0x8a23…41c7</div></div>
+              </div>
+              <button class="wdp-copy" type="button" data-copy="wallet"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path></svg><span>Copy address</span></button>
+            </div>
+            <div class="wdp-safety"><span class="wdp-safety-mark">ⓘ</span><span>Only send on the selected network. Make sure the sending app also uses <strong data-wallet-network-name>Monad Testnet</strong>.</span></div>
+            <div class="wdp-steps" aria-label="Deposit steps"><div class="wdp-step"><span class="wdp-step-num">1</span><span>Copy this address</span></div><div class="wdp-step"><span class="wdp-step-num">2</span><span>Send from another wallet</span></div><div class="wdp-step"><span class="wdp-step-num">3</span><span>Check your balance here</span></div></div>
+          </div>
+          <div class="wdp-empty wdp-hidden" data-wallet-missing>
+            <div class="wdp-empty-icon">◈</div><h3>Create your Kites wallet</h3>
+            <p>Set up your wallet before receiving funds. You’ll create it with a passkey, then come back here for your address.</p>
+            <button class="wdp-setup" type="button" data-setup="wallet-deposit">Set up wallet</button>
+            <p class="wdp-setup-message wdp-hidden" data-setup-message="wallet-deposit">This opens wallet setup. Your address will appear here when setup is complete.</p>
+          </div>
+        </div>
+
+        <div class="wdp-hidden" data-funding-content>
+          <div class="wdp-funding-summary">
+            <div class="wdp-funding-venue"><span class="wdp-dest-icon">P</span><span><strong>Polymarket</strong><small>Funding for this trade</small></span></div>
+            <div class="wdp-market"><span>MARKET</span><strong>Will BTC be above $100,000 on Friday?</strong></div>
+          </div>
+          <div data-funding-ready>
+            <div class="wdp-funding-flow">
+              <div><span class="wdp-funding-label">FROM</span><strong>Kites wallet</strong><small>Available: $126.40 USDC</small></div>
+              <span class="wdp-funding-arrow">↓</span>
+              <div><span class="wdp-funding-label">TO</span><strong>Polymarket balance</strong><small>Polygon · USDC</small></div>
+            </div>
+            <div class="wdp-funding-amount"><span><small>Amount needed for this trade</small><strong>$25.00</strong></span><span class="wdp-amount-token">USDC</span></div>
+            <div class="wdp-safety"><span class="wdp-safety-mark">ⓘ</span><span>Review the network fee and confirm before funds move. Your remaining Kites wallet balance stays available in your wallet.</span></div>
+            <button class="wdp-copy" type="button" data-confirm-transfer>Review transfer</button>
+            <p class="wdp-setup-message wdp-hidden" data-transfer-message>Transfer review opened. The app will show the exact transaction and fee before signing.</p>
+          </div>
+          <div class="wdp-empty wdp-hidden" data-funding-missing>
+            <div class="wdp-empty-icon">◈</div><h3>Set up your Kites wallet first</h3>
+            <p>Your wallet is the source for venue funding. Create it with a passkey, then return to this trade.</p>
+            <button class="wdp-setup" type="button" data-setup="wallet-funding">Set up wallet</button>
+            <p class="wdp-setup-message wdp-hidden" data-setup-message="wallet-funding">This opens wallet setup. You’ll return to the trade when setup is complete.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="wdp-closed" data-closed><button type="button" data-reopen>Deposit</button></div>
+    <div class="wdp-toast wdp-hidden" data-toast role="status" aria-live="polite">Address copied</div>
+  </div>
+
+  <script>
+    (() => {
+      const root = document.getElementById("wallet-deposit-preview");
+      if (!root) return;
+      let view = "wallet";
+      let network = "polygon";
+      let walletReady = true;
+      let toastTimer;
+      const setPressed = (selector, attr, value) => root.querySelectorAll(selector).forEach((el) => el.setAttribute("aria-pressed", el.getAttribute(attr) === value ? "true" : "false"));
+      const drawPreviewQr = (container, seed) => {
+        const size = 25;
+        const cells = Array.from({ length: size }, () => Array(size).fill(false));
+        const reserved = Array.from({ length: size }, () => Array(size).fill(false));
+        const finders = [[0, 0], [18, 0], [0, 18]];
+        finders.forEach(([left, top]) => {
+          for (let y = -1; y <= 7; y++) for (let x = -1; x <= 7; x++) {
+            const px = left + x, py = top + y;
+            if (px < 0 || py < 0 || px >= size || py >= size) continue;
+            reserved[py][px] = true;
+            if (x >= 0 && x <= 6 && y >= 0 && y <= 6) {
+              const edge = x === 0 || x === 6 || y === 0 || y === 6;
+              const center = x >= 2 && x <= 4 && y >= 2 && y <= 4;
+              cells[py][px] = edge || center;
+            }
+          }
+        });
+        for (let i = 8; i < 17; i++) {
+          reserved[6][i] = reserved[i][6] = true;
+          cells[6][i] = cells[i][6] = i % 2 === 0;
+        }
+        let state = seed === "polymarket" ? 91731 : 52719;
+        const randomBit = () => { state = (state * 1103515245 + 12345) & 0x7fffffff; return (state >>> 12) % 2 === 0; };
+        for (let y = 0; y < size; y++) for (let x = 0; x < size; x++) if (!reserved[y][x]) cells[y][x] = randomBit();
+        const ns = "http://www.w3.org/2000/svg";
+        const svg = document.createElementNS(ns, "svg");
+        svg.setAttribute("viewBox", `-1 -1 ${size + 2} ${size + 2}`);
+        svg.setAttribute("role", "img");
+        svg.setAttribute("aria-label", "Decorative QR code preview; not scannable");
+        const bg = document.createElementNS(ns, "rect");
+        bg.setAttribute("x", "-1"); bg.setAttribute("y", "-1"); bg.setAttribute("width", String(size + 2)); bg.setAttribute("height", String(size + 2)); bg.setAttribute("fill", "white");
+        svg.appendChild(bg);
+        for (let y = 0; y < size; y++) for (let x = 0; x < size; x++) if (cells[y][x]) {
+          const rect = document.createElementNS(ns, "rect");
+          rect.setAttribute("x", String(x)); rect.setAttribute("y", String(y)); rect.setAttribute("width", "1"); rect.setAttribute("height", "1"); rect.setAttribute("fill", "#111");
+          svg.appendChild(rect);
+        }
+        container.appendChild(svg);
+      };
+      const render = () => {
+        setPressed("[data-view]", "data-view", view);
+        setPressed("[data-network]", "data-network", network);
+        root.querySelector("[data-wallet-content]").classList.toggle("wdp-hidden", view !== "wallet");
+        root.querySelector("[data-funding-content]").classList.toggle("wdp-hidden", view !== "funding");
+        root.querySelector("[data-wallet-background]").classList.toggle("wdp-hidden", view !== "wallet");
+        root.querySelector("[data-market-background]").classList.toggle("wdp-hidden", view !== "funding");
+        root.querySelectorAll("[data-wallet-only]").forEach((el) => el.classList.toggle("wdp-hidden", view !== "wallet"));
+        root.querySelector("[data-sheet-title]").textContent = view === "wallet" ? "Deposit" : "Fund this trade";
+        root.querySelector("[data-sheet-subtitle]").textContent = view === "wallet" ? "Receive funds into your Kites wallet." : "Move funds from your Kites wallet to the venue.";
+        root.querySelector("[data-wallet-address]").classList.toggle("wdp-hidden", walletReady !== true);
+        root.querySelector("[data-wallet-missing]").classList.toggle("wdp-hidden", walletReady === true);
+        root.querySelector("[data-funding-ready]").classList.toggle("wdp-hidden", walletReady !== true);
+        root.querySelector("[data-funding-missing]").classList.toggle("wdp-hidden", walletReady === true);
+        root.querySelector("[data-wallet-note]").textContent = `Send funds on ${network === "monad" ? "Monad Testnet" : "Polygon"} to this address.`;
+        root.querySelector("[data-wallet-network-name]").textContent = network === "monad" ? "Monad Testnet" : "Polygon";
+        setPressed("[data-wallet-state]", "data-wallet-state", walletReady ? "ready" : "missing");
+      };
+      root.querySelectorAll("[data-view]").forEach((button) => button.addEventListener("click", () => { view = button.dataset.view; render(); }));
+      root.querySelectorAll("[data-network]").forEach((button) => button.addEventListener("click", () => { network = button.dataset.network; render(); }));
+      root.querySelectorAll("[data-wallet-state]").forEach((button) => button.addEventListener("click", () => { walletReady = button.dataset.walletState === "ready"; render(); }));
+      root.querySelectorAll("[data-setup]").forEach((button) => button.addEventListener("click", () => {
+        root.querySelector(`[data-setup-message="${button.dataset.setup}"]`).classList.remove("wdp-hidden");
+      }));
+      root.querySelector("[data-confirm-transfer]").addEventListener("click", () => root.querySelector("[data-transfer-message]").classList.remove("wdp-hidden"));
+      root.querySelectorAll("[data-copy]").forEach((button) => button.addEventListener("click", () => {
+        const toast = root.querySelector("[data-toast]");
+        toast.classList.remove("wdp-hidden");
+        window.clearTimeout(toastTimer);
+        toastTimer = window.setTimeout(() => toast.classList.add("wdp-hidden"), 1800);
+      }));
+      const closeSheet = () => { root.querySelector("[data-sheet]").classList.add("wdp-hidden"); root.querySelector("[data-closed]").style.display = "block"; };
+      root.querySelector("[data-close]").addEventListener("click", closeSheet);
+      root.querySelector("[data-reopen]").addEventListener("click", () => { root.querySelector("[data-sheet]").classList.remove("wdp-hidden"); root.querySelector("[data-closed]").style.display = "none"; });
+      root.querySelector("[data-sheet]").addEventListener("click", (event) => { if (event.target === event.currentTarget) closeSheet(); });
+      root.querySelectorAll("[data-qr]").forEach((container) => drawPreviewQr(container, container.dataset.qr));
+      render();
+    })();
+  </script>
+</div>

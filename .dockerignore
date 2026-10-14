@@ -1,0 +1,12 @@
+fly.toml
+Dockerfile
+.dockerignore
+node_modules
+**/node_modules
+.git
+
+# only want db + push notifs
+/apps/expo
+/apps/nextjs
+/cryptography
+/packages/api

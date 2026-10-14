@@ -1,0 +1,53 @@
+{
+  "name": "kites",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "clean": "git clean -xdf node_modules",
+    "clean:workspaces": "turbo clean",
+    "db:generate": "turbo db:generate",
+    "db:push": "turbo db:push db:generate",
+    "db:studio": "turbo db:studio",
+    "dev": "pnpm dev:expo",
+    "dev:both": "turbo dev --parallel",
+    "dev:expo": "cd apps/expo && pnpm dev",
+    "dev:next": "cd apps/nextjs && pnpm dev",
+    "dev:push": "cd apps/push-notifs && pnpm dev",
+    "dev:market-bot": "cd apps/market-bot && pnpm dev",
+    "market-bot:build": "cd apps/market-bot && pnpm build",
+    "market-bot:start": "cd apps/market-bot && pnpm start",
+    "market-bot:alchemy:deploy": "cd apps/market-bot && pnpm alchemy:deploy",
+    "market-bot:alchemy:dev": "cd apps/market-bot && pnpm alchemy:dev",
+    "market-bot:alchemy:logs": "cd apps/market-bot && pnpm alchemy:logs",
+    "push:build": "cd apps/push-notifs && pnpm build",
+    "push:start": "cd apps/push-notifs && pnpm start",
+    "extract": "cd apps/expo && pnpm extract",
+    "compile": "cd apps/expo && pnpm compile",
+    "format": "turbo run format --continue -- --cache --cache-location .cache/.prettiercache",
+    "format:fix": "turbo run format --continue -- --write --cache --cache-location .cache/.prettiercache",
+    "lint": "turbo run lint --continue -- --cache --cache-location .cache/.eslintcache",
+    "lint:fix": "turbo run lint --continue -- --fix --cache --cache-location .cache/.eslintcache",
+    "lint:ws": "pnpm dlx sherif@latest",
+    "typecheck": "turbo typecheck"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.13.0"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "packageManager": "pnpm@9.15.4",
+  "pnpm": {
+    "overrides": {
+      "sharp": "0.32.6",
+      "use-deep-compare": "npm:use-deep-compare-dequal-update@2.0.0",
+      "color": "4.2.3",
+      "@effect/sql-d1": "4.0.2",
+      "@effect/sql-sqlite-do": "4.0.2"
+    },
+    "patchedDependencies": {
+      "react-native-collapsible-tab-view": "patches/react-native-collapsible-tab-view.patch"
+    }
+  },
+  "prettier": "@kites-social/prettier-config"
+}

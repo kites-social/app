@@ -1,0 +1,10 @@
+{
+  "extends": "@kites-social/tsconfig/base.json",
+  "compilerOptions": {
+    "target": "ES2020",
+    "moduleResolution": "bundler",
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"
+  },
+  "include": ["*.ts", "src"],
+  "exclude": ["node_modules"]
+}

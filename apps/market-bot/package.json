@@ -1,0 +1,37 @@
+{
+  "name": "@kites-social/market-bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild ./src/index.ts --bundle --outfile=dist/index.cjs --platform=node --format=cjs",
+    "dev": "dotenv -e ../../.env -- tsx watch ./src/index.ts",
+    "start": "pnpm with-env node ./dist/index.cjs",
+    "alchemy:dev": "alchemy dev",
+    "alchemy:deploy": "alchemy deploy",
+    "alchemy:destroy": "alchemy destroy",
+    "alchemy:logs": "alchemy logs",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "dependencies": {
+    "@atproto/api": "^0.13.31",
+    "@atproto/common-web": "0.4.7",
+    "@kites-social/venues": "0.1.0",
+    "effect": "4.0.2"
+  },
+  "devDependencies": {
+    "@kites-social/eslint-config": "0.1.0",
+    "@kites-social/tsconfig": "0.1.0",
+    "alchemy": "^2.0.0-beta.81",
+    "dotenv-cli": "^11.0.0",
+    "esbuild": "^0.24.0",
+    "eslint": "^9.39.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

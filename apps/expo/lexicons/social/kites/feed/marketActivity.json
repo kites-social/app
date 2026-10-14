@@ -1,0 +1,41 @@
+{
+  "lexicon": 1,
+  "id": "social.kites.feed.marketActivity",
+  "description": "A public market trade activity referring to the post whose market embed was traded.",
+  "defs": {
+    "main": {
+      "type": "record",
+      "key": "tid",
+      "record": {
+        "type": "object",
+        "required": ["version", "subject", "market", "side", "createdAt"],
+        "properties": {
+          "version": { "type": "integer", "const": 1 },
+          "subject": { "$ref": "com.atproto.repo.strongRef" },
+          "market": {
+            "type": "object",
+            "required": ["venue", "marketType", "marketId"],
+            "properties": {
+              "venue": { "type": "string", "maxLength": 64 },
+              "marketType": {
+                "type": "string",
+                "knownValues": ["prediction", "spot", "perpetual"]
+              },
+              "marketId": { "type": "string", "maxLength": 256 },
+              "label": { "type": "string", "maxLength": 256 }
+            }
+          },
+          "side": {
+            "type": "string",
+            "knownValues": ["buy", "sell", "long", "short"]
+          },
+          "outcome": {
+            "type": "string",
+            "knownValues": ["yes", "no"]
+          },
+          "createdAt": { "type": "string", "format": "datetime" }
+        }
+      }
+    }
+  }
+}

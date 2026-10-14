@@ -1,0 +1,37 @@
+diff --git a/lib/commonjs/Container.js b/lib/commonjs/Container.js
+index d5f9f61cab72978e6470f35e4658cab119d22f3f..35559c3cd81d14b307836ba3b2ff27cff4fc6a88 100644
+--- a/lib/commonjs/Container.js
++++ b/lib/commonjs/Container.js
+@@ -340,6 +340,7 @@ const Container = /*#__PURE__*/_react.default.memo( /*#__PURE__*/_react.default.
+   }), tabNamesArray.map((tabName, i) => {
+     return /*#__PURE__*/_react.default.createElement(_reactNative.View, {
+       key: i,
++      collapsable: false,
+       style: styles.pageContainer
+     }, /*#__PURE__*/_react.default.createElement(_Context.TabNameContext.Provider, {
+       value: tabName
+diff --git a/lib/module/Container.js b/lib/module/Container.js
+index b417d125afe8e734075bad586c1f00b54affe95f..0b7c0ef130414f39814da0c51dc1c60a0fa0207b 100644
+--- a/lib/module/Container.js
++++ b/lib/module/Container.js
+@@ -306,6 +306,7 @@ export const Container = /*#__PURE__*/React.memo( /*#__PURE__*/React.forwardRef(
+   }), tabNamesArray.map((tabName, i) => {
+     return /*#__PURE__*/React.createElement(View, {
+       key: i,
++      collapsable: false,
+       style: styles.pageContainer
+     }, /*#__PURE__*/React.createElement(TabNameContext.Provider, {
+       value: tabName
+diff --git a/src/Container.tsx b/src/Container.tsx
+index 9ec4cfe90166c00f2ccfb7aec3f5da8cc5c4bae1..0ded5ab29059ec5b31091df40f5f8f92a4265df1 100644
+--- a/src/Container.tsx
++++ b/src/Container.tsx
+@@ -435,7 +435,7 @@ export const Container = React.memo(
+             >
+               {tabNamesArray.map((tabName, i) => {
+                 return (
+-                  <View key={i} style={styles.pageContainer}>
++                  <View key={i} collapsable={false} style={styles.pageContainer}>
+                     <TabNameContext.Provider value={tabName}>
+                       <Lazy
+                         startMounted={lazy ? undefined : true}

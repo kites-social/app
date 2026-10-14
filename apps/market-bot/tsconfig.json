@@ -1,0 +1,9 @@
+{
+  "extends": "@kites-social/tsconfig/base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "moduleResolution": "bundler",
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"
+  },
+  "include": ["src"]
+}

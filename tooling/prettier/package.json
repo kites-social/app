@@ -1,0 +1,22 @@
+{
+  "name": "@kites-social/prettier-config",
+  "version": "0.1.0",
+  "dependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
+    "prettier": "^3.7.4",
+    "prettier-plugin-tailwindcss": "^0.7.2"
+  },
+  "devDependencies": {
+    "@kites-social/tsconfig": "0.1.0",
+    "typescript": "^5.9.3"
+  },
+  "main": "index.mjs",
+  "prettier": "./index.mjs",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "format": "prettier --check \"**/*.{mjs,json}\"",
+    "format:fix": "prettier --write \"**/*.{mjs,json}\"",
+    "typecheck": "tsc --noEmit"
+  }
+}

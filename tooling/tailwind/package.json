@@ -1,0 +1,15 @@
+{
+  "name": "@kites-social/tailwind-config",
+  "version": "0.1.0",
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "postcss": "^8.5.6",
+    "tailwindcss": "4.1.18"
+  },
+  "files": [
+    "index.ts",
+    "postcss.js"
+  ],
+  "license": "MIT",
+  "main": "index.ts"
+}
